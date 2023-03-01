@@ -2,8 +2,24 @@ body {
   padding: 0px;
   margin: 0 auto;
 }
+.heber_info_header p,
+.heber_info_header p a {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #e3e3e3;
+}
+.heber_info_header p a {
+  text-decoration: underline;
+  font-weight: 900;
+}
 .navbar_back {
   background-color: white;
+}
+:root {
+  --mob_infinit: #1e90ff;
 }
 .tehsil_btn {
   background: #281f8c;
@@ -180,6 +196,9 @@ nav input:focus-visible {
 }
 
 @media (max-width: 991px) {
+  .mobile_slider_none {
+    display: none;
+  }
   .user_btn {
     border: none;
     color: #e3e3e3;
@@ -237,6 +256,36 @@ nav input:focus-visible {
 
 .mob_nav_back {
   background: #5200ff;
+}
+
+.infinit_mob_nav {
+  background: var(--mob_infinit);
+  padding: 23px 20px;
+  border-radius: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-top: -40px;
+}
+.infinit_circle1 {
+  height: 80px;
+  width: 80px;
+  background: #a00808;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  top: 0;
+  left: 6px;
+
+  z-index: -1;
+}
+.infinit_circle2 {
+  height: 80px;
+  width: 80px;
+  background: #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  top: 0;
+  right: 6px;
+
+  z-index: -1;
 }
 @media (max-width: 767px) {
   .navbar-brand img {
@@ -313,22 +362,28 @@ nav input:focus-visible {
     width: 120%;
   }
   .tehsil_btn {
-    padding: 17px 5px;
-    font-size: 11.5px;
+    padding: 17px 7px;
+    font-size: 13.5px;
   }
   .usaq_btn {
-    padding: 17px 5px;
-    font-size: 11.5px;
+    padding: 17px 7px;
+    font-size: 13.5px;
   }
 
   .eses_btn {
-    padding: 17px 5px;
-    font-size: 11.5px;
+    padding: 17px 7px;
+    font-size: 13.5px;
   }
   .tehsil_btn img,
   .usaq_btn img,
   .eses_btn img {
     width: 20px;
     height: 20px;
+  }
+  .mobile_bottom_nav ul li a i {
+    font-size: 25px;
+  }
+  .infinit_mob_nav i {
+    font-size: 32px !important;
   }
 }
