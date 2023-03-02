@@ -73,7 +73,7 @@ body {
 .search_input_nav {
   background: rgba(229, 229, 230, 0.6);
   border: 1px solid #5b2cc0;
-  border-left: none;
+  border-left: auto;
 
   border-top-right-radius: 25.5px;
   border-bottom-right-radius: 25.5px;
@@ -138,6 +138,129 @@ nav input:focus-visible {
   font-size: 20px;
   line-height: 24px;
   padding: 17px 10px;
+}
+
+.mob_nav_back {
+  background: #5200ff;
+}
+
+.infinit_mob_nav {
+  background: var(--mob_infinit);
+  padding: 23px 20px;
+  border-radius: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-top: -40px;
+}
+.infinit_circle1 {
+  height: 80px;
+  width: 80px;
+  background: #a00808;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  top: 0;
+  left: 6px;
+
+  z-index: -1;
+}
+.infinit_circle2 {
+  height: 80px;
+  width: 80px;
+  background: #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  top: 0;
+  right: 6px;
+
+  z-index: -1;
+}
+.slide_info .row .col-lg-8,
+.slide_info .row .col-lg-1 {
+  background: rgba(124, 7, 7, 0.65);
+}
+.slide_info .col-lg-8 p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #e3e3e3;
+  word-break: break-all;
+}
+.slide_info .autor a {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  text-decoration: none;
+
+  color: #e3e3e3;
+}
+.slide_info .user_reaction .user_plus a {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  text-decoration: none;
+
+  color: #2c8bc0;
+}
+.slide_info .user_reaction .user_check a {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  text-decoration: none;
+
+  color: #ff9f47;
+}
+.slide_info .post_time,
+.slide_info .post_date {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+
+  color: #e3e3e3;
+}
+
+.slide_info .user_reaction .qeydiyat_btn button {
+  background: #2c8bc0;
+  border-radius: 11px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  border: none;
+  padding: 9px;
+
+  color: #e3e3e3;
+}
+
+.slide_like,
+.slide_save {
+  margin: 0 5px;
+  color: #e3e3e3;
+  font-size: 19px;
+}
+.slide_share {
+  margin: auto 5px;
+  color: #e3e3e3;
+  font-size: 19px;
+}
+.slide_like a,
+.slide_save a,
+.slide_share a {
+  color: #e3e3e3;
+}
+.carousel-control-next,
+.carousel-control-prev {
+  margin: auto 0px;
+  height: 15%;
 }
 
 @media (max-width: 1399px) {
@@ -210,7 +333,7 @@ nav input:focus-visible {
   .search_input_nav {
     background: rgba(229, 229, 230, 0.6);
     border: 1px solid #5b2cc0;
-    border-left: none;
+    border-left: auto;
 
     border-top-right-radius: 25.5px;
     border-bottom-right-radius: 25.5px;
@@ -252,41 +375,18 @@ nav input:focus-visible {
   .user_btn {
     display: none;
   }
+  .first_swiper_slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(124, 7, 7, 0.65);
+  }
+  .slide_info {
+    bottom: 10px;
+    left: auto;
+  }
 }
 
-.mob_nav_back {
-  background: #5200ff;
-}
-
-.infinit_mob_nav {
-  background: var(--mob_infinit);
-  padding: 23px 20px;
-  border-radius: 50px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  margin-top: -40px;
-}
-.infinit_circle1 {
-  height: 80px;
-  width: 80px;
-  background: #a00808;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 50px;
-  top: 0;
-  left: 6px;
-
-  z-index: -1;
-}
-.infinit_circle2 {
-  height: 80px;
-  width: 80px;
-  background: #000000;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 50px;
-  top: 0;
-  right: 6px;
-
-  z-index: -1;
-}
 @media (max-width: 767px) {
   .navbar-brand img {
     width: 85%;
@@ -322,6 +422,10 @@ nav input:focus-visible {
     padding: 17px;
     max-width: 150px;
   }
+  .slide_info {
+    bottom: 10px;
+    left: auto;
+  }
 }
 
 @media (max-width: 575px) {
@@ -351,6 +455,10 @@ nav input:focus-visible {
   .eses_btn img {
     width: 22px;
     height: 22px;
+  }
+  .slide_info {
+    bottom: 10px;
+    left: auto;
   }
 }
 
@@ -385,5 +493,9 @@ nav input:focus-visible {
   }
   .infinit_mob_nav i {
     font-size: 32px !important;
+  }
+  .slide_info {
+    bottom: 10px;
+    left: auto;
   }
 }
