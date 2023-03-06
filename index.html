@@ -14,16 +14,477 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css"
+    />
     <link rel="stylesheet" href="./css/vertical-carousel.css" />
     <!-- FONTAWESOME -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+    <script>
+      var r = document.querySelector(":root");
+      // Create a function for setting a variable value
+      function myFunction_set_esas() {
+        // Set the value of variable --blue to another value (in this case "lightblue")
+        r.style.setProperty("--sign-in-color", "#1e90ff");
+      }
+      function myFunction_set_teh() {
+        // Set the value of variable --blue to another value (in this case "lightblue")
+        r.style.setProperty("--sign-in-color", "#281F8C");
+      }
+      function myFunction_set_us() {
+        // Set the value of variable --blue to another value (in this case "lightblue")
+        r.style.setProperty("--sign-in-color", "#FF8D3B");
+      }
+    </script>
+    <link rel="stylesheet" href="./css/modal.css" />
 
     <link rel="stylesheet" href="./css/index.css" />
   </head>
+
   <body>
+    <!-- Modal -->
+    <!-- Check your browser's console to see the logging when the submit button is clicked. -->
+
+    <div id="signup-modal" class="modal">
+      <div id="modal-content" class="signup-modal-content">
+        <div class="col-lg-12">
+          <div id="close-btn" class="close">
+            <span>&#xf00d;</span>
+          </div>
+          <div class="sign_up_card w-100">
+            <div class="row">
+              <div class="col-lg-6">
+                <h4 class="text-white d-flex justify-content-center mb-3">
+                  Hesab növünü seçin
+                </h4>
+                <div
+                  class="d-flex justify-content-evenly align-items-center w-100"
+                  id="myBtnContainer"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-light active"
+                    onclick="filterSelection('muteh')"
+                  >
+                    Mütəxəssis
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-light"
+                    onclick="filterSelection('istifa')"
+                  >
+                    İstifadəçi
+                  </button>
+                </div>
+                <div class="my_modal_body">
+                  <h4 class="">Hesab bölməsini seçin</h4>
+                  <button
+                    type="button"
+                    class="eses_btn_sign"
+                    onclick="myFunction_set_esas()"
+                  >
+                    <img
+                      src="./img/eses_bolme_logo.png"
+                      width="26px"
+                      height="26px"
+                      alt=""
+                      srcset=""
+                    />
+                    <span> Esas Bolme</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="tehsil_btn_sign"
+                    onclick="myFunction_set_teh()"
+                  >
+                    <img
+                      src="./img/tehsil.svg"
+                      width="26px"
+                      height="26px"
+                      alt=""
+                      srcset=""
+                    />
+                    <span> Təhsil bölməsi </span>
+                  </button>
+                  <button
+                    type="button"
+                    class="usaq_btn_sign"
+                    onclick="myFunction_set_us()"
+                  >
+                    <img
+                      src="./img/usag.svg"
+                      width="26px"
+                      height="26px"
+                      alt=""
+                      srcset=""
+                    />
+                    <span>Uşaq bölməsi</span>
+                  </button>
+                </div>
+              </div>
+              <style>
+                .filterDiv {
+                  display: none;
+                }
+                .filterDiv2 {
+                  display: none;
+                }
+                .filterDiv3 {
+                  display: none;
+                }
+                .show {
+                  display: block;
+                }
+              </style>
+              <div class="col-lg-6">
+                <div class="sign_cta_card_wraper filterDiv muteh">
+                  <div class="sign_cta_card">
+                    <div
+                      class="d-flex justify-content-evenly align-items-center w-100 mt-1 mb-3"
+                      id="myBtnContainer2"
+                    >
+                      <button
+                        type="button"
+                        class="btn btn-light active2"
+                        onclick="filterSelection2('qeyd')"
+                      >
+                        Qeydiyyatdan keç
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-light"
+                        onclick="filterSelection2('dax')"
+                      >
+                        Hesaba daxil ol
+                      </button>
+                    </div>
+
+                    <div class="sign_input_body filterDiv2 qeyd">
+                      <div
+                        class="d-flex justify-content-evenly align-items-center name_last my-2"
+                      >
+                        <input
+                          type="text"
+                          name="first-name"
+                          class="first_name"
+                          placeholder="Ad"
+                        />
+                        <input
+                          type="text"
+                          name="last-name"
+                          class="last_name"
+                          placeholder="Soyad"
+                        />
+                      </div>
+                      <div
+                        class="d-flex justify-content-center align-items-center flex-column other_info_imputs"
+                      >
+                        <div class="mail">
+                          <label for="email"
+                            ><i class="fa-solid fa-at"></i
+                          ></label>
+                          <input
+                            ng-model="suCtrl.email"
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            required
+                          />
+                        </div>
+                        <div class="phone my-2">
+                          <label for="phone"
+                            ><i class="fa-solid fa-phone"></i
+                          ></label>
+                          <input
+                            ng-model="suCtrl.phone"
+                            type="phone"
+                            name="phone"
+                            placeholder="Nomre"
+                            required
+                          />
+                        </div>
+                        <div class="password">
+                          <label for="password"
+                            ><i class="fa-solid fa-unlock"></i
+                          ></label>
+                          <input
+                            ng-model="suCtrl.password"
+                            placeholder="Parol"
+                            type="password"
+                            name="password"
+                            required
+                          />
+                        </div>
+                        <div class="proffesion_type my-2">
+                          <label for="proffesion_type"
+                            ><i class="fa-solid fa-user-tie"></i
+                          ></label>
+
+                          <select
+                            name="proffesion_type"
+                            id="proffesion_type"
+                            required
+                          >
+                            <option value="0">
+                              Mütəxəssis kateqoriyanızı seçin
+                            </option>
+                            <option value="1">something1</option>
+                            <option value="2">something2</option>
+                            <option value="3">something3</option>
+                            <option value="4">something4</option>
+                          </select>
+                        </div>
+                        <div class="cv_upload">
+                          <form class="form">
+                            <div
+                              class="file-upload-wrapper"
+                              data-text="CV-ni yükləyin!"
+                            >
+                              <input
+                                name="file-upload-field"
+                                type="file"
+                                class="file-upload-field"
+                                value=""
+                              />
+                            </div>
+                          </form>
+                        </div>
+                        <div class="agreement">
+                          <input
+                            type="checkbox"
+                            id="agree-to-terms"
+                            name="agree-to-terms"
+                            required
+                          />
+                          <label for="agree-to-terms"
+                            >Bütün qaydalar ilə razıyam</label
+                          >
+                        </div>
+                        <a href="#" class="text-white"> Qaydaları oxu </a>
+                        <input type="submit" class="my-2 px-2" />
+                      </div>
+                    </div>
+                    <div class="sign_input_body filterDiv2 dax'">
+                      <div
+                        class="d-flex justify-content-center align-items-center flex-column other_info_imputs"
+                      >
+                        <div class="mail">
+                          <label for="email"
+                            ><i class="fa-solid fa-at"></i
+                          ></label>
+                          <input
+                            ng-model="suCtrl.email"
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            required
+                          />
+                        </div>
+
+                        <div class="password mt-2">
+                          <label for="password"
+                            ><i class="fa-solid fa-unlock"></i
+                          ></label>
+                          <input
+                            ng-model="suCtrl.password"
+                            placeholder="Parol"
+                            type="password"
+                            name="password"
+                            required
+                          />
+                        </div>
+
+                        <div class="agreement">
+                          <input
+                            type="checkbox"
+                            id="agree-to-terms"
+                            name="agree-to-terms"
+                            required
+                          />
+                          <label for="agree-to-terms"
+                            >Məni sistemdə saxla</label
+                          >
+                        </div>
+                        <a href="#" class="text-white"> Parolu unutdum </a>
+                        <input type="submit" class="my-2 px-2" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sign_cta_card filterDiv istifa">
+                  <div
+                    class="d-flex justify-content-evenly align-items-center w-100 mt-1 mb-3"
+                    id="myBtnContainer3"
+                  >
+                    <button
+                      type="button"
+                      class="btn btn-light active3"
+                      onclick="filterSelection3('qeyd2')"
+                    >
+                      Qeydiyyatdan keç
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-light"
+                      onclick="filterSelection3('istifa2')"
+                    >
+                      Hesaba daxil ol
+                    </button>
+                  </div>
+
+                  <div class="sign_input_body filterDiv3 qeyd2">
+                    <div
+                      class="d-flex justify-content-evenly align-items-center name_last my-2"
+                    >
+                      <input
+                        type="text"
+                        name="first-name"
+                        class="first_name"
+                        placeholder="Ad"
+                      />
+                      <input
+                        type="text"
+                        name="last-name"
+                        class="last_name"
+                        placeholder="Soyad"
+                      />
+                    </div>
+                    <div
+                      class="d-flex justify-content-center align-items-center flex-column other_info_imputs"
+                    >
+                      <div class="proffesion_type my-2">
+                        <label for="proffesion_type"
+                          ><i class="fa-solid fa-calendar-days"></i
+                        ></label>
+
+                        <select
+                          name="proffesion_type"
+                          id="proffesion_type"
+                          required
+                        >
+                          <option value="0">Doğum tarixinizi seçin</option>
+                          <option value="1">something1</option>
+                          <option value="2">something2</option>
+                          <option value="3">something3</option>
+                          <option value="4">something4</option>
+                        </select>
+                      </div>
+                      <div class="mail">
+                        <label for="email"
+                          ><i class="fa-solid fa-at"></i
+                        ></label>
+                        <input
+                          ng-model="suCtrl.email"
+                          type="email"
+                          name="email"
+                          placeholder="Email"
+                          required
+                        />
+                      </div>
+                      <div class="phone my-2">
+                        <label for="phone"
+                          ><i class="fa-solid fa-phone"></i
+                        ></label>
+                        <input
+                          ng-model="suCtrl.phone"
+                          type="phone"
+                          name="phone"
+                          placeholder="Nomre"
+                          required
+                        />
+                      </div>
+                      <div class="password">
+                        <label for="password"
+                          ><i class="fa-solid fa-unlock"></i
+                        ></label>
+                        <input
+                          ng-model="suCtrl.password"
+                          placeholder="Parol"
+                          type="password"
+                          name="password"
+                          required
+                        />
+                      </div>
+
+                      <div class="agreement">
+                        <input
+                          type="checkbox"
+                          id="agree-to-terms"
+                          name="agree-to-terms"
+                          required
+                        />
+                        <label for="agree-to-terms"
+                          >Bütün qaydalar ilə razıyam</label
+                        >
+                      </div>
+                      <a href="#" class="text-white"> Qaydaları oxu </a>
+                      <input type="submit" class="my-2 px-2" />
+                    </div>
+                  </div>
+                  <div class="sign_input_body filterDiv3 istifa2">
+                    <div
+                      class="d-flex justify-content-center align-items-center flex-column other_info_imputs"
+                    >
+                      <div class="mail">
+                        <label for="email"
+                          ><i class="fa-solid fa-at"></i
+                        ></label>
+                        <input
+                          ng-model="suCtrl.email"
+                          type="email"
+                          name="email"
+                          placeholder="Email"
+                          required
+                        />
+                      </div>
+
+                      <div class="password mt-2">
+                        <label for="password"
+                          ><i class="fa-solid fa-unlock"></i
+                        ></label>
+                        <input
+                          ng-model="suCtrl.password"
+                          placeholder="Parol"
+                          type="password"
+                          name="password"
+                          required
+                        />
+                      </div>
+
+                      <div class="agreement">
+                        <input
+                          type="checkbox"
+                          id="agree-to-terms"
+                          name="agree-to-terms"
+                          required
+                        />
+                        <label for="agree-to-terms">
+                          Məni sistemdə saxla
+                        </label>
+                      </div>
+                      <a href="#" class="text-white"> Parolu unutdum </a>
+                      <input type="submit" class="my-2 px-2" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+
     <div class="container-fluid mob_nav_back">
       <div class="container">
         <div
@@ -161,7 +622,13 @@
               </div>
             </a>
             <a class="nav-item nav-link active" aria-current="page" href="#"
-              ><button type="button" class="user_btn">
+              ><button
+                type="button"
+                class="user_btn"
+                id="signup-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+              >
                 <img
                   src="./img/user_icon.svg"
                   width="26px"
@@ -654,114 +1121,288 @@
           >
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <div class="second_sleder_slide">
+                <div class="third_slider_slide">
                   <img
-                    src="./img/second_slider_photo2.jpg"
+                    src="./img/third_slider_photo.jpg"
                     alt=""
                     style="width: 100%; height: 100%; object-fit: cover"
                   />
-                  <div class="second_slider_info position-absolute bottom-0">
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <span class="person_position"> Psixoloq </span>
-                      <span class="person_rating">
-                        <span>4.9</span> <i class="fa-regular fa-star"></i>
-                      </span>
-                      <span class="person_name"> Şəbnəm Samirli </span>
-                    </div>
-                    <div
-                      class="second_slider_info_active d-flex justify-content-between align-items-center"
-                    >
-                      <div>
-                        <span class="person_positiom_type">
-                          Ailə və uşaq psixoloqu
-                        </span>
+                  <a
+                    class="popup-youtube video_control position-absolute"
+                    style="
+                      top: 31%;
+                      left: 50%;
+                      transform: translate(-50%, -50%);
+                    "
+                    href="https://www.youtube.com/watch?v=wxMh-1xZdp8"
+                  >
+                    <i class="fa-regular fa-circle-play fa-4x"></i>
+                  </a>
+                  <div class="third_slider_info position-absolute bottom-0">
+                    <div>
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <span class="post_name">
+                          Depressiyanın seçimlərə təsiri</span
+                        >
                       </div>
                       <div
-                        class="share_buttons d-flex align-items-center justify-content-center"
+                        class="third_slider_info_active d-flex justify-content-between align-items-center"
                       >
-                        <a href="#" class="">
-                          <i class="fa-solid fa-share-nodes"></i>
-                        </a>
+                        <div>
+                          <span class="person_positiom_type">
+                            <div class="autor">
+                              <a href="#">
+                                <i class="fa-solid fa-user-pen"></i
+                                ><span class="ps-1">Kənan Zərbiyev</span>
+                              </a>
+                            </div>
+                          </span>
+                        </div>
+                        <div
+                          class="share_buttons d-flex align-items-center justify-content-center"
+                        >
+                          <a href="#" class="">
+                            <i class="fa-solid fa-share-nodes"></i>
+                          </a>
 
-                        <button class="">Müraciət et</button>
+                          <button class="">Keçid et</button>
+                        </div>
+                      </div>
+                      <div
+                        class="d-flex justify-content-start align-items-center py-1"
+                      >
+                        <div class="post_time">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="ps-1">15:36</span>
+                        </div>
+                        <div class="post_date ps-3">
+                          <span>05.02.2023</span>
+                        </div>
+                      </div>
+                      <div class="social_buttoms">
+                        <ul
+                          class="list-unstyled m-0 p-0"
+                          style="
+                            display: flex;
+                            height: 100%;
+                            justify-content: space-between;
+                            flex-wrap: wrap;
+                          "
+                        >
+                          <li class="slide_view">
+                            <a href="#">
+                              <i class="fa-regular fa-eye"></i
+                              ><span class="ps-1">328</span></a
+                            >
+                          </li>
+                          <li class="slide_like">
+                            <a href="#"
+                              ><i class="fa-regular fa-heart"></i
+                              ><span class="ps-1">176</span></a
+                            >
+                          </li>
+
+                          <li class="slide_save">
+                            <a href="#">
+                              <i class="fa-regular fa-bookmark"></i
+                              ><span class="ps-1">142</span></a
+                            >
+                          </li>
+                        </ul>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="carousel-item">
-                <div class="second_sleder_slide">
+                <div class="third_slider_slide">
                   <img
-                    src="./img/second_slider_photo3.jpg"
+                    src="./img/third_slider_photo3.jpg"
                     alt=""
                     style="width: 100%; height: 100%; object-fit: cover"
                   />
-                  <div class="second_slider_info position-absolute bottom-0">
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <span class="person_position"> Psixoloq </span>
-                      <span class="person_rating">
-                        <span>4.9</span> <i class="fa-regular fa-star"></i>
-                      </span>
-                      <span class="person_name"> Şəbnəm Samirli </span>
-                    </div>
-                    <div
-                      class="second_slider_info_active d-flex justify-content-between align-items-center"
-                    >
-                      <div>
-                        <span class="person_positiom_type">
-                          Ailə və uşaq psixoloqu
-                        </span>
+                  <a
+                    class="popup-youtube video_control position-absolute"
+                    style="
+                      top: 31%;
+                      left: 50%;
+                      transform: translate(-50%, -50%);
+                    "
+                    href="https://www.youtube.com/watch?v=wxMh-1xZdp8"
+                  >
+                    <i class="fa-regular fa-circle-play fa-4x"></i>
+                  </a>
+                  <div class="third_slider_info position-absolute bottom-0">
+                    <div>
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <span class="post_name">
+                          Depressiyanın seçimlərə təsiri</span
+                        >
                       </div>
                       <div
-                        class="share_buttons d-flex align-items-center justify-content-center"
+                        class="third_slider_info_active d-flex justify-content-between align-items-center"
                       >
-                        <a href="#" class="">
-                          <i class="fa-solid fa-share-nodes"></i>
-                        </a>
+                        <div>
+                          <span class="person_positiom_type">
+                            <div class="autor">
+                              <a href="#">
+                                <i class="fa-solid fa-user-pen"></i
+                                ><span class="ps-1">Kənan Zərbiyev</span>
+                              </a>
+                            </div>
+                          </span>
+                        </div>
+                        <div
+                          class="share_buttons d-flex align-items-center justify-content-center"
+                        >
+                          <a href="#" class="">
+                            <i class="fa-solid fa-share-nodes"></i>
+                          </a>
 
-                        <button class="">Müraciət et</button>
+                          <button class="">Keçid et</button>
+                        </div>
+                      </div>
+                      <div
+                        class="d-flex justify-content-start align-items-center py-1"
+                      >
+                        <div class="post_time">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="ps-1">15:36</span>
+                        </div>
+                        <div class="post_date ps-3">
+                          <span>05.02.2023</span>
+                        </div>
+                      </div>
+                      <div class="social_buttoms">
+                        <ul
+                          class="list-unstyled m-0 p-0"
+                          style="
+                            display: flex;
+                            height: 100%;
+                            justify-content: space-between;
+                            flex-wrap: wrap;
+                          "
+                        >
+                          <li class="slide_view">
+                            <a href="#">
+                              <i class="fa-regular fa-eye"></i
+                              ><span class="ps-1">328</span></a
+                            >
+                          </li>
+                          <li class="slide_like">
+                            <a href="#"
+                              ><i class="fa-regular fa-heart"></i
+                              ><span class="ps-1">176</span></a
+                            >
+                          </li>
+
+                          <li class="slide_save">
+                            <a href="#">
+                              <i class="fa-regular fa-bookmark"></i
+                              ><span class="ps-1">142</span></a
+                            >
+                          </li>
+                        </ul>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="carousel-item">
-                <div class="second_sleder_slide overflow-hidden">
+                <div class="third_slider_slide">
                   <img
-                    src="./img/second_slider_photo.jpg"
+                    src="./img/third_slider_photo2.jpg"
                     alt=""
                     style="width: 100%; height: 100%; object-fit: cover"
                   />
-                  <div class="second_slider_info position-absolute bottom-0">
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <span class="person_position"> Psixoloq </span>
-                      <span class="person_rating">
-                        <span>4.9</span> <i class="fa-regular fa-star"></i>
-                      </span>
-                      <span class="person_name"> Şəbnəm Samirli </span>
-                    </div>
-                    <div
-                      class="second_slider_info_active d-flex justify-content-between align-items-center"
-                    >
-                      <div>
-                        <span class="person_positiom_type">
-                          Ailə və uşaq psixoloqu
-                        </span>
+                  <a
+                    class="popup-youtube video_control position-absolute"
+                    style="
+                      top: 31%;
+                      left: 50%;
+                      transform: translate(-50%, -50%);
+                    "
+                    href="https://www.youtube.com/watch?v=wxMh-1xZdp8"
+                  >
+                    <i class="fa-regular fa-circle-play fa-4x"></i>
+                  </a>
+                  <div class="third_slider_info position-absolute bottom-0">
+                    <div>
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <span class="post_name">
+                          Depressiyanın seçimlərə təsiri</span
+                        >
                       </div>
                       <div
-                        class="share_buttons d-flex align-items-center justify-content-center"
+                        class="third_slider_info_active d-flex justify-content-between align-items-center"
                       >
-                        <a href="#" class="">
-                          <i class="fa-solid fa-share-nodes"></i>
-                        </a>
+                        <div>
+                          <span class="person_positiom_type">
+                            <div class="autor">
+                              <a href="#">
+                                <i class="fa-solid fa-user-pen"></i
+                                ><span class="ps-1">Kənan Zərbiyev</span>
+                              </a>
+                            </div>
+                          </span>
+                        </div>
+                        <div
+                          class="share_buttons d-flex align-items-center justify-content-center"
+                        >
+                          <a href="#" class="">
+                            <i class="fa-solid fa-share-nodes"></i>
+                          </a>
 
-                        <button class="">Müraciət et</button>
+                          <button class="">Keçid et</button>
+                        </div>
+                      </div>
+                      <div
+                        class="d-flex justify-content-start align-items-center py-1"
+                      >
+                        <div class="post_time">
+                          <i class="fa-regular fa-clock"></i>
+                          <span class="ps-1">15:36</span>
+                        </div>
+                        <div class="post_date ps-3">
+                          <span>05.02.2023</span>
+                        </div>
+                      </div>
+                      <div class="social_buttoms">
+                        <ul
+                          class="list-unstyled m-0 p-0"
+                          style="
+                            display: flex;
+                            height: 100%;
+                            justify-content: space-between;
+                            flex-wrap: wrap;
+                          "
+                        >
+                          <li class="slide_view">
+                            <a href="#">
+                              <i class="fa-regular fa-eye"></i
+                              ><span class="ps-1">328</span></a
+                            >
+                          </li>
+                          <li class="slide_like">
+                            <a href="#"
+                              ><i class="fa-regular fa-heart"></i
+                              ><span class="ps-1">176</span></a
+                            >
+                          </li>
+
+                          <li class="slide_save">
+                            <a href="#">
+                              <i class="fa-regular fa-bookmark"></i
+                              ><span class="ps-1">142</span></a
+                            >
+                          </li>
+                        </ul>
                       </div>
                     </div>
                   </div>
@@ -805,253 +1446,448 @@
           class="col-xxl-2 col-xl-3 col-lg-3 side_back_color mobile_slider_none"
           id="navTransfer"
         >
-          <div class="side_menu">
-            <a href="#"
-              ><i class="fa-solid fa-house"></i><span>Əsas səhifə</span></a
-            >
-            <a
-              data-bs-toggle="collapse"
-              href="#collapseExample1"
-              role="button"
-              aria-expanded="false"
-              aria-controls="collapseExample1"
-              bis_skin_checked="1"
-              class="collapsed"
-            >
-              <div class="d-flex justify-content-between align-items-center">
-                <span class="p-0"
-                  ><i class="fa-regular fa-user"></i
-                  ><span class="span_move">Mütəxəssislər</span></span
-                ><i class="fa-solid fa-chevron-down"></i></div
-            ></a>
-            <div
-              class="child_mobile colapse_body collapse"
-              id="collapseExample1"
-              bis_skin_checked="1"
-              style=""
-            >
-              <div class="">
-                <a href="#">Psixoloq</a>
-                <a href="#">Təlimçi</a>
-                <a href="#">Təlimçi</a>
+          <div class="side_menu_wraper">
+            <div class="side_menu" id="side_menu">
+              <a href="#" class="active menu_buttons"
+                ><i class="fa-solid fa-house"></i><span>Əsas səhifə</span></a
+              >
+              <a
+                data-bs-toggle="collapse"
+                href="#collapseExample1"
+                role="button"
+                aria-expanded="false"
+                aria-controls="collapseExample1"
+                bis_skin_checked="1"
+                class="collapsed"
+              >
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="p-0"
+                    ><i class="fa-regular fa-user"></i
+                    ><span class="span_move">Mütəxəssislər</span></span
+                  ><i class="fa-solid fa-chevron-down"></i></div
+              ></a>
+              <div
+                class="child_mobile colapse_body collapse"
+                id="collapseExample1"
+                bis_skin_checked="1"
+                style=""
+              >
+                <div class="">
+                  <a href="#" class="menu_buttons">Psixoloq</a>
+                  <a href="#" class="menu_buttons">Təlimçi</a>
+                  <a href="#" class="menu_buttons">Təlimçi</a>
+                </div>
               </div>
+              <a href="#" class="menu_buttons"
+                ><i class="fa-solid fa-user-graduate"></i
+                ><span>Təhsil bölməsi</span></a
+              >
+              <a href="#" class="menu_buttons">
+                <div class="d-flex align-items-center">
+                  <img
+                    src="./img/usag.svg"
+                    alt=""
+                    height="16px"
+                    style="filter: invert(1)"
+                  />
+                  <span>Uşaq bölməsi</span>
+                </div>
+              </a>
+              <a href="#" class="menu_buttons">
+                <div class="d-flex align-items-center">
+                  <img src="./img/psi_academy.svg" alt="" height="16px" />
+                  <span>PSİ akademiyası</span>
+                </div></a
+              >
+              <a
+                href="#"
+                class="menu_buttons"
+                style="
+                  background-color: #1e1e1e !important;
+                  color: white !important;
+                "
+                ><div class="d-flex align-items-center">
+                  <img src="./img/anobim.svg" alt="" height="16px" />
+                  <span>Anonim dinləyici çatı</span>
+                </div></a
+              >
+              <a href="#" class="menu_buttons"
+                ><i class="fa-solid fa-calendar-check"></i
+                ><span>Tədbir və elan</span></a
+              >
+              <a
+                data-bs-toggle="collapse"
+                href="#collapseExample"
+                role="button"
+                aria-expanded="false"
+                aria-controls="collapseExample"
+                bis_skin_checked="1"
+                class="collapsed"
+              >
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="p-0"
+                    ><i class="fa-solid fa-qrcode"></i
+                    ><span>Xidmətlər</span></span
+                  ><i class="fa-solid fa-chevron-down"></i>
+                </div>
+              </a>
+              <div
+                class="child_mobile colapse_body collapse"
+                id="collapseExample"
+                bis_skin_checked="1"
+                style=""
+              >
+                <div class="">
+                  <a href="#" class="menu_buttons">Məsləhət</a>
+
+                  <a href="#" class="menu_buttons">Seminar</a>
+
+                  <a href="#" class="menu_buttons">Təlim</a>
+
+                  <a href="#" class="menu_buttons">Onlayn kitabxana</a>
+                </div>
+              </div>
+              <a href="#" class="menu_buttons"
+                ><i class="fa-solid fa-store"></i><span>Mağaza</span></a
+              >
+              <a href="#" class="menu_buttons"
+                ><i class="fa-regular fa-bell"></i><span>Xəbərlər</span></a
+              >
+              <a href="#" class="menu_buttons"
+                ><i class="fa-solid fa-sheet-plastic"></i
+                ><span>Layihələrimiz</span></a
+              >
+              <a href="#" class="menu_buttons"
+                ><i class="fa-solid fa-circle-info"></i
+                ><span>Haqqımızda</span></a
+              >
             </div>
-            <a href="#" class="active"
-              ><i class="fa-solid fa-user-graduate"></i
-              ><span>Təhsil bölməsi</span></a
-            >
-            <a href="#">
-              <div class="d-flex align-items-center">
+            <div class="ads">
+              <div class="ads_img_wrapper">
                 <img
-                  src="./img/usag.svg"
+                  src="./img/first_slider_img2.jpg"
+                  class="img-fluid"
                   alt=""
-                  height="16px"
-                  style="filter: invert(1)"
                 />
-                <span>Uşaq bölməsi</span>
-              </div>
-            </a>
-            <a href="#">
-              <div class="d-flex align-items-center">
-                <img src="./img/psi_academy.svg" alt="" height="16px" />
-                <span>PSİ akademiyası</span>
-              </div></a
-            >
-            <a
-              href="#"
-              style="
-                background-color: #1e1e1e !important;
-                color: white !important;
-              "
-              ><div class="d-flex align-items-center">
-                <img src="./img/anobim.svg" alt="" height="16px" />
-                <span>Anonim dinləyici çatı</span>
-              </div></a
-            >
-            <a href="#"
-              ><i class="fa-solid fa-calendar-check"></i
-              ><span>Tədbir və elan</span></a
-            >
-            <a
-              data-bs-toggle="collapse"
-              href="#collapseExample"
-              role="button"
-              aria-expanded="false"
-              aria-controls="collapseExample"
-              bis_skin_checked="1"
-              class="collapsed"
-            >
-              <div class="d-flex justify-content-between align-items-center">
-                <span class="p-0"
-                  ><i class="fa-solid fa-qrcode"></i
-                  ><span>Xidmətlər</span></span
-                ><i class="fa-solid fa-chevron-down"></i>
-              </div>
-            </a>
-            <div
-              class="child_mobile colapse_body collapse"
-              id="collapseExample"
-              bis_skin_checked="1"
-              style=""
-            >
-              <div class="">
-                <a href="#">Məsləhət</a>
-
-                <a href="#">Seminar</a>
-
-                <a href="#">Təlim</a>
-
-                <a href="#">Onlayn kitabxana</a>
+                <button class="ads_btn">
+                  <i class="fa-solid fa-circle-arrow-up"></i> Siz də bizə
+                  qatılın
+                </button>
               </div>
             </div>
-            <a href="#"><i class="fa-solid fa-store"></i><span>Mağaza</span></a>
-            <a href="#"
-              ><i class="fa-regular fa-bell"></i><span>Xəbərlər</span></a
+            <ul
+              class="d-flex flex-wrap justify-content-between align-items-center list-unstyled px-2 social_networks"
             >
-            <a href="#"
-              ><i class="fa-solid fa-sheet-plastic"></i
-              ><span>Layihələrimiz</span></a
-            >
-            <a href="#"
-              ><i class="fa-solid fa-circle-info"></i><span>Haqqımızda</span></a
-            >
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i
+                    class="fa-brands fa-facebook"
+                    style="color: #2b4886; background: white"
+                  >
+                  </i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-youtube" style="color: red"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-linkedin" style="color: #0077b5"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+              </li>
+            </ul>
           </div>
         </div>
         <div class="col-xxl-10 col-xl-9 col-lg-9">
-          <div class="col-lg-12 pb-3">
+          <div class="w-100 pt-3 scroller_style">
+            <div class="scroller scroller-left float-start mt-2">
+              <i class="bi bi-caret-left-fill"></i>
+            </div>
+            <div class="scroller scroller-right float-end mt-2">
+              <i class="bi bi-caret-right-fill"></i>
+            </div>
+            <div class="wrapper-nav" style="border-radius: 10px">
+              <nav
+                style="cursor: pointer"
+                class="nav nav-tabs list mt-2"
+                id="myTab"
+                role="tablist"
+              >
+                <a
+                  class="nav-item nav-link pointer active"
+                  data-bs-toggle="tab"
+                  data-bs-target="#tab1"
+                  role="tab"
+                  aria-controls="public"
+                  aria-selected="true"
+                  >Hamısı</a
+                >
+
+                <a
+                  class="nav-item nav-link pointer"
+                  data-bs-target="#tab2"
+                  role="tab"
+                  data-bs-toggle="tab"
+                  >Məqalə</a
+                >
+                <a
+                  class="nav-item nav-link pointer"
+                  data-bs-target="#tab3"
+                  role="tab"
+                  data-bs-toggle="tab"
+                  >Video</a
+                >
+                <a
+                  class="nav-item nav-link pointer"
+                  data-bs-target="#tab4"
+                  role="tab"
+                  data-bs-toggle="tab"
+                  >Podkast</a
+                >
+                <a
+                  class="nav-item nav-link pointer"
+                  data-bs-target="#tab5"
+                  role="tab"
+                  data-bs-toggle="tab"
+                  >Kitablar</a
+                >
+                <a
+                  class="nav-item nav-link pointer"
+                  data-bs-target="#tab6"
+                  role="tab"
+                  data-bs-toggle="tab"
+                  >Musiqi</a
+                >
+                <a
+                  class="nav-item nav-link pointer"
+                  data-bs-target="#tab7"
+                  role="tab"
+                  data-bs-toggle="tab"
+                  >Film</a
+                >
+                <a
+                  class="nav-item nav-link pointer"
+                  data-bs-target="#tab8"
+                  role="tab"
+                  data-bs-toggle="tab"
+                  >Tədbir və elanlar</a
+                >
+              </nav>
+            </div>
+          </div>
+          <div class="col-lg-12 py-4">
             <div class="elan_photo">
               <img src="./img/elan_content.png" class="img-fluid" alt="" />
             </div>
           </div>
           <div class="col-lg-12">
-            <div class="news">
-              <div class="col-lg-12">
-                <div class="audio_news_card">
-                  <div
-                    class="news_type_time d-flex justify-content-between align-items-center"
-                  >
-                    <span class="news_type">Təhsil</span>
-                    <span class="news_time d-flex align-items-center"
-                      ><i class="fa-regular fa-clock"></i
-                      ><span class="ps-1">25 yanvar</span></span
-                    >
-                  </div>
-                  <div class="row">
-                    <div
-                      class="col-lg-6 d-lg-none news_user d-flex justify-content-between align-items-center"
-                      id="audusertransfmob"
-                    ></div>
-                    <div
-                      class="col-lg-6 d-lg-none"
-                      id="audiimgtransfermob"
-                    ></div>
-                    <div class="col-lg-6">
+            <div class="tab-content" id="myTabContent">
+              <div
+                role="tabpanel"
+                class="tab-pane fade active show"
+                id="tab1"
+                aria-labelledby="public-tab"
+              >
+                <div class="news">
+                  <div class="col-lg-12">
+                    <div class="audio_news_card">
                       <div
-                        class="news_user d-flex justify-content-between align-items-center"
-                        id="audusertransfdesk"
+                        class="news_type_time d-flex justify-content-between align-items-center"
                       >
-                        <div class="user_info d-flex align-items-center">
-                          <div class="user_news_photo d-inline-block">
+                        <span class="news_type">Təhsil</span>
+                        <span class="news_time d-flex align-items-center"
+                          ><i class="fa-regular fa-clock"></i
+                          ><span class="ps-1">25 yanvar</span></span
+                        >
+                      </div>
+                      <div class="row">
+                        <div
+                          class="col-lg-6 d-lg-none news_user d-flex justify-content-between align-items-center"
+                          id="audusertransfmob"
+                        ></div>
+                        <div
+                          class="col-lg-6 d-lg-none"
+                          id="audiimgtransfermob"
+                        ></div>
+                        <div class="col-lg-6">
+                          <div
+                            class="news_user d-flex justify-content-between align-items-center"
+                            id="audusertransfdesk"
+                          >
+                            <div class="user_info d-flex align-items-center">
+                              <div class="user_news_photo d-inline-block">
+                                <img
+                                  src="./img/user_news_photo.jpg"
+                                  class="img-fluid"
+                                  alt=""
+                                />
+                              </div>
+                              <div class="user_news_info d-inline-block ps-2">
+                                <span class="user_news_name"
+                                  >Kənan Zərbiyev</span
+                                >
+                                <br />
+                                <span class="user_news_position"
+                                  >Pedaqoq, Təhsil koçu</span
+                                >
+                              </div>
+                            </div>
+                            <div class="user_news_sub">
+                              <button>
+                                <i class="fa-solid fa-user-plus"></i>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="news_content">
+                            <h1 class="m-0">
+                              Uşaqlarda diqqət əskikliyinin səbəbi nədir?
+                            </h1>
+                            <p class="m-0">
+                              Valideyin olmaq tək övladı dünyaya gətirməklə
+                              bitmir.Övladınıza yanaşma tərziniz onun gələcək
+                              həyatına təsir edir.Bu səbəbdən doğrunu
+                              yanlışlardan ayırmaqla uşaqlarınızın sağlam
+                              psixoloji duruma sahib olmasına kömək edə
+                              bilərsiniz.Bəs doğru bildiyimiz hansı yanlışlar
+                              var?.....
+                            </p>
+                            <audio controls class="w-100">
+                              <source src="horse.ogg" type="audio/ogg" />
+                              <source
+                                src="./audio/Lil Uzi Vert - Watch This (Sped up).mp3"
+                                type="audio/mpeg"
+                              />
+                              Your browser does not support the audio element.
+                            </audio>
+                            <style>
+                              .news_content audio {
+                                filter: sepia(20%) saturate(70%);
+                                box-shadow: rgba(20, 0, 255, 0.7) 0px 10px 38px
+                                  0px;
+                                border-radius: 25px;
+                              }
+                            </style>
+                          </div>
+                        </div>
+
+                        <div
+                          class="col-lg-6 audio_news_img_border"
+                          id="audiimgtransferdeask"
+                        >
+                          <div class="news_imge_wraper">
                             <img
-                              src="./img/user_news_photo.jpg"
+                              src="./img/audi_news_img.jpg"
                               class="img-fluid"
                               alt=""
                             />
                           </div>
-                          <div class="user_news_info d-inline-block ps-2">
-                            <span class="user_news_name">Kənan Zərbiyev</span>
-                            <br />
-                            <span class="user_news_position"
-                              >Pedaqoq, Təhsil koçu</span
+                        </div>
+                        <div
+                          class="audio_news_social_buttons col-lg-12 d-flex justify-content-between align-items-center"
+                        >
+                          <button>
+                            Keçid et <i class="fa-solid fa-chevron-right"></i>
+                          </button>
+                          <div class="social_reaction">
+                            <ul
+                              class="p-0 m-0 list-unstyled d-flex align-items-center"
                             >
+                              <li>
+                                <a href="#" class="views"
+                                  ><i class="fa-regular fa-eye"></i>
+                                  <span class="px-1">6000</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#" class="likes"
+                                  ><i class="fa-regular fa-heart"></i>
+                                  <span class="px-1">1200</span></a
+                                >
+                              </li>
+                              <li>
+                                <a href="#" class="save"
+                                  ><i class="fa-regular fa-bookmark"></i
+                                ></a>
+                              </li>
+                              <li>
+                                <a href="#" class="share"
+                                  ><i class="fa-solid fa-share-nodes"></i
+                                ></a>
+                              </li>
+                            </ul>
                           </div>
                         </div>
-                        <div class="user_news_sub">
-                          <button>
-                            <i class="fa-solid fa-user-plus"></i>
-                          </button>
-                        </div>
-                      </div>
-
-                      <div class="news_content">
-                        <h1 class="m-0">
-                          Uşaqlarda diqqət əskikliyinin səbəbi nədir?
-                        </h1>
-                        <p class="m-0">
-                          Valideyin olmaq tək övladı dünyaya gətirməklə
-                          bitmir.Övladınıza yanaşma tərziniz onun gələcək
-                          həyatına təsir edir.Bu səbəbdən doğrunu yanlışlardan
-                          ayırmaqla uşaqlarınızın sağlam psixoloji duruma sahib
-                          olmasına kömək edə bilərsiniz.Bəs doğru bildiyimiz
-                          hansı yanlışlar var?.....
-                        </p>
-                        <audio controls class="w-100">
-                          <source src="horse.ogg" type="audio/ogg" />
-                          <source
-                            src="./audio/Lil Uzi Vert - Watch This (Sped up).mp3"
-                            type="audio/mpeg"
-                          />
-                          Your browser does not support the audio element.
-                        </audio>
-                        <style>
-                          .news_content audio {
-                            filter: sepia(20%) saturate(70%);
-                            box-shadow: rgba(20, 0, 255, 0.7) 0px 10px 38px 0px;
-                            border-radius: 25px;
-                          }
-                        </style>
-                      </div>
-                    </div>
-
-                    <div
-                      class="col-lg-6 audio_news_img_border"
-                      id="audiimgtransferdeask"
-                    >
-                      <div class="news_imge_wraper">
-                        <img
-                          src="./img/audi_news_img.jpg"
-                          class="img-fluid"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                    <div
-                      class="audio_news_social_buttons col-lg-12 d-flex justify-content-between align-items-center"
-                    >
-                      <button>
-                        Keçid et <i class="fa-solid fa-chevron-right"></i>
-                      </button>
-                      <div class="social_reaction">
-                        <ul
-                          class="p-0 m-0 list-unstyled d-flex align-items-center"
-                        >
-                          <li>
-                            <a href="#" class="views"
-                              ><i class="fa-regular fa-eye"></i>
-                              <span class="px-1">6000</span></a
-                            >
-                          </li>
-                          <li>
-                            <a href="#" class="likes"
-                              ><i class="fa-regular fa-heart"></i>
-                              <span class="px-1">1200</span></a
-                            >
-                          </li>
-                          <li>
-                            <a href="#" class="save"
-                              ><i class="fa-regular fa-bookmark"></i
-                            ></a>
-                          </li>
-                          <li>
-                            <a href="#" class="share"
-                              ><i class="fa-solid fa-share-nodes"></i
-                            ></a>
-                          </li>
-                        </ul>
                       </div>
                     </div>
                   </div>
                 </div>
+              </div>
+              <div
+                class="tab-pane fade mt-2"
+                id="tab2"
+                role="tabpanel"
+                aria-labelledby="group-dropdown2-tab"
+              >
+                This is the content of Tab 2...
+              </div>
+              <div
+                class="tab-pane fade mt-2"
+                id="tab3"
+                role="tabpanel"
+                aria-labelledby="group-dropdown2-tab"
+              >
+                This is the content of Tab 3...
+              </div>
+              <div
+                class="tab-pane fade mt-2"
+                id="tab4"
+                role="tabpanel"
+                aria-labelledby="group-dropdown2-tab"
+              >
+                This is the content of Tab 4...
+              </div>
+              <div
+                class="tab-pane fade mt-2"
+                id="tab5"
+                role="tabpanel"
+                aria-labelledby="group-dropdown2-tab"
+              >
+                This is the content of Tab 5...
+              </div>
+              <div
+                class="tab-pane fade mt-2"
+                id="tab6"
+                role="tabpanel"
+                aria-labelledby="group-dropdown2-tab"
+              >
+                This is the content of Tab 6...
+              </div>
+              <div
+                class="tab-pane fade mt-2"
+                id="tab7"
+                role="tabpanel"
+                aria-labelledby="group-dropdown2-tab"
+              >
+                This is the content of Tab 7...
+              </div>
+              <div
+                class="tab-pane fade mt-2"
+                id="tab8"
+                role="tabpanel"
+                aria-labelledby="group-dropdown2-tab"
+              >
+                This is the content of Tab 8...
               </div>
             </div>
           </div>
@@ -1060,7 +1896,7 @@
     </div>
     <div
       class="container-fluid mob_nav_back py-3 position-fixed d-lg-none"
-      style="bottom: 0"
+      style="bottom: 0; z-index: 99999999999999"
     >
       <div class="mobile_bottom_nav container">
         <ul
@@ -1192,3 +2028,197 @@
     });
   });
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+<script>
+  $(function () {
+    $(".popup-youtube, .popup-vimeo").magnificPopup({
+      disableOn: 700,
+      type: "iframe",
+      mainClass: "mfp-fade",
+      removalDelay: 160,
+      preloader: false,
+      fixedContentPos: false,
+    });
+  });
+</script>
+
+<script>
+  var selector = ".menu_buttons";
+
+  $(selector).on("click", function () {
+    $(selector).removeClass("active");
+    $(this).addClass("active");
+  });
+</script>
+
+<script>
+  filterSelection("muteh");
+  function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("filterDiv");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+      w3RemoveClass(x[i], "show");
+      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+  }
+
+  function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) {
+        element.className += " " + arr2[i];
+      }
+    }
+  }
+
+  function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);
+      }
+    }
+    element.className = arr1.join(" ");
+  }
+
+  // Add active class to the current button (highlight it)
+  var btnContainer = document.getElementById("myBtnContainer");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function () {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+</script>
+<script>
+  filterSelection2("qeyd");
+  function filterSelection2(c) {
+    var x, i;
+    x = document.getElementsByClassName("filterDiv2");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+      w3RemoveClass(x[i], "show");
+      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+  }
+
+  function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) {
+        element.className += " " + arr2[i];
+      }
+    }
+  }
+
+  function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);
+      }
+    }
+    element.className = arr1.join(" ");
+  }
+
+  // Add active class to the current button (highlight it)
+  var btnContainer = document.getElementById("myBtnContainer2");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function () {
+      var current = document.getElementsByClassName("active2");
+      current[0].className = current[0].className.replace(" active2", "");
+      this.className += " active2";
+    });
+  }
+</script>
+<script>
+  filterSelection3("qeyd2");
+  function filterSelection3(c) {
+    var x, i;
+    x = document.getElementsByClassName("filterDiv3");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+      w3RemoveClass(x[i], "show");
+      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+  }
+
+  function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) {
+        element.className += " " + arr2[i];
+      }
+    }
+  }
+
+  function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);
+      }
+    }
+    element.className = arr1.join(" ");
+  }
+
+  // Add active class to the current button (highlight it)
+  var btnContainer = document.getElementById("myBtnContainer3");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function () {
+      var current = document.getElementsByClassName("active3");
+      current[0].className = current[0].className.replace(" active3", "");
+      this.className += " active3";
+    });
+  }
+</script>
+<script>
+  $("form").on("change", ".file-upload-field", function () {
+    $(this)
+      .parent(".file-upload-wrapper")
+      .attr(
+        "data-text",
+        $(this)
+          .val()
+          .replace(/.*(\/|\\)/, "")
+      );
+  });
+</script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/move.js/0.0.4/move.min.js"
+  integrity="sha512-hyuyxsdbUJ0hwjMICPbOw6EOwF/xabPTCu30/7yAKfVp0LpXXgFWlRL6cWGLPuH+jAqEQ/2mFsTS3vpjqhsaeQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<link href="./css/scrollable-tabs.min.css" rel="stylesheet" />
+<script src="./scrollable-tabs.min.js"></script>
+<style>
+  .wrappernav_style {
+    background: rgba(217, 75, 152, 0.32) !important;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+    border-radius: 13px;
+  }
+
+  .scroller_style .scroller {
+    color: var(--second) !important;
+  }
+</style>
