@@ -422,7 +422,7 @@ nav input:focus-visible {
 }
 /* IZMENENIYA */
 #mobile_menu_transfer {
-  margin-top: -26px;
+  margin-top: -22px;
 }
 /* IZMENENIYA */
 .side_menu_wraper {
@@ -453,6 +453,10 @@ nav input:focus-visible {
   padding-left: 5px;
   text-align: center;
 }
+.side_menu a i {
+  text-align: center;
+  font-size: 17px;
+}
 
 .side_menu .child_mobile a {
   background-color: #d4d1f8 !important;
@@ -466,7 +470,8 @@ nav input:focus-visible {
   border-top: transparent;
   border-left: transparent;
   border-right: transparent;
-  border-bottom: 3px solid #281f8c;
+  box-sizing: border-box;
+  border-bottom: 3px solid #8a22f1;
 }
 .nav-tabs .nav-link.active {
   color: #1e1e1e;
@@ -474,13 +479,14 @@ nav input:focus-visible {
   border-top: transparent;
   border-left: transparent;
   border-right: transparent;
-  border-bottom: 3px solid #281f8c;
+  box-sizing: border-box;
+  border-bottom: 3px solid #8a22f1;
 }
-.nav-tabs .nav-link {
-  margin-right: 48px;
+.list {
+  left: 165px;
 }
 .wrapper-nav {
-  background: rgba(40, 24, 222, 0.2);
+  background: #cf9fff81;
   border-radius: 13px;
 }
 .wrapper-nav a {
@@ -676,9 +682,9 @@ nav input:focus-visible {
 }
 
 .social_reaction ul li .share {
-  background-color: #3f497f;
-  border-radius: 45px;
-  padding: 7px 8px;
+  color: #3f497f;
+
+  padding: 3px 16px;
   display: flex;
   justify-content: center;
 }
@@ -1012,8 +1018,8 @@ body {
   .third_slider_info .post_date {
     font-size: 13px;
   }
-  .nav-tabs .nav-link {
-    margin-right: 12px;
+  .list {
+    left: 43px;
   }
 }
 
@@ -1036,6 +1042,9 @@ body {
     width: 105px;
   }
   .side_menu a span {
+    font-size: 14px;
+  }
+  .side_menu a i {
     font-size: 14px;
   }
   .second_slider_info {
@@ -1091,8 +1100,8 @@ body {
   .third_slider_info .post_date {
     font-size: 12px;
   }
-  .nav-tabs .nav-link {
-    margin-right: 0px;
+  .list {
+    left: 0px;
   }
 }
 
@@ -1188,6 +1197,14 @@ body {
   #audusertransfdesk {
     display: none !important;
   }
+  .ads_img_wrapper {
+    margin-top: 1rem;
+    width: 100%;
+    min-height: 80px;
+  }
+  .ads_img_wrapper img {
+    height: 80px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1242,6 +1259,9 @@ body {
   .modal .signup-modal-content {
     height: 1020px;
   }
+  .social_reaction {
+    scale: 1.1;
+  }
 }
 
 @media (max-width: 475px) {
@@ -1259,6 +1279,9 @@ body {
   }
   .social_reaction ul li {
     margin-top: 24px;
+  }
+  .first_swiper_slide ul {
+    margin-left: -8px !important;
   }
 }
 @media (max-width: 468px) {
