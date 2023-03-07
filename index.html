@@ -660,7 +660,7 @@
             id="carouselExampleControlsNoTouching"
             class="carousel slide"
             data-bs-touch="true"
-            data-bs-ride="true"
+            data-bs-ride="false"
             bis_skin_checked="1"
           >
             <div class="carousel-inner" bis_skin_checked="1">
@@ -948,7 +948,7 @@
               <span class="visually-hidden">Previous</span>
             </button>
             <button
-              class="carousel-control-next carousel1-control-next"
+              class="carousel-control-next carousel1-control-next myautoplay"
               type="button"
               data-bs-target="#carouselExampleControlsNoTouching"
               data-bs-slide="next"
@@ -967,7 +967,7 @@
           <div
             id="carouselExampleCaptions"
             class="carousel slide vertical"
-            data-bs-ride="true"
+            data-bs-ride="false"
             data-bs-touch="true"
           >
             <div class="carousel-inner">
@@ -1100,7 +1100,7 @@
               <span class="visually-hidden">Previous</span>
             </button>
             <button
-              class="carousel-control-next"
+              class="carousel-control-next myautoplay"
               type="button"
               data-bs-target="#carouselExampleCaptions"
               data-bs-slide="next"
@@ -1437,7 +1437,7 @@
               <span class="visually-hidden">Previous</span>
             </button>
             <button
-              class="carousel-control-next"
+              class="carousel-control-next myautoplay"
               type="button"
               data-bs-target="#carouselExampleCaptions2"
               data-bs-slide="next"
@@ -2273,14 +2273,11 @@
 ></script>
 
 <script src="./scrollable-tabs.min.js"></script>
-<style>
-  .wrappernav_style {
-    background: rgba(217, 75, 152, 0.32) !important;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
-    border-radius: 13px;
+<script>
+  function autoplayFunction() {
+    document.getElementsByClassName("myautoplay")[0].click();
+    document.getElementsByClassName("myautoplay")[1].click();
+    document.getElementsByClassName("myautoplay")[2].click();
   }
-
-  .scroller_style .scroller {
-    color: var(--second) !important;
-  }
-</style>
+  setInterval(autoplayFunction, 5000);
+</script>
