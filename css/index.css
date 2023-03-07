@@ -2,6 +2,25 @@
   --sign-in-color: #40a1d8;
   --mob_infinit: #1e90ff;
 }
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(243, 197, 222, 255);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5200ff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5100ff75;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
 body {
   padding: 0px;
   margin: 0 auto;
