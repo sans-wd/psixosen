@@ -420,6 +420,11 @@ nav input:focus-visible {
 .third_slider_slide .video_control {
   color: rgba(255, 255, 255, 0.699);
 }
+/* IZMENENIYA */
+#mobile_menu_transfer {
+  margin-top: -26px;
+}
+/* IZMENENIYA */
 .side_menu_wraper {
   position: sticky;
   top: 10px;
@@ -643,7 +648,7 @@ nav input:focus-visible {
 
   color: #e3e3e3;
 }
-
+/* IZMENENIYA */
 .social_reaction ul li {
   margin-right: 20px;
 }
@@ -653,26 +658,31 @@ nav input:focus-visible {
   color: white;
 }
 .social_reaction ul li .views {
-  background-color: #539165;
+  color: #539165;
   border-radius: 15px;
   padding: 3px 5px;
 }
+
 .social_reaction ul li .likes {
-  background-color: #df2e38;
+  color: #df2e38;
   border-radius: 15px;
   padding: 3px 5px;
 }
+
 .social_reaction ul li .save {
-  background-color: #f7c04a;
+  color: #f7c04a;
   border-radius: 15px;
   padding: 3px 16px;
 }
 
 .social_reaction ul li .share {
   background-color: #3f497f;
-  border-radius: 15px;
-  padding: 3px 16px;
+  border-radius: 45px;
+  padding: 7px 8px;
+  display: flex;
+  justify-content: center;
 }
+/* IZMENENIYA */
 .my_modal_body {
   display: flex;
   justify-content: center;
@@ -1228,6 +1238,9 @@ body {
   }
   .audio_news_social_buttons button {
     font-size: 14px;
+  }
+  .modal .signup-modal-content {
+    height: 1020px;
   }
 }
 
