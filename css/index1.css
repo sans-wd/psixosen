@@ -82,7 +82,7 @@ body {
 .search_input_nav {
   background: rgba(229, 229, 230, 0.6);
   border: 1px solid #5b2cc0;
-  border-left: auto;
+  border-left: none;
 
   border-top-right-radius: 25.5px;
   border-bottom-right-radius: 25.5px;
@@ -115,10 +115,25 @@ nav input:focus-visible {
 .user_btn {
   border: none;
   color: #e3e3e3;
-  padding: 17px 30px;
+  /* padding: 17px 30px;
   background: #5b2cc0;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px; */
+
+  border: none;
+  color: #e3e3e3;
   border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #3e588a;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 14px 23px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 17px;
 }
 
 .money_btn {
@@ -154,7 +169,7 @@ nav input:focus-visible {
 }
 
 .mob_nav_back {
-  background: #5B2CC0;
+  background: #5b2cc0;
 }
 
 .infinit_mob_nav {
@@ -387,9 +402,8 @@ nav input:focus-visible {
   overflow: hidden;
 }
 
-
 .side_menu a.active {
-  background: #FF9F47 !important;
+  background: #ff9f47 !important;
 }
 
 .side_menu a span {
@@ -483,7 +497,8 @@ nav input:focus-visible {
   padding: 8px 20px;
 }
 
-.news_content {}
+.news_content {
+}
 
 .news_content h1 {
   font-family: "Inter";
@@ -648,7 +663,6 @@ nav input:focus-visible {
 }
 
 @media (max-width: 1199px) {
-
   .tehsil_btn span,
   .usaq_btn span,
   .anonim_btn span {
@@ -732,7 +746,7 @@ nav input:focus-visible {
   .search_input_nav {
     background: rgba(229, 229, 230, 0.6);
     border: 1px solid #5b2cc0;
-    border-left: auto;
+    border-left: none;
 
     border-top-right-radius: 25.5px;
     border-bottom-right-radius: 25.5px;
@@ -822,7 +836,6 @@ nav input:focus-visible {
 }
 
 @media (max-width: 767px) {
-
   .carousel1-control-next,
   .carousel1-control-prev {
     display: none;

@@ -40,9 +40,8 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="index1.css" />
-    <link rel="stylesheet" href="Expert_profile.css" />
-    <link rel="stylesheet" href="last.css" />
+    <link rel="stylesheet" href="./css/index1.css" />
+    <link rel="stylesheet" href="./css/Expert_profile.css" />
   </head>
 
   <body>
@@ -57,7 +56,7 @@
     </div>
     <nav class="navbar navbar-expand-lg navbar_back">
       <div class="container">
-        <a href="#" class="navbar-brand"
+        <a href="./index_transfer_exp.html" class="navbar-brand"
           ><img src="./img/loqopsixoyazılı.png" alt=""
         /></a>
 
@@ -184,13 +183,8 @@
             </a>
             <a class="nav-item nav-link active" aria-current="page" href="#"
               ><button type="button" class="user_btn">
-                <img
-                  src="./img/user_icon.svg"
-                  width="26px"
-                  height="26px"
-                  alt=""
-                  srcset=""
-                />
+                133 <br />
+                AZN
               </button>
             </a>
           </div>
@@ -204,7 +198,7 @@
         margin: 0 auto;
         overflow: hidden;
         padding: 5px;
-        min-height: 39px;
+        min-height: 38px;
         background: var(--first) !important;
       }
 
@@ -243,31 +237,55 @@
         <div class="container profile_main">
           <div class="row mobstyle123">
             <div
-              class="col-lg-3 col-md-4 col-sm-4 col-xs-4 col-4 img_box"
-              style="
-                padding: 0px;
-                position: relative;
-                height: 100%;
-                border-radius: 40px;
-              "
+              class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-4 img_box"
+              style="padding: 0px; position: relative; height: 100%"
             >
               <img
-                class="img-fluid mob_padd mobilephoto1"
-                src="png/Rectangle 45.png"
+                id="change"
+                style="border: 6px solid green; object-fit: cover"
+                class="img-fluid mob_padd mobilephoto"
+                src="png/profile2.png"
                 alt=""
               />
             </div>
-            <div class="col-lg-9 col-md-8 col-sm-8 col-xs-8 col-8">
+            <script>
+              var change = document.getElementById("change");
+
+              document
+                .getElementById("foreground")
+                .addEventListener("change", function () {
+                  change.style.color = this.value;
+                });
+
+              document
+                .getElementById("font")
+                .addEventListener("change", function () {
+                  change.style.fontFamily = this.value;
+                });
+
+              document
+                .getElementById("border")
+                .addEventListener("change", function () {
+                  change.style.borderColor = this.value;
+                });
+            </script>
+            <div
+              style="position: relative"
+              class="col-lg-9 col-md-9 col-sm-9 col-xs-9 col-8"
+            >
               <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-8">
-                  <h5 style="font-size: 19px" class="mt-4 mob_style mytext1">
+                  <h5
+                    style="font-size: 19px; color: #fff"
+                    class="mt-4 mob_style mytext1"
+                  >
                     Səadət Əliyeva
                   </h5>
                   <button
                     style="
                       min-width: 125px;
                       min-height: 30px;
-
+                      padding: 5px;
                       background: var(--second) !important;
                       border-radius: 6px;
                       border: none;
@@ -280,86 +298,87 @@
                       color: #e3e3e3;
                     "
                   >
-                    Tələbə
+                    Uşaq psixoloqu
                   </button>
                   <br />
                   <br />
-                  <span class="mobile_text">
+                  <span
+                    class="mobile_text mobile_ext11"
+                    style="color: #fff; !important"
+                  >
                     Azərbaycanın ilk psixoloji və özünü inkişaf platforması
                     <br />
-                    Sənin həyatın, sənin psixologiyan <br />
-                    Yeni həyata başlamaq sənin əlindədir
+                    Sənin həyatın, sənin psixologiyan
+                    <br />
                   </span>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-4 pt-3">
                   <div class="row">
                     <div class="col-12" style="float: right">
                       <div class="button_wraper position-relative sht1">
-                        <div class="sdd  position-absolute">
-                          <h5>Bu bölmə sizin fəaliyyət üzrə reytinqinizi
-                            əks etdirir</h5>
+                        <div class="sdd position-absolute">
+                          <h5>
+                            Bu bölmə sizin fəaliyyət üzrə reytinqinizi əks
+                            etdirir
+                          </h5>
                         </div>
-                        <button class="mob_button1" style="color: white !important;
-                                      flex-direction: column;
-                                      background: rgba(234, 47, 47, 0.65);;
-                                      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                                      border-radius: 20px;
-                                      border: none;
-                                      padding: 17px 30px;
-                                      float: right;
-                                              ">
-                          <i style="color: white;" class="fa-solid fa-biohazard fa-2x"></i>
-                          <br>
-                          <a style="color: #fff;" href="#">34%</a>
+                        <button
+                          class="mob_button1"
+                          style="
+                            color: white !important;
+                            flex-direction: column;
+                            background: rgba(0, 255, 255, 0.75);
+                            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                            border-radius: 20px;
+                            border: none;
+                            padding: 17px 30px;
+                            float: right;
+                          "
+                        >
+                          <i
+                            style="color: #e2720b"
+                            class="fa-regular fa-star fa-2x"
+                          ></i>
+                          <br />
+                          <a style="color: #fff" href="#">4.9</a>
                         </button>
                       </div>
                     </div>
+                    <style>
+                      .sdd {
+                        display: none;
+                        background: rgba(0, 255, 255, 0.95);
+                        text-align: center;
+
+                        border-radius: 15px;
+                        top: 20px;
+                        width: 200px;
+                        padding: 2px;
+                      }
+
+                      .sdd h5 {
+                        font-size: 14px;
+                        color: white;
+                        margin: 0px;
+                        padding: 5px 5px;
+                      }
+
+                      .sht1:hover .sdd {
+                        display: block;
+                      }
+                    </style>
                     <!-- <script>
                     $(function () {
                       $('[data-bs-toggle="tooltip"]').tooltip()
                     })
                   </script> -->
-                  <style>
-                    .sdd {
-                      display: none;
-                      background: rgba(234, 47, 47, 0.85);;
-                      text-align: center;
-
-                      border-radius: 15px;
-                      top: 20px;
-                      width: 200px;
-                      padding: 2px;
-                    }
-
-                    .sdd h5 {
-                      font-size: 14px;
-                      color: white;
-                      margin: 0px;
-                      padding: 5px 5px;
-
-                    }
-
-                    .sht1:hover .sdd {
-                      display: block;
-
-                    }
-                  </style>
                     <style>
-                      .sdsdf {
-                        display: none;
-                        top: 15px;
-                        right: 95px;
-                        width: 190px;
-                        text-align: center;
-                        background: #2c8cc0cc;
-                        border-radius: 15px;
-                      }
-
                       .sdsdf h5 {
                         font-size: 14px;
                         color: white;
                         margin: 0px;
                         padding: 5px 5px;
+                        width: 200px;
                       }
 
                       .shtoot:hover .sdsdf {
@@ -375,7 +394,7 @@
                           </h5>
                         </div>
                         <button
-                          class="mob_button1"
+                          class="mob_button2"
                           data-bs-toggle="tooltip"
                           style="
                             background: #2c8bc0;
@@ -384,7 +403,7 @@
                             border-radius: 20px;
                             border: none;
                             float: right;
-                            padding: 17px 30px;
+                            padding: 17px 33px;
                             margin-left: -25px;
                             color: white;
                           "
@@ -427,75 +446,9 @@
                     <span>125 izlənilən</span>
                   </button>
                   <div class="dispblock1" style="float: right">
-                    <img
-                      class="img-fluid"
-                      style="float: right"
-                      src="png/anonim2.png"
-                      alt=""
-                    />
-                    <div class="checkbox-wrapper-22" style="float: right">
-                      <label class="switch" for="checkbox">
-                        <input type="checkbox" id="checkbox" />
-                        <div class="slider round"></div>
-                      </label>
-                    </div>
-
-                    <style>
-                      .checkbox-wrapper-22 .switch {
-                        display: inline-block;
-                        height: 34px;
-                        position: relative;
-                        width: 60px;
-                      }
-
-                      .checkbox-wrapper-22 .switch input {
-                        display: none;
-                      }
-
-                      .checkbox-wrapper-22 .slider {
-                        background-color: #ccc;
-                        bottom: 0;
-                        cursor: pointer;
-                        left: 0;
-                        position: absolute;
-                        right: 0;
-                        top: 0;
-                        transition: 0.4s;
-                      }
-
-                      .checkbox-wrapper-22 .slider:before {
-                        background-color: #fff;
-                        bottom: 4px;
-                        content: "";
-                        height: 26px;
-                        left: 4px;
-                        position: absolute;
-                        transition: 0.4s;
-                        width: 26px;
-                      }
-
-                      .checkbox-wrapper-22 input:checked + .slider {
-                        background-color: #66bb6a;
-                      }
-
-                      .checkbox-wrapper-22 input:checked + .slider:before {
-                        transform: translateX(26px);
-                      }
-
-                      .checkbox-wrapper-22 .slider.round {
-                        border-radius: 34px;
-                      }
-
-                      .checkbox-wrapper-22 .slider.round:before {
-                        border-radius: 50%;
-                      }
-                    </style>
-                    <img
-                      class="img-fluid"
-                      style="float: right"
-                      src="png/anonim.png"
-                      alt=""
-                    />
+                    <button style="color: rgba(40, 24, 222, 0.7)" class="izle">
+                      <i class="fa-solid fa-user-plus me-2"></i> Izlə
+                    </button>
                   </div>
                 </div>
               </div>
@@ -505,24 +458,34 @@
           <div class="col-12 dispblock mt-1" style="">
             <div class="container mt-3 mb-4" style="padding: 0px">
               <div class="d-flex justify-content-between">
-                <div class="custom-select">
-                  <select>
-                    <option value="0">Depressiv</option>
-                    <option value="1">Depressiv</option>
-                    <option value="2">Pozitiv</option>
-                    <option value="3">Əsəbi</option>
-                    <option value="4">Stresli</option>
-                    <option value="5">Əyləncəli</option>
-                    <option value="6">Yorğun</option>
-                  </select>
-                </div>
-                <div class="" style="width: 200px">
+                <select
+                  class="fff"
+                  style="
+                    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+                    background: green;
+                    border: none;
+                    min-width: 40%;
+                    min-height: 47px;
+                    border-radius: 15px;
+                    text-align: center;
+                    color: white;
+                  "
+                  name="border"
+                  id="border1"
+                >
+                  <option style="background: green" value="green">Aktiv</option>
+                  <option style="background: red" value="red">
+                    Aktiv deyil
+                  </option>
+                </select>
+
+                <div class=" " style="width: 200px">
                   <div class="btn-group dropup mobile_margin1">
                     <button
                       type="button"
+                      class="btn dropdown-toggle d-flex align-items-center justify-content-center"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
-                      class="dropdown-toggle d-flex justify-content-center align-items-center"
                       style="
                         background: var(--second) !important;
                         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -530,17 +493,19 @@
                         padding: 11px 2px;
                         color: white;
                         border: none;
-                        min-width: 100%;
-                        min-height: 45px;
+                        min-width: 90%;
+                        min-height: 30px;
+                        min-height: 47px;
                         font-size: 12px;
                       "
                     >
-                    <i class="fa-solid fa-circle-plus fa-2x me-2"></i>    Paylaşım et 
+                      <i class="fa-solid fa-circle-plus fa-2x me-2"></i>
+                      Paylaşım et
                     </button>
-                    <ul class="dropdown-menu mob_style_li text-dark">
+                    <ul class="dropdown-menu mob_style_li">
                       <li>
                         <img
-                          style="width: 25px; height: 25px; filter: invert(1);"
+                          style="width: 25px; height: 25px"
                           class="me-2 img-fluid"
                           src="png/first.png"
                           alt=""
@@ -548,7 +513,7 @@
                       </li>
                       <li>
                         <img
-                          style="width: 25px; height: 25px; filter: invert(1);"
+                          style="width: 25px; height: 25px"
                           class="me-2 mt-2 mb-2 img-fluid"
                           src="png/first1.png"
                           alt=""
@@ -556,7 +521,7 @@
                       </li>
                       <li>
                         <img
-                          style="width: 25px; height: 25px; filter: invert(1);"
+                          style="width: 25px; height: 25px"
                           class="me-2 img-fluid"
                           src="png/first2.png"
                           alt=""
@@ -564,7 +529,7 @@
                       </li>
                       <li>
                         <img
-                          style="width: 25px; height: 25px; filter: invert(1);"
+                          style="width: 25px; height: 25px"
                           class="me-2 mt-2 mb-2 img-fluid"
                           src="png/first3.png"
                           alt=""
@@ -572,7 +537,7 @@
                       </li>
                       <li>
                         <img
-                          style="width: 25px; height: 25px; filter: invert(1);"
+                          style="width: 25px; height: 25px"
                           class="me-2 img-fluid"
                           src="png/first4.png"
                           alt=""
@@ -580,7 +545,7 @@
                       </li>
                       <li>
                         <img
-                          style="width: 25px; height: 25px; filter: invert(1);"
+                          style="width: 25px; height: 25px"
                           class="me-2 mt-2 mb-2 img-fluid"
                           src="png/first5.png"
                           alt=""
@@ -588,7 +553,7 @@
                       </li>
                       <li>
                         <img
-                          style="width: 25px; height: 25px; filter: invert(1);"
+                          style="width: 25px; height: 25px"
                           class="me-2 img-fluid"
                           src="png/first6.png"
                           alt=""
@@ -613,7 +578,7 @@
                     align-items: center;
                     color: white;
                     padding: 0px 4px;
-                    width: 230px;
+                    min-width: 230px;
                     font-weight: 600;
                   "
                 >
@@ -629,81 +594,9 @@
                     align-items: center;
                   "
                 >
-                  <img
-                    class="img-fluid pt-1"
-                    style="
-                      float: right;
-                      float: left;
-                      justify-content: center;
-                      align-items: center;
-                      display: flex;
-                    "
-                    src="png/anonim.png"
-                    alt=""
-                  />
-                  <div class="checkbox-wrapper-22 pt-1" style="float: right">
-                    <label class="switch" for="checkbox1">
-                      <input type="checkbox" id="checkbox1" />
-                      <div class="slider round"></div>
-                    </label>
-                  </div>
-
-                  <style>
-                    .checkbox-wrapper-22 .switch {
-                      display: inline-block;
-                      height: 34px;
-                      position: relative;
-                      width: 60px;
-                    }
-
-                    .checkbox-wrapper-22 .switch input {
-                      display: none;
-                    }
-
-                    .checkbox-wrapper-22 .slider {
-                      background-color: #ccc;
-                      bottom: 0;
-                      cursor: pointer;
-                      left: 0;
-                      position: absolute;
-                      right: 0;
-                      top: 0;
-                      transition: 0.4s;
-                    }
-
-                    .checkbox-wrapper-22 .slider:before {
-                      background-color: #fff;
-                      bottom: 4px;
-                      content: "";
-                      height: 26px;
-                      left: 4px;
-                      position: absolute;
-                      transition: 0.4s;
-                      width: 26px;
-                    }
-
-                    .checkbox-wrapper-22 input:checked + .slider {
-                      background-color: #66bb6a;
-                    }
-
-                    .checkbox-wrapper-22 input:checked + .slider:before {
-                      transform: translateX(26px);
-                    }
-
-                    .checkbox-wrapper-22 .slider.round {
-                      border-radius: 34px;
-                    }
-
-                    .checkbox-wrapper-22 .slider.round:before {
-                      border-radius: 50%;
-                    }
-                  </style>
-                  <img
-                    class="img-fluid pt-1"
-                    style="float: right"
-                    src="png/anonim2.png"
-                    alt=""
-                  />
+                  <button style="color: rgba(40, 24, 222, 0.7)" class="izle">
+                    <i class="fa-solid fa-user-plus me-2"></i> Izlə
+                  </button>
                 </div>
               </div>
             </div>
@@ -716,24 +609,34 @@
             class="mb-3 col-xxl-3 col-xl-3 col-lg-3 side_back_color mobile_slider_none"
             id="navTransfer"
           >
-            <div
-              class="custom-select col-3 dispblock1 mb-3 mt-3"
-              style="width: 100%"
-            >
-              <select id="op1">
-                <option value="0">Depressiv</option>
-                <option value="1">Depressiv1</option>
-                <option value="2">Pozitiv</option>
-                <option value="3">Əsəbi</option>
-                <option value="4">Stresli</option>
-                <option value="5">Əyləncəli</option>
-                <option value="6">Yorğun</option>
+            <div class="col-3 dispblock1 mb-3 mt-3" style="width: 100%">
+              <select
+                class="fff"
+                style="
+                  background: green;
+                  border: none;
+                  width: 100%;
+                  min-height: 37px;
+                  border-radius: 15px;
+                  text-align: center;
+                  color: white;
+                "
+                name="border"
+                id="border"
+              >
+                <option value="green">Aktiv</option>
+                <option value="red">Aktiv deyil</option>
               </select>
             </div>
             <div class="side_menu" id="side_menu">
               <a href="#" class="active menu_buttons d-flex align-items-center">
                 <div class="d-flex align-items-center">
-                  <img src="./img/esas_sephe.svg" alt="" height="16px" />
+                  <img
+                    src="./img/esas_sephe.svg"
+                    alt=""
+                    height="16px"
+                    style="filter: invert(1)"
+                  />
                   <span>Əsas səhifə</span>
                 </div>
               </a>
@@ -767,29 +670,24 @@
               </div>
               <a href="#" class="menu_buttons">
                 <div class="d-flex align-items-center">
-                  <img
-                    src="./img/tehsil.svg"
-                    alt=""
-                    height="16px"
-                    style="filter: invert(1)"
-                  />
+                  <img src="./img/tehsil.svg" alt="" height="16px" />
                   <span>Təhsil bölməsi</span>
                 </div>
               </a>
               <a href="#" class="menu_buttons">
                 <div class="d-flex align-items-center">
-                  <img
-                    src="./img/usag.svg"
-                    alt=""
-                    height="16px"
-                    style="filter: invert(1)"
-                  />
+                  <img src="./img/usag.svg" alt="" height="16px" />
                   <span>Uşaq bölməsi</span>
                 </div>
               </a>
               <a href="#" class="menu_buttons">
                 <div class="d-flex align-items-center">
-                  <img src="./img/psi_academy.svg" alt="" height="16px" />
+                  <img
+                    src="./img/psi_academy.svg"
+                    alt=""
+                    height="16px"
+                    style="filter: invert(1)"
+                  />
                   <span>PSİ akademiyası</span>
                 </div>
               </a>
@@ -811,7 +709,12 @@
                 class="menu_buttons d-flex justify-content-start align-items-center"
               >
                 <div class="d-flex align-items-center">
-                  <img src="./img/tedbir.svg" alt="" height="16px" />
+                  <img
+                    src="./img/tedbir.svg"
+                    alt=""
+                    height="16px"
+                    style="filter: invert(1)"
+                  />
                   <span>Tədbir və elan</span>
                 </div>
               </a>
@@ -826,7 +729,12 @@
               >
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="d-flex align-items-center">
-                    <img src="./img/xidmet.svg" alt="" height="16px" />
+                    <img
+                      src="./img/xidmet.svg"
+                      alt=""
+                      height="16px"
+                      style="filter: invert(1)"
+                    />
                     <span>Xidmetler</span>
                   </div>
                   <i class="fa-solid fa-chevron-down"></i>
@@ -850,25 +758,45 @@
               </div>
               <a href="#" class="menu_buttons">
                 <div class="d-flex align-items-center">
-                  <img src="./img/magaza.svg" alt="" height="16px" />
+                  <img
+                    src="./img/magaza.svg"
+                    alt=""
+                    height="16px"
+                    style="filter: invert(1)"
+                  />
                   <span>Mağaza</span>
                 </div>
               </a>
               <a href="#" class="menu_buttons">
                 <div class="d-flex align-items-center">
-                  <img src="./img/xeber.svg" alt="" height="16px" />
+                  <img
+                    src="./img/xeber.svg"
+                    alt=""
+                    height="16px"
+                    style="filter: invert(1)"
+                  />
                   <span>Xəbərlər</span>
                 </div>
               </a>
               <a href="#" class="menu_buttons">
                 <div class="d-flex align-items-center">
-                  <img src="./img/layihe.svg" alt="" height="16px" />
+                  <img
+                    src="./img/layihe.svg"
+                    alt=""
+                    height="16px"
+                    style="filter: invert(1)"
+                  />
                   <span>Layihələrimiz</span>
                 </div>
               </a>
               <a href="#" class="menu_buttons">
                 <div class="d-flex align-items-center">
-                  <img src="./img/haqq.svg" alt="" height="16px" />
+                  <img
+                    src="./img/haqq.svg"
+                    alt=""
+                    height="16px"
+                    style="filter: invert(1)"
+                  />
                   <span>Haqqımızda</span>
                 </div>
               </a>
@@ -1244,19 +1172,18 @@
                           class="fa-solid fa-plus fa-4x"
                         ></i>
                       </button>
-                      <ul class="dropdown-menu mob_style_li text-dark">
+                      <ul class="dropdown-menu mob_style_li">
                         <li>
                           <img
-                            style="width: 25px; height: 25px ; filter: invert(1);"
+                            style="width: 25px; height: 25px"
                             class="me-2 img-fluid"
                             src="png/first.png"
                             alt=""
-                            
                           />Məqalə
                         </li>
                         <li>
                           <img
-                            style="width: 25px; height: 25px; filter: invert(1);"
+                            style="width: 25px; height: 25px"
                             class="me-2 mt-2 mb-2 img-fluid"
                             src="png/first1.png"
                             alt=""
@@ -1264,16 +1191,15 @@
                         </li>
                         <li>
                           <img
-                            style="width: 25px; height: 25px; filter: invert(1);"
+                            style="width: 25px; height: 25px"
                             class="me-2 img-fluid"
                             src="png/first2.png"
                             alt=""
-                            
                           />Podkast
                         </li>
                         <li>
                           <img
-                            style="width: 25px; height: 25px; filter: invert(1);"
+                            style="width: 25px; height: 25px"
                             class="me-2 mt-2 mb-2 img-fluid"
                             src="png/first3.png"
                             alt=""
@@ -1281,16 +1207,15 @@
                         </li>
                         <li>
                           <img
-                            style="width: 25px; height: 25px; filter: invert(1);"
+                            style="width: 25px; height: 25px"
                             class="me-2 img-fluid"
                             src="png/first4.png"
                             alt=""
-                            
                           />Kitab tövsiyəsi
                         </li>
                         <li>
                           <img
-                            style="width: 25px; height: 25px; filter: invert(1);"
+                            style="width: 25px; height: 25px"
                             class="me-2 mt-2 mb-2 img-fluid"
                             src="png/first5.png"
                             alt=""
@@ -1298,11 +1223,10 @@
                         </li>
                         <li>
                           <img
-                            style="width: 25px; height: 25px; filter: invert(1);"
+                            style="width: 25px; height: 25px"
                             class="me-2 img-fluid"
                             src="png/first6.png"
                             alt=""
-                            
                           />Musiqi tövsiyəsi
                         </li>
                       </ul>
@@ -1496,6 +1420,18 @@
           </ul>
         </div>
       </div>
+      <script>
+        function changeIcon2(anchor) {
+          var icon = anchor.querySelector("i");
+          icon.classList.toggle("fa-regular");
+          icon.classList.toggle("fa-solid");
+        }
+      </script>
+
+      <div class="container">
+        <!-- partial -->
+        <script src="./script.js"></script>
+      </div>
     </body>
 
     <script
@@ -1504,7 +1440,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="./dist/scrollable-tabs.js"></script>
+    <script src="./scrollable-tabs.min.js"></script>
     <script>
       var x, i, j, l, ll, selElmnt, a, b, c;
       /* Look for any elements with the class "custom-select": */
@@ -1666,12 +1602,10 @@
         });
       });
     </script>
-    <script>
-      function changeIcon2(anchor) {
-        var icon = anchor.querySelector("i");
-        icon.classList.toggle("fa-regular");
-        icon.classList.toggle("fa-solid");
-      }
-    </script>
   </body>
 </html>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+/>
+<script src="script.js"></script>
