@@ -1,5 +1,5 @@
 :root {
-  --sign-in-color: #40a1d8;
+  --sign-in-color: #1e90ff;
   --mob_infinit: #1e90ff;
 }
 ::-webkit-scrollbar {
@@ -24,7 +24,6 @@
 body {
   padding: 0px;
   margin: 0 auto;
-  height: 4000px;
 }
 
 .heber_info_header p,
@@ -43,6 +42,22 @@ body {
 .navbar_back {
   background-color: white;
 }
+#fixed_nav {
+  width: 100%;
+  height: calc(100vh - 62px);
+  background-color: #d4d1f8;
+  z-index: 9999;
+  float: left;
+  position: fixed;
+  top: -100%;
+  transition: 0.5s;
+  overflow-y: auto;
+}
+
+.my_fixed_nav {
+  width: 100%;
+  top: 0px !important;
+}
 
 .tehsil_btn {
   background: #281f8c;
@@ -50,7 +65,7 @@ body {
   border-radius: 16px;
   border: none;
   color: #e3e3e3;
-  padding: 17px;
+  padding: 13px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -63,7 +78,7 @@ body {
   border-radius: 16px;
   border: none;
   color: #e3e3e3;
-  padding: 17px;
+  padding: 13px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -73,7 +88,7 @@ body {
 .anonim_btn {
   border: none;
   color: #e3e3e3;
-  padding: 17px;
+  padding: 13px;
   background: #1e1e1e;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
@@ -106,6 +121,9 @@ body {
 nav input:focus-visible {
   outline: none;
 }
+.shopping_cart i {
+  font-size: 20px;
+}
 .shopping_cart_count {
   bottom: -13px;
   right: -13px;
@@ -126,7 +144,7 @@ nav input:focus-visible {
 .user_btn {
   border: none;
   color: #e3e3e3;
-  padding: 17px 30px;
+  padding: 13px 30px;
   background: #5b2cc0;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
@@ -165,14 +183,22 @@ nav input:focus-visible {
 
 .mob_nav_back {
   background: #5b2cc0;
+  padding: 8px 0;
 }
-
+.infinit_mob_nav_a {
+  text-decoration: none;
+}
 .infinit_mob_nav {
   background: var(--mob_infinit);
-  padding: 23px 20px;
+
   border-radius: 50px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-top: -40px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .infinit_circle1 {
   height: 80px;
@@ -202,6 +228,10 @@ nav input:focus-visible {
 .first_swiper_slide {
   overflow: hidden;
   height: 400px;
+}
+.slide_info {
+  bottom: 10px;
+  left: 12px;
 }
 .first_swiper_slide .slide_info .row .col-lg-8,
 .first_swiper_slide .slide_info .row .col-lg-1 {
@@ -273,14 +303,20 @@ nav input:focus-visible {
 
 .first_swiper_slide .slide_like,
 .first_swiper_slide .slide_save {
-  margin: 0 5px;
+  margin: 0 0px;
   color: #e3e3e3;
   font-size: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .first_swiper_slide .slide_share {
-  margin: auto 5px;
+  margin: auto 0px;
   color: #e3e3e3;
   font-size: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .first_swiper_slide .slide_like a,
 .first_swiper_slide .slide_save a,
@@ -482,7 +518,11 @@ nav input:focus-visible {
   padding-right: 5px;
   display: block;
 }
-.nav-tabs .nav-link:hover {
+.wrapper-nav .nav-item {
+  border: 1px solid transparent !important;
+  transition: 0.2s;
+}
+.wrapper-nav .nav-tabs .nav-link:hover {
   color: #000000;
 
   background: transparent;
@@ -490,19 +530,20 @@ nav input:focus-visible {
   border-left: transparent;
   border-right: transparent;
   box-sizing: border-box;
-  border-bottom: 3px solid #8a22f1;
+  border-bottom: 3px solid #8a22f1 !important;
 }
-.nav-tabs .nav-link.active {
+.wrapper-nav .nav-tabs .nav-link.active {
   color: #1e1e1e;
   background: transparent;
   border-top: transparent;
   border-left: transparent;
   border-right: transparent;
   box-sizing: border-box;
-  border-bottom: 3px solid #8a22f1;
+  border-bottom: 3px solid #8a22f1 !important;
 }
+
 .list {
-  left: 165px;
+  left: 105px;
 }
 .wrapper-nav {
   background: #cf9fff81;
@@ -515,6 +556,7 @@ nav input:focus-visible {
   font-weight: 600;
   font-size: 17px;
 }
+
 .side_menu a.active {
   background-color: #a9a2f7 !important;
 }
@@ -759,14 +801,32 @@ nav input:focus-visible {
   border: none;
 }
 
-.btn-light.active {
-  border: 4px solid #ebcb00;
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
 }
-.btn-light.active2 {
-  border: 4px solid #ebcb00;
+input {
+  outline: none;
 }
-.btn-light.active3 {
-  border: 4px solid #ebcb00;
+
+.btn-primary {
+  border: 4px solid transparent;
+  transition: 0.5s;
+}
+.btn-light {
+  border: 4px solid transparent;
+  transition: 0.5s;
+}
+
+.btn-light.active4 {
+  border: 4px solid var(--sign-in-color);
+}
+.btn-primary.active2 {
+  border: 4px solid #0d7412;
+}
+.btn-primary.active3 {
+  border: 4px solid #0d7412;
 }
 
 .sign_input_body {
@@ -836,14 +896,10 @@ nav input:focus-visible {
 } */
 
 /* cv_part */
-@import "bourbon";
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,300);
-body {
-  font-family: "Lato", sans-serif;
-}
 
 .form {
-  width: 400px;
+  width: 265px;
+  box-sizing: border-box;
 }
 .file-upload-wrapper {
   position: relative;
@@ -855,7 +911,7 @@ body {
   font-size: 18px;
   position: absolute;
   top: 0;
-  left: 56px;
+  left: 15px;
   background: #fff;
   padding: 10px 8px;
   display: block;
@@ -872,14 +928,14 @@ body {
   content: "Fayl yüklə";
   position: absolute;
   top: 0;
-  right: 56px;
+  right: -15px;
   display: inline-block;
   height: 40px;
   background: #5b2cc0;
   color: #fff;
   font-weight: 600;
   z-index: 25;
-  font-size: 15px;
+  font-size: 12px;
   line-height: 41px;
   padding: 0 15px;
   text-transform: uppercase;
@@ -954,12 +1010,30 @@ body {
 
   color: #e3e3e3;
 }
+.anonim_mutton_nav .btn-close {
+  box-sizing: content-box;
+  font-size: 22px;
+  color: #000;
+
+  opacity: 9.5;
+}
+
+.mobile_fix_header h1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+
+  color: #1e1e1e;
+}
+
 @media (max-width: 1399px) {
   .tehsil_btn {
     padding: 10px;
+    display: flex;
 
-    font-size: 19px;
-    width: 155px;
+    font-size: 18px;
+    width: 153px;
   }
 
   .tehsil_btn span {
@@ -967,25 +1041,34 @@ body {
   }
   .usaq_btn {
     padding: 10px;
-
-    font-size: 19px;
-    width: 155px;
+    display: flex;
+    font-size: 18px;
+    width: 145px;
   }
   .usaq_btn span {
     display: block;
   }
   .anonim_btn {
     padding: 10px;
-
-    font-size: 19px;
-    width: 195px;
+    display: flex;
+    font-size: 18px;
+    width: 203px;
   }
   .anonim_btn span {
     display: block;
   }
+  .user_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 17px;
+  }
+  /* .user_btn img {
+    height: 23px;
+  } */
 
   .search_input_nav {
-    width: 75px;
+    width: 145px;
   }
   .second_slider_info {
     padding: 0 9px;
@@ -1038,7 +1121,10 @@ body {
     font-size: 13px;
   }
   .list {
-    left: 43px;
+    left: 0px;
+  }
+  .signup-modal-content {
+    width: 80% !important;
   }
 }
 
@@ -1122,6 +1208,14 @@ body {
   .list {
     left: 0px;
   }
+  .ads_img_wrapper {
+    margin-top: 0rem !important;
+    width: 100%;
+    min-height: 400px;
+  }
+  .signup-modal-content {
+    width: 86% !important;
+  }
 }
 
 @media (max-width: 991px) {
@@ -1159,7 +1253,6 @@ body {
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
-    margin: 0 10px;
   }
   .usaq_btn {
     background: #ff8d3b;
@@ -1174,6 +1267,17 @@ body {
     font-size: 20px;
     line-height: 24px;
   }
+  .modal {
+    height: calc(100vh - 62px) !important;
+  }
+
+  #search_mob_transfer {
+    width: 300px;
+  }
+  .fixed_pos_contruction .input-group {
+    display: flex;
+    flex-wrap: nowrap;
+  }
   .tehsil_btn span,
   .usaq_btn span {
     display: inline-block;
@@ -1182,6 +1286,9 @@ body {
   .user_btn {
     display: none;
   }
+  .anonim_btn {
+    padding: 9px 23px;
+  }
   .first_swiper_slide {
     display: flex;
     justify-content: center;
@@ -1189,7 +1296,8 @@ body {
     background: rgba(124, 7, 7, 0.65);
   }
   .slide_info {
-    bottom: 10px;
+    width: 96.6%;
+    bottom: 0px;
     left: auto;
   }
   .news_imge_wraper {
@@ -1219,10 +1327,101 @@ body {
   .ads_img_wrapper {
     margin-top: 1rem;
     width: 100%;
-    min-height: 80px;
+    min-height: 60px;
   }
   .ads_img_wrapper img {
-    height: 80px;
+    height: 60px;
+  }
+  .search_input_nav {
+    width: 80%;
+  }
+  .side_menu {
+    border-radius: 0px;
+    overflow: hidden;
+    border-collapse: collapse;
+  }
+  .esas_page_nav {
+    display: none !important;
+  }
+  .after_transfer_disp_none {
+    display: none;
+  }
+  .nav_width_edit {
+    width: 100%;
+  }
+
+  .side_menu a {
+    background: none;
+
+    display: block;
+    border-collapse: collapse;
+    border-bottom: 3px solid rgba(183, 183, 183, 0.2);
+    padding: 5px 10px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+
+    color: #1e1e1e;
+    text-decoration: none;
+  }
+  .side_menu .child_mobile a {
+    background-color: #b5aff8 !important;
+  }
+  /* .side_menu .child_mobile a {
+    border-bottom: 3px solid rgba(183, 183, 183, 1);
+  } */
+
+  .side_menu a span {
+    padding-left: 5px;
+    text-align: center;
+    font-size: 20px;
+  }
+  .child_mobile a {
+    font-size: 20px;
+  }
+  .side_menu a img {
+    height: 22px;
+  }
+  .side_menu a i {
+    text-align: center;
+    font-size: 17px;
+  }
+  .ads_img_wrapper {
+    position: relative;
+  }
+
+  .ads_img_wrapper button {
+    position: absolute;
+    right: 0;
+    width: 15%;
+    height: 100%;
+  }
+  .ads_img_wrapper button span {
+    display: none;
+  }
+  .ads_img_wrapper button i {
+    font-size: 26px;
+  }
+  .signup-modal-content {
+    width: 60% !important;
+  }
+  .my_modal_body h4 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .my_modal_body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: initial;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+  }
+  .my_modal_body button {
+    margin: 6px;
   }
 }
 
@@ -1236,16 +1435,22 @@ body {
   }
   .tehsil_btn {
     font-size: 15px;
+    padding: 11px 10px;
 
-    margin: 0 10px;
+    margin: 0px;
     max-width: 150px;
     display: flex;
   }
+  .search_button_nav {
+    padding: 5px 13px;
+  }
+
   .usaq_btn {
     font-size: 15px;
     line-height: 24px;
     max-width: 150px;
     display: flex;
+    padding: 11px 10px;
   }
   .tehsil_btn span,
   .usaq_btn span,
@@ -1262,11 +1467,11 @@ body {
 
     font-size: 15px;
 
-    padding: 17px;
+    padding: 11px 10px;
     max-width: 150px;
   }
   .slide_info {
-    bottom: 10px;
+    bottom: 0px;
     left: auto;
   }
   .social_reaction ul li a {
@@ -1276,10 +1481,12 @@ body {
     font-size: 14px;
   }
   .modal .signup-modal-content {
-    height: 1020px;
   }
   .social_reaction {
     scale: 1.1;
+  }
+  .signup-modal-content {
+    width: 97% !important;
   }
 }
 
@@ -1301,6 +1508,13 @@ body {
   }
   .first_swiper_slide ul {
     margin-left: -8px !important;
+  }
+  #fixed_nav {
+    width: 100%;
+    height: calc(100vh - 62px);
+  }
+  .btn-primary {
+    font-size: 13px;
   }
 }
 @media (max-width: 468px) {
@@ -1330,7 +1544,7 @@ body {
     height: 22px;
   }
   .slide_info {
-    bottom: 10px;
+    bottom: 0px;
     left: auto;
   }
 }
@@ -1340,19 +1554,19 @@ body {
     width: 35%;
   }
   .navbar-brand img {
-    width: 120%;
+    width: 78%;
   }
   .tehsil_btn {
-    padding: 17px 7px;
+    padding: 10px 7px;
     font-size: 13.5px;
   }
   .usaq_btn {
-    padding: 17px 7px;
+    padding: 10px 7px;
     font-size: 13.5px;
   }
 
   .eses_btn {
-    padding: 17px 7px;
+    padding: 10px 7px;
     font-size: 13.5px;
   }
   .tehsil_btn img,
@@ -1368,7 +1582,22 @@ body {
     font-size: 32px !important;
   }
   .slide_info {
-    bottom: 10px;
+    bottom: 0px;
     left: auto;
+  }
+}
+
+@media (max-width: 360px) {
+  .btn-primary {
+    font-size: 12px;
+  }
+  .other_info_imputs input {
+    width: 255px !important;
+  }
+  .other_info_imputs input[type="checkbox"] {
+    width: initial !important;
+  }
+  .name_last input {
+    width: 140px;
   }
 }

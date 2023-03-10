@@ -67,9 +67,6 @@
     <div id="signup-modal" class="modal">
       <div id="modal-content" class="signup-modal-content">
         <div class="col-lg-12">
-          <div id="close-btn" class="close">
-            <span>&#xf00d;</span>
-          </div>
           <div class="sign_up_card w-100">
             <div class="row">
               <div class="col-lg-6">
@@ -82,8 +79,9 @@
                 >
                   <button
                     type="button"
-                    class="btn btn-light active"
+                    class="btn btn-light active4"
                     onclick="filterSelection('muteh')"
+                    style="border-radius: 16px"
                   >
                     Mütəxəssis
                   </button>
@@ -91,6 +89,7 @@
                     type="button"
                     class="btn btn-light"
                     onclick="filterSelection('istifa')"
+                    style="border-radius: 16px"
                   >
                     İstifadəçi
                   </button>
@@ -158,27 +157,241 @@
               <div class="col-lg-6">
                 <div class="sign_cta_card_wraper filterDiv muteh">
                   <div class="sign_cta_card">
+                    <div class="sign_input_body">
+                      <div
+                        class="d-flex justify-content-between align-items-center w-100 mt-1 mb-3"
+                        id="myBtnContainer2"
+                        style="
+                          background-color: white;
+                          border-radius: 16px;
+                          padding: 10px;
+                        "
+                      >
+                        <button
+                          type="button"
+                          class="btn btn-primary active2"
+                          style="
+                            background-color: var(--sign-in-color);
+                            border-radius: 16px;
+                          "
+                          onclick="filterSelection2('qeyd')"
+                        >
+                          Qeydiyyatdan keç
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-primary"
+                          style="
+                            background-color: var(--sign-in-color);
+                            border-radius: 16px;
+                          "
+                          onclick="filterSelection2('dax')"
+                        >
+                          Hesaba daxil ol
+                        </button>
+                      </div>
+                      <div class="filterDiv2 qeyd">
+                        <div
+                          class="d-flex justify-content-evenly align-items-center name_last my-2"
+                        >
+                          <input
+                            type="text"
+                            name="first-name"
+                            class="first_name"
+                            placeholder="Ad"
+                          />
+                          <input
+                            type="text"
+                            name="last-name"
+                            class="last_name"
+                            placeholder="Soyad"
+                          />
+                        </div>
+                        <div
+                          class="d-flex justify-content-center align-items-center flex-column other_info_imputs"
+                        >
+                          <div class="mail my-3">
+                            <label for="email"
+                              ><img src="./img/email.svg" alt=""
+                            /></label>
+                            <input
+                              ng-model="suCtrl.email"
+                              type="email"
+                              name="email"
+                              placeholder="Email"
+                              required
+                            />
+                          </div>
+                          <div class="phone">
+                            <label for="phone"
+                              ><img src="./img/nomre.svg" alt="" srcset=""
+                            /></label>
+                            <input
+                              ng-model="suCtrl.phone"
+                              type="phone"
+                              name="phone"
+                              placeholder="Nomre"
+                              required
+                            />
+                          </div>
+                          <div class="password my-3">
+                            <label for="password"
+                              ><img src="./img/pass.svg" alt="" srcset=""
+                            /></label>
+                            <input
+                              ng-model="suCtrl.password"
+                              placeholder="Parol"
+                              type="password"
+                              name="password"
+                              required
+                            />
+                          </div>
+                          <div class="proffesion_type">
+                            <label for="proffesion_type"
+                              ><img src="./img/sign_user.svg" alt="" srcset=""
+                            /></label>
+
+                            <select
+                              name="proffesion_type"
+                              style="height: 46px"
+                              id="proffesion_type"
+                              required
+                            >
+                              <option value="0">
+                                Mütəxəssis kateqoriyanızı seçin
+                              </option>
+                              <option value="1">something1</option>
+                              <option value="2">something2</option>
+                              <option value="3">something3</option>
+                              <option value="4">something4</option>
+                            </select>
+                          </div>
+                          <div class="cv_upload my-3">
+                            <form class="form">
+                              <div
+                                class="file-upload-wrapper"
+                                data-text="CV-ni yükləyin!"
+                              >
+                                <label
+                                  for="form"
+                                  style="
+                                    position: absolute;
+                                    left: -14px;
+                                    top: 8px;
+                                  "
+                                >
+                                  <img
+                                    src="./img/cv_sign.svg"
+                                    alt=""
+                                    srcset=""
+                                  />
+                                </label>
+                                <input
+                                  name="file-upload-field"
+                                  type="file"
+                                  class="file-upload-field"
+                                  value=""
+                                />
+                              </div>
+                            </form>
+                          </div>
+                          <div class="agreement">
+                            <input
+                              type="checkbox"
+                              id="agree-to-terms"
+                              name="agree-to-terms"
+                              required
+                            />
+                            <label for="agree-to-terms"
+                              >Bütün qaydalar ilə razıyam</label
+                            >
+                          </div>
+                          <a href="#" class="text-white"> Qaydaları oxu </a>
+                        </div>
+                      </div>
+                      <div class="filterDiv2 dax'">
+                        <div
+                          class="d-flex justify-content-center align-items-center flex-column other_info_imputs"
+                        >
+                          <div class="mail">
+                            <label for="email"
+                              ><img src="./img/email.svg" alt=""
+                            /></label>
+                            <input
+                              ng-model="suCtrl.email"
+                              type="email"
+                              name="email"
+                              placeholder="Email"
+                              required
+                            />
+                          </div>
+
+                          <div class="password my-3">
+                            <label for="password"
+                              ><img src="./img/pass.svg" alt=""
+                            /></label>
+                            <input
+                              ng-model="suCtrl.password"
+                              placeholder="Parol"
+                              type="password"
+                              name="password"
+                              required
+                            />
+                          </div>
+
+                          <div class="agreement">
+                            <input
+                              type="checkbox"
+                              id="agree-to-terms2"
+                              name="agree-to-terms2"
+                              required
+                            />
+                            <label for="agree-to-terms2"
+                              >Məni sistemdə saxla</label
+                            >
+                          </div>
+                          <a href="#" class="text-white"> Parolu unutdum </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sign_cta_card filterDiv istifa">
+                  <div class="sign_input_body">
                     <div
-                      class="d-flex justify-content-evenly align-items-center w-100 mt-1 mb-3"
-                      id="myBtnContainer2"
+                      class="d-flex justify-content-between align-items-center w-100 mt-1 mb-3"
+                      id="myBtnContainer3"
+                      style="
+                        background-color: white;
+                        border-radius: 16px;
+                        padding: 10px;
+                      "
                     >
                       <button
                         type="button"
-                        class="btn btn-light active2"
-                        onclick="filterSelection2('qeyd')"
+                        class="btn btn-primary active3"
+                        onclick="filterSelection3('qeyd2')"
+                        style="
+                          background-color: var(--sign-in-color);
+                          border-radius: 16px;
+                        "
                       >
                         Qeydiyyatdan keç
                       </button>
                       <button
                         type="button"
-                        class="btn btn-light"
-                        onclick="filterSelection2('dax')"
+                        class="btn btn-primary"
+                        onclick="filterSelection3('istifa2')"
+                        style="
+                          background-color: var(--sign-in-color);
+                          border-radius: 16px;
+                        "
                       >
                         Hesaba daxil ol
                       </button>
                     </div>
-
-                    <div class="sign_input_body filterDiv2 qeyd">
+                    <div class="filterDiv3 qeyd2">
                       <div
                         class="d-flex justify-content-evenly align-items-center name_last my-2"
                       >
@@ -198,10 +411,23 @@
                       <div
                         class="d-flex justify-content-center align-items-center flex-column other_info_imputs"
                       >
+                        <div class="date_type my-3">
+                          <label for="date_type"
+                            ><img src="./img/date.svg" alt="" srcset=""
+                          /></label>
+
+                          <input
+                            name="date_type"
+                            type="date"
+                            id="date_type"
+                            style="width: 265px"
+                            required
+                          />
+                        </div>
                         <div class="mail">
                           <label for="email"
-                            ><i class="fa-solid fa-at"></i
-                          ></label>
+                            ><img src="./img/email.svg" alt="" srcset=""
+                          /></label>
                           <input
                             ng-model="suCtrl.email"
                             type="email"
@@ -210,10 +436,10 @@
                             required
                           />
                         </div>
-                        <div class="phone my-2">
+                        <div class="phone my-3">
                           <label for="phone"
-                            ><i class="fa-solid fa-phone"></i
-                          ></label>
+                            ><img src="./img/nomre.svg" alt="" srcset=""
+                          /></label>
                           <input
                             ng-model="suCtrl.phone"
                             type="phone"
@@ -222,10 +448,10 @@
                             required
                           />
                         </div>
-                        <div class="password">
+                        <div class="password mb-3">
                           <label for="password"
-                            ><i class="fa-solid fa-unlock"></i
-                          ></label>
+                            ><img src="./img/pass.svg" alt="" srcset=""
+                          /></label>
                           <input
                             ng-model="suCtrl.password"
                             placeholder="Parol"
@@ -234,63 +460,29 @@
                             required
                           />
                         </div>
-                        <div class="proffesion_type my-2">
-                          <label for="proffesion_type"
-                            ><i class="fa-solid fa-user-tie"></i
-                          ></label>
 
-                          <select
-                            name="proffesion_type"
-                            id="proffesion_type"
-                            required
-                          >
-                            <option value="0">
-                              Mütəxəssis kateqoriyanızı seçin
-                            </option>
-                            <option value="1">something1</option>
-                            <option value="2">something2</option>
-                            <option value="3">something3</option>
-                            <option value="4">something4</option>
-                          </select>
-                        </div>
-                        <div class="cv_upload">
-                          <form class="form">
-                            <div
-                              class="file-upload-wrapper"
-                              data-text="CV-ni yükləyin!"
-                            >
-                              <input
-                                name="file-upload-field"
-                                type="file"
-                                class="file-upload-field"
-                                value=""
-                              />
-                            </div>
-                          </form>
-                        </div>
                         <div class="agreement">
                           <input
                             type="checkbox"
-                            id="agree-to-terms"
-                            name="agree-to-terms"
+                            id="agree-to-terms3"
+                            name="agree-to-terms3"
                             required
                           />
-                          <label for="agree-to-terms"
+                          <label for="agree-to-terms3"
                             >Bütün qaydalar ilə razıyam</label
                           >
                         </div>
                         <a href="#" class="text-white"> Qaydaları oxu </a>
-                        <input type="submit" class="my-2 px-2" />
                       </div>
                     </div>
-                    <div class="sign_input_body filterDiv2 dax'">
+                    <div class="filterDiv3 istifa2">
                       <div
                         class="d-flex justify-content-center align-items-center flex-column other_info_imputs"
                       >
                         <div class="mail">
                           <label for="email"
-                            ><i class="fa-solid fa-at"></i
-                          ></label>
+                            ><img src="./img/email.svg" alt="" srcset=""
+                          /></label>
                           <input
                             ng-model="suCtrl.email"
                             type="email"
@@ -300,10 +492,10 @@
                           />
                         </div>
 
-                        <div class="password mt-2">
+                        <div class="password my-3">
                           <label for="password"
-                            ><i class="fa-solid fa-unlock"></i
-                          ></label>
+                            ><img src="./img/pass.svg" alt=""
+                          /></label>
                           <input
                             ng-model="suCtrl.password"
                             placeholder="Parol"
@@ -316,221 +508,183 @@
                         <div class="agreement">
                           <input
                             type="checkbox"
-                            id="agree-to-terms"
-                            name="agree-to-terms"
+                            id="agree-to-terms4"
+                            name="agree-to-terms4"
                             required
                           />
-                          <label for="agree-to-terms"
-                            >Məni sistemdə saxla</label
-                          >
+                          <label for="agree-to-terms4">
+                            Məni sistemdə saxla
+                          </label>
                         </div>
                         <a href="#" class="text-white"> Parolu unutdum </a>
-                        <input type="submit" class="my-2 px-2" />
                       </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="sign_cta_card filterDiv istifa">
-                  <div
-                    class="d-flex justify-content-evenly align-items-center w-100 mt-1 mb-3"
-                    id="myBtnContainer3"
-                  >
-                    <button
-                      type="button"
-                      class="btn btn-light active3"
-                      onclick="filterSelection3('qeyd2')"
-                    >
-                      Qeydiyyatdan keç
-                    </button>
-                    <button
-                      type="button"
-                      class="btn btn-light"
-                      onclick="filterSelection3('istifa2')"
-                    >
-                      Hesaba daxil ol
-                    </button>
-                  </div>
-
-                  <div class="sign_input_body filterDiv3 qeyd2">
-                    <div
-                      class="d-flex justify-content-evenly align-items-center name_last my-2"
-                    >
-                      <input
-                        type="text"
-                        name="first-name"
-                        class="first_name"
-                        placeholder="Ad"
-                      />
-                      <input
-                        type="text"
-                        name="last-name"
-                        class="last_name"
-                        placeholder="Soyad"
-                      />
-                    </div>
-                    <div
-                      class="d-flex justify-content-center align-items-center flex-column other_info_imputs"
-                    >
-                      <div class="proffesion_type my-2">
-                        <label for="proffesion_type"
-                          ><i class="fa-solid fa-calendar-days"></i
-                        ></label>
-
-                        <select
-                          name="proffesion_type"
-                          id="proffesion_type"
-                          required
-                        >
-                          <option value="0">Doğum tarixinizi seçin</option>
-                          <option value="1">something1</option>
-                          <option value="2">something2</option>
-                          <option value="3">something3</option>
-                          <option value="4">something4</option>
-                        </select>
-                      </div>
-                      <div class="mail">
-                        <label for="email"
-                          ><i class="fa-solid fa-at"></i
-                        ></label>
-                        <input
-                          ng-model="suCtrl.email"
-                          type="email"
-                          name="email"
-                          placeholder="Email"
-                          required
-                        />
-                      </div>
-                      <div class="phone my-2">
-                        <label for="phone"
-                          ><i class="fa-solid fa-phone"></i
-                        ></label>
-                        <input
-                          ng-model="suCtrl.phone"
-                          type="phone"
-                          name="phone"
-                          placeholder="Nomre"
-                          required
-                        />
-                      </div>
-                      <div class="password">
-                        <label for="password"
-                          ><i class="fa-solid fa-unlock"></i
-                        ></label>
-                        <input
-                          ng-model="suCtrl.password"
-                          placeholder="Parol"
-                          type="password"
-                          name="password"
-                          required
-                        />
-                      </div>
-
-                      <div class="agreement">
-                        <input
-                          type="checkbox"
-                          id="agree-to-terms"
-                          name="agree-to-terms"
-                          required
-                        />
-                        <label for="agree-to-terms"
-                          >Bütün qaydalar ilə razıyam</label
-                        >
-                      </div>
-                      <a href="#" class="text-white"> Qaydaları oxu </a>
-                      <input type="submit" class="my-2 px-2" />
-                    </div>
-                  </div>
-                  <div class="sign_input_body filterDiv3 istifa2">
-                    <div
-                      class="d-flex justify-content-center align-items-center flex-column other_info_imputs"
-                    >
-                      <div class="mail">
-                        <label for="email"
-                          ><i class="fa-solid fa-at"></i
-                        ></label>
-                        <input
-                          ng-model="suCtrl.email"
-                          type="email"
-                          name="email"
-                          placeholder="Email"
-                          required
-                        />
-                      </div>
-
-                      <div class="password mt-2">
-                        <label for="password"
-                          ><i class="fa-solid fa-unlock"></i
-                        ></label>
-                        <input
-                          ng-model="suCtrl.password"
-                          placeholder="Parol"
-                          type="password"
-                          name="password"
-                          required
-                        />
-                      </div>
-
-                      <div class="agreement">
-                        <input
-                          type="checkbox"
-                          id="agree-to-terms"
-                          name="agree-to-terms"
-                          required
-                        />
-                        <label for="agree-to-terms">
-                          Məni sistemdə saxla
-                        </label>
-                      </div>
-                      <a href="#" class="text-white"> Parolu unutdum </a>
-                      <input type="submit" class="my-2 px-2" />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <div class="d-flex justify-content-end align-items-center">
+            <div
+              id="close-btn"
+              class="close d-inline-flex justify-content-end"
+              style="width: auto"
+            >
+              <span
+                style="
+                  font-family: 'Inter';
+                  font-style: normal;
+                  font-weight: 400;
+                  font-size: 20px;
+                  line-height: 24px;
+                  color: #e3e3e3;
+                  background: #ff6161;
+                  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                  border-radius: 10px;
+                  padding: 8px 48px;
+                "
+                >Bağla</span
+              >
+            </div>
+            <input
+              type="submit"
+              placeholder="Təstiqlə"
+              class="my-2 px-2"
+              style="
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 24px;
+
+                color: #e3e3e3;
+                background: rgba(16, 231, 50, 0.62);
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 10px;
+                outline: none;
+                border: none;
+                padding: 7px 48px;
+                display: inline-flex;
+                width: 142px;
+                justify-content: center;
+              "
+            />
+          </div>
         </div>
       </div>
     </div>
     <!-- Modal -->
+
+    <!-- MOBILE_FIXED_MENU -->
+    <div class="fixed_pos_contruction px-2" id="fixed_nav">
+      <div class="d-flex justify-content-between align-items-center my-3">
+        <div class="navbar_logo">
+          <a href="#" class="navbar-brand" id="logo_mob_transfer"></a>
+        </div>
+        <div
+          class="anonim_mutton_nav d-flex justify-content-between align-items-center"
+        >
+          <a
+            class="nav-item nav-link active"
+            aria-current="page"
+            href="#"
+            id="anon_mob_transfer"
+          ></a>
+          <a
+            class="nav-item nav-link active ms-2 d-lg-none"
+            aria-current="page"
+            href="#"
+            onclick="openMenu(),changeIcon(infinit_button)"
+          >
+            <button class="btn btn-lg btn-close fixed_nav_close"></button>
+          </a>
+        </div>
+      </div>
+      <div
+        class="d-flex justify-content-center align-items-center mobile_fix_header mb-3"
+      >
+        <h1>İstifadəçi bölməsi</h1>
+      </div>
+      <div class="d-flex justify-content-between align-items-center">
+        <div id="esas_mob_transfer"></div>
+        <div>
+          <a
+            class="nav-item nav-link active"
+            aria-current="page"
+            href="#"
+            id="usaq_mob_transfer"
+          >
+          </a>
+        </div>
+        <div>
+          <a
+            class="nav-item nav-link active"
+            aria-current="page"
+            href="#"
+            id="tehsil_mob_transfer"
+          >
+          </a>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center align-items-center my-3">
+        <a
+          class="nav-item nav-link active"
+          aria-current="page"
+          href="#"
+          id="search_mob_transfer"
+        >
+        </a>
+      </div>
+      <div class="ads" id="ads_mob_transfer"></div>
+      <div class="side_menu my-3" id="side_menu_mob_transfer"></div>
+      <ul
+        class="d-flex flex-wrap justify-content-between align-items-center list-unstyled px-2 social_networks mt-0 mb-3"
+        id="social_mob_transfer"
+      ></ul>
+    </div>
+
+    <!-- MOBILE_FIXED_MENU -->
 
     <div class="container-fluid mob_nav_back">
       <div class="container">
         <div
           class="heber_info_header d-flex justify-content-center align-items-center"
         >
-          <p class="m-0 py-2">Ən son xəbərləri <a href="#">burdan</a> gör</p>
+          <p class="m-0 py-0">Ən son xəbərləri <a href="#">burdan</a> gör</p>
         </div>
       </div>
     </div>
     <nav class="navbar navbar-expand-lg navbar_back">
       <div class="container">
-        <a href="#" class="navbar-brand"
-          ><img src="./img/loqopsixoyazılı.png" alt=""
-        /></a>
-
-        <div class="d-flex">
-          <div
-            id="mobileFrom"
-            class="d-lg-none"
-            class="justify-content-center align-items-center"
-            style="flex-direction: row; display: flex"
-          ></div>
-          <!-- <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarText"
-            aria-controls="navbarText"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button> -->
+        <div
+          class="d-flex justify-content-between align-items-center nav_width_edit"
+        >
+          <a href="#" class="navbar-brand" id="logo_desk_transfer"
+            ><img src="./img/loqopsixoyazılı.png" alt=""
+          /></a>
+          <div class="d-flex align-items-center">
+            <a
+              class="nav-item nav-link active d-lg-none"
+              aria-current="page"
+              href="#"
+              id="anon_mob_transfer2"
+            ></a>
+            <a
+              class="nav-item nav-link active d-lg-none"
+              aria-current="page"
+              href="#"
+              ><button type="button" class="money_btn">
+                <span>133 azn</span>
+              </button>
+            </a>
+          </div>
         </div>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <div id="esasbolme" class="d-none">
+
+        <div
+          class="collapse navbar-collapse after_transfer_disp_none"
+          id="navbarText"
+        >
+          <div class="d-none" id="esas_desk_transfer">
             <a class="nav-item nav-link active" aria-current="page" href="#"
               ><button type="button" class="eses_btn">
                 <img
@@ -545,70 +699,63 @@
             </a>
           </div>
           <div class="navbar-nav ms-auto align-items-center">
-            <div
-              id="mobileButtons"
-              class="d-lg-none"
-              style="
-                flex-direction: row;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-              "
-            ></div>
-            <div
-              id="desktopButtons"
-              class="d-none d-lg-flex"
-              style="display: flex; flex-direction: row"
-            >
-              <a class="nav-item nav-link active" aria-current="page" href="#"
-                ><button type="button" class="tehsil_btn">
-                  <img
-                    src="./img/tehsil.svg"
-                    width="26px"
-                    height="26px"
-                    alt=""
-                    srcset=""
-                  />
-                  <span> Təhsil bölməsi </span>
-                </button>
-              </a>
+            <a
+              class="nav-item nav-link active"
+              aria-current="page"
+              href="#"
+              id="tehsil_desk_transfer"
+              ><button type="button" class="tehsil_btn">
+                <img
+                  src="./img/tehsil.svg"
+                  width="26px"
+                  height="26px"
+                  alt=""
+                  srcset=""
+                />
+                <span> Təhsil bölməsi </span>
+              </button>
+            </a>
 
-              <a class="nav-item nav-link active" aria-current="page" href="#"
-                ><button type="button" class="usaq_btn">
-                  <img
-                    src="./img/usag.svg"
-                    width="26px"
-                    height="26px"
-                    alt=""
-                    srcset=""
-                  />
-                  <span>Uşaq bölməsi</span>
-                </button>
-              </a>
-            </div>
-            <div id="desktopFrom" class="d-none d-lg-flex">
-              <a class="nav-item nav-link active" aria-current="page" href="#"
-                ><button type="button" class="anonim_btn">
-                  <img
-                    src="./img/anobim.svg"
-                    width="26px"
-                    height="26px"
-                    alt=""
-                    srcset=""
-                  />
-                  <span> Anonim dinləyici çatı </span>
-                </button>
-              </a>
-              <a
-                class="nav-item nav-link active d-lg-none"
-                aria-current="page"
-                href="#"
-                ><button type="button" class="money_btn">
-                  <span>133 azn</span>
-                </button>
-              </a>
-            </div>
-            <a class="nav-item nav-link active" aria-current="page" href="#">
+            <a
+              class="nav-item nav-link active"
+              aria-current="page"
+              href="#"
+              id="usaq_desk_transfer"
+              ><button type="button" class="usaq_btn">
+                <img
+                  src="./img/usag.svg"
+                  width="26px"
+                  height="26px"
+                  alt=""
+                  srcset=""
+                />
+                <span>Uşaq bölməsi</span>
+              </button>
+            </a>
+
+            <a
+              class="nav-item nav-link active"
+              aria-current="page"
+              href="#"
+              id="anon_desk_transfer"
+              ><button type="button" class="anonim_btn">
+                <img
+                  src="./img/anobim.svg"
+                  width="26px"
+                  height="26px"
+                  alt=""
+                  srcset=""
+                />
+                <span> Anonim dinləyici çatı </span>
+              </button>
+            </a>
+
+            <a
+              class="nav-item nav-link active"
+              aria-current="page"
+              href="#"
+              id="search_desk_transfer"
+            >
               <div class="input-group">
                 <div class="input-group-append">
                   <button class="search_button_nav" type="button">
@@ -624,23 +771,19 @@
             </a>
             <a class="nav-item nav-link active" aria-current="page" href="#">
               <div class="shopping_cart">
-                <img
-                  src="./img/shopping-cart-2-line.svg"
-                  height="36px"
-                  alt=""
-                  srcset=""
-                />
-                <!-- <div class="shopping_cart_count position-absolute">
-                    <span>5</span>
-                  </div> -->
+                <i class="fa-solid fa-cart-shopping fa-2x position-relative">
+                  <!-- <div class="shopping_cart_count position-absolute">
+                  <span>5</span>
+                </div> -->
+                </i>
               </div>
             </a>
             <!-- IZMENENIYA -->
             <a
               class="nav-item nav-link active"
               aria-current="page"
-              href="./user1.html"
-              ><button type="button" class="user_btn">
+              href="./Expert_profile.html"
+              ><button type="button" class="user_btn" id="signup-btn2">
                 <img
                   src="./img/user_icon.svg"
                   width="26px"
@@ -652,7 +795,6 @@
             </a>
             <!-- IZMENENIYA -->
           </div>
-          <div id="mobile_menu_transfer" class="d-lg-none"></div>
         </div>
       </div>
     </nav>
@@ -674,10 +816,7 @@
                     alt=""
                     style="width: 100%; height: 100%; object-fit: cover"
                   />
-                  <div
-                    class="slide_info position-absolute"
-                    style="bottom: 10px; left: 10px"
-                  >
+                  <div class="slide_info position-absolute">
                     <div class="row">
                       <div
                         class="col-lg-8 col-md-11 col-sm-10 col-xs-10 col-10"
@@ -727,7 +866,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-1 col-sm-1 col-md-1 col-xs-1 col-1">
+                      <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 col-2">
                         <ul
                           class="list-unstyled m-0 p-0"
                           style="
@@ -764,10 +903,7 @@
                     alt=""
                     style="width: 100%; height: 100%; object-fit: cover"
                   />
-                  <div
-                    class="slide_info position-absolute"
-                    style="bottom: 10px; left: 10px"
-                  >
+                  <div class="slide_info position-absolute">
                     <div class="row">
                       <div
                         class="col-lg-8 col-md-11 col-sm-10 col-xs-10 col-10"
@@ -817,7 +953,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-1 col-sm-1 col-md-1 col-xs-1 col-1">
+                      <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 col-2">
                         <ul
                           class="list-unstyled m-0 p-0"
                           style="
@@ -854,10 +990,8 @@
                     alt=""
                     style="width: 100%; height: 100%; object-fit: cover"
                   />
-                  <div
-                    class="slide_info position-absolute"
-                    style="bottom: 10px; left: 10px"
-                  >
+
+                  <div class="slide_info position-absolute">
                     <div class="row">
                       <div
                         class="col-lg-8 col-md-11 col-sm-10 col-xs-10 col-10"
@@ -907,7 +1041,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-1 col-sm-1 col-md-1 col-xs-1 col-1">
+                      <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 col-2">
                         <ul
                           class="list-unstyled m-0 p-0"
                           style="
@@ -1456,8 +1590,10 @@
           id="navTransfer"
         >
           <div class="side_menu_wraper">
-            <div class="side_menu" id="side_menu">
-              <a href="#" class="active menu_buttons d-flex align-items-center"
+            <div class="side_menu" id="side_menu_desk_transfer">
+              <a
+                href="#"
+                class="active menu_buttons d-flex align-items-center esas_page_nav"
                 ><div class="d-flex align-items-center">
                   <img src="./img/esas_sephe.svg" alt="" height="16px" />
                   <span>Əsas səhifə</span>
@@ -1473,11 +1609,13 @@
                 class="collapsed"
               >
                 <div class="d-flex justify-content-between align-items-center">
-                  <span class="p-0"
-                    ><i class="fa-regular fa-user"></i
-                    ><span class="span_move">Mütəxəssislər</span></span
-                  ><i class="fa-solid fa-chevron-down"></i></div
-              ></a>
+                  <div class="d-flex align-items-center">
+                    <img src="./img/muteh.svg" alt="" height="16px" />
+                    <span>Mütəxəssislər</span>
+                  </div>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+              </a>
               <div
                 class="child_mobile colapse_body collapse"
                 id="collapseExample1"
@@ -1596,7 +1734,7 @@
                 </div></a
               >
             </div>
-            <div class="ads">
+            <div class="ads" id="ads_desk_transfer">
               <div class="ads_img_wrapper">
                 <img
                   src="./img/first_slider_img2.jpg"
@@ -1604,13 +1742,14 @@
                   alt=""
                 />
                 <button class="ads_btn">
-                  <i class="fa-solid fa-circle-arrow-up"></i> Siz də bizə
-                  qatılın
+                  <i class="fa-solid fa-circle-arrow-up"></i>
+                  <span>Siz də bizə qatılın</span>
                 </button>
               </div>
             </div>
             <ul
               class="d-flex flex-wrap justify-content-between align-items-center list-unstyled px-2 social_networks"
+              id="social_desk_transfer"
             >
               <li>
                 <a href="#">
@@ -1621,7 +1760,11 @@
                 <a href="#">
                   <i
                     class="fa-brands fa-facebook"
-                    style="color: #2b4886; background: white"
+                    style="
+                      color: #2b4886;
+                      background: transparent;
+                      border-radius: 56px;
+                    "
                   >
                   </i>
                 </a>
@@ -1664,7 +1807,7 @@
                   role="tab"
                   aria-controls="public"
                   aria-selected="true"
-                  >Hamısı</a
+                  >Yeni</a
                 >
 
                 <a
@@ -1672,49 +1815,63 @@
                   data-bs-target="#tab2"
                   role="tab"
                   data-bs-toggle="tab"
-                  >Məqalə</a
+                  >Trend</a
                 >
                 <a
                   class="nav-item nav-link pointer"
                   data-bs-target="#tab3"
                   role="tab"
                   data-bs-toggle="tab"
-                  >Video</a
+                  >Məqalə</a
                 >
                 <a
                   class="nav-item nav-link pointer"
                   data-bs-target="#tab4"
                   role="tab"
                   data-bs-toggle="tab"
-                  >Podkast</a
+                  >Video</a
                 >
                 <a
                   class="nav-item nav-link pointer"
                   data-bs-target="#tab5"
                   role="tab"
                   data-bs-toggle="tab"
-                  >Kitablar</a
+                  >Podkast</a
                 >
                 <a
                   class="nav-item nav-link pointer"
                   data-bs-target="#tab6"
                   role="tab"
                   data-bs-toggle="tab"
-                  >Musiqi</a
+                  >Kitablar</a
                 >
                 <a
                   class="nav-item nav-link pointer"
                   data-bs-target="#tab7"
                   role="tab"
                   data-bs-toggle="tab"
-                  >Film</a
+                  >Musiqi</a
                 >
                 <a
                   class="nav-item nav-link pointer"
                   data-bs-target="#tab8"
                   role="tab"
                   data-bs-toggle="tab"
-                  >Tədbir və elanlar</a
+                  >Film</a
+                >
+                <a
+                  class="nav-item nav-link pointer"
+                  data-bs-target="#tab9"
+                  role="tab"
+                  data-bs-toggle="tab"
+                  >Test</a
+                >
+                <a
+                  class="nav-item nav-link pointer"
+                  data-bs-target="#tab10"
+                  role="tab"
+                  data-bs-toggle="tab"
+                  >Tədbir və elan</a
                 >
               </nav>
             </div>
@@ -1938,8 +2095,8 @@
       </div>
     </div>
     <div
-      class="container-fluid mob_nav_back py-3 position-fixed d-lg-none"
-      style="bottom: 0; z-index: 99999999999999"
+      class="container-fluid mob_nav_back position-fixed d-lg-none"
+      style="bottom: 0; z-index: 999999999"
     >
       <div class="mobile_bottom_nav container">
         <ul
@@ -1958,14 +2115,10 @@
           <li>
             <!-- IZMENENIYA -->
             <a
-              class="navbar-toggler"
+              class="navbar-toggler infinit_mob_nav_a"
+              id="infinit_button"
               type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarText"
-              aria-controls="navbarText"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-              onclick="changeIcon(this)"
+              onclick="changeIcon(this), openMenu()"
             >
               <!-- IZMENENIYA -->
               <div class="infinit_mob_nav position-relative">
@@ -1981,7 +2134,7 @@
             </a>
           </li>
           <li>
-            <a href="./user1.html" type="button">
+            <a href="./Expert_profile.html" type="button">
               <i
                 class="fa-solid fa-user fa-2x"
                 style="color: white; width: 32px; height: 32px"
@@ -2021,7 +2174,7 @@
   integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
   crossorigin="anonymous"
 ></script>
-<script>
+<!-- <script>
   $(function () {
     var desktopForm = $("#desktopFrom").html();
     $(window).on("load resize", function () {
@@ -2046,6 +2199,22 @@
     });
   });
 </script>
+
+
+
+<script>
+  $(function () {
+    var desktopForm = $("#esasbolme").html() + $("#desktopButtons").html();
+    $(window).on("load resize", function () {
+      if ($(window).width() <= 991) {
+        $("#mobileButtons").html(desktopForm);
+      } else {
+        $("#mobileButtons").empty();
+      }
+    });
+  });
+</script> -->
+
 <script>
   $(function () {
     var desktopForm = $("#audiimgtransferdeask").html();
@@ -2060,12 +2229,96 @@
 </script>
 <script>
   $(function () {
-    var desktopForm = $("#audusertransfdesk").html();
+    var desktopForm = $("#logo_desk_transfer").html();
     $(window).on("load resize", function () {
       if ($(window).width() <= 991) {
-        $("#audusertransfmob").html(desktopForm);
+        $("#logo_mob_transfer").html(desktopForm);
       } else {
-        $("#audusertransfmob").empty();
+        $("#logo_mob_transfer").empty();
+      }
+    });
+  });
+</script>
+<script>
+  $(function () {
+    var desktopForm = $("#anon_desk_transfer").html();
+    $(window).on("load resize", function () {
+      if ($(window).width() <= 991) {
+        $("#anon_mob_transfer").html(desktopForm);
+      } else {
+        $("#anon_mob_transfer").empty();
+      }
+    });
+  });
+</script>
+<script>
+  $(function () {
+    var desktopForm = $("#esas_desk_transfer").html();
+    $(window).on("load resize", function () {
+      if ($(window).width() <= 991) {
+        $("#esas_mob_transfer").html(desktopForm);
+      } else {
+        $("#esas_mob_transfer").empty();
+      }
+    });
+  });
+</script>
+<script>
+  $(function () {
+    var desktopForm = $("#usaq_desk_transfer").html();
+    $(window).on("load resize", function () {
+      if ($(window).width() <= 991) {
+        $("#usaq_mob_transfer").html(desktopForm);
+      } else {
+        $("#usaq_mob_transfer").empty();
+      }
+    });
+  });
+</script>
+<script>
+  $(function () {
+    var desktopForm = $("#tehsil_desk_transfer").html();
+    $(window).on("load resize", function () {
+      if ($(window).width() <= 991) {
+        $("#tehsil_mob_transfer").html(desktopForm);
+      } else {
+        $("#tehsil_mob_transfer").empty();
+      }
+    });
+  });
+</script>
+<script>
+  $(function () {
+    var desktopForm = $("#search_desk_transfer").html();
+    $(window).on("load resize", function () {
+      if ($(window).width() <= 991) {
+        $("#search_mob_transfer").html(desktopForm);
+      } else {
+        $("#search_mob_transfer").empty();
+      }
+    });
+  });
+</script>
+<script>
+  $(function () {
+    var desktopForm = $("#ads_desk_transfer").html();
+    $(window).on("load resize", function () {
+      if ($(window).width() <= 991) {
+        $("#ads_mob_transfer").html(desktopForm);
+      } else {
+        $("#ads_mob_transfer").empty();
+      }
+    });
+  });
+</script>
+<script>
+  $(function () {
+    var desktopForm = $("#side_menu_desk_transfer").html();
+    $(window).on("load resize", function () {
+      if ($(window).width() <= 991) {
+        $("#side_menu_mob_transfer").html(desktopForm);
+      } else {
+        $("#side_menu_mob_transfer").empty();
       }
     });
   });
@@ -2073,15 +2326,33 @@
 
 <script>
   $(function () {
-    var desktopForm = $("#esasbolme").html() + $("#desktopButtons").html();
+    var desktopForm = $("#anon_desk_transfer").html();
     $(window).on("load resize", function () {
       if ($(window).width() <= 991) {
-        $("#mobileButtons").html(desktopForm);
+        $("#anon_mob_transfer2").html(desktopForm);
       } else {
-        $("#mobileButtons").empty();
+        $("#anon_mob_transfer2").empty();
       }
     });
   });
+</script>
+<script>
+  $(function () {
+    var desktopForm = $("#social_desk_transfer").html();
+    $(window).on("load resize", function () {
+      if ($(window).width() <= 991) {
+        $("#social_mob_transfer").html(desktopForm);
+      } else {
+        $("#social_mob_transfer").empty();
+      }
+    });
+  });
+</script>
+<script>
+  function openMenu() {
+    var element = document.getElementById("fixed_nav");
+    element.classList.toggle("my_fixed_nav");
+  }
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 
@@ -2148,9 +2419,9 @@
   var btns = btnContainer.getElementsByClassName("btn");
   for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function () {
-      var current = document.getElementsByClassName("active");
-      current[0].className = current[0].className.replace(" active", "");
-      this.className += " active";
+      var current = document.getElementsByClassName("active4");
+      current[0].className = current[0].className.replace(" active4", "");
+      this.className += " active4";
     });
   }
 </script>
