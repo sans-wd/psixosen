@@ -45,43 +45,123 @@
     <link rel="stylesheet" href="./css/last.css" />
   </head>
 
-  <body>
+  <body class="istifa_selector">
+    <!-- MOBILE_FIXED_MENU -->
+    <div class="fixed_pos_contruction px-2" id="fixed_nav">
+      <div class="d-flex justify-content-between align-items-center my-3">
+        <div class="navbar_logo">
+          <a
+            href="./index_istifat.html"
+            class="navbar-brand"
+            id="logo_mob_transfer"
+          ></a>
+        </div>
+        <div
+          class="anonim_mutton_nav d-flex justify-content-between align-items-center"
+        >
+          <a
+            class="nav-item nav-link active"
+            aria-current="page"
+            href="#"
+            id="anon_mob_transfer"
+          ></a>
+          <a
+            class="nav-item nav-link active ms-2 d-lg-none"
+            aria-current="page"
+            href="#"
+            onclick="openMenu(),changeIcon(infinit_button)"
+          >
+            <button class="btn btn-lg btn-close fixed_nav_close"></button>
+          </a>
+        </div>
+      </div>
+      <div
+        class="d-flex justify-content-center align-items-center mobile_fix_header mb-3"
+      >
+        <h1>İstifadəçi bölməsi</h1>
+      </div>
+      <div class="d-flex justify-content-between align-items-center">
+        <div id="esas_mob_transfer"></div>
+        <div>
+          <a
+            class="nav-item nav-link active"
+            aria-current="page"
+            href="#"
+            id="usaq_mob_transfer"
+          >
+          </a>
+        </div>
+        <div>
+          <a
+            class="nav-item nav-link active"
+            aria-current="page"
+            href="#"
+            id="tehsil_mob_transfer"
+          >
+          </a>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center align-items-center my-3">
+        <a
+          class="nav-item nav-link active"
+          aria-current="page"
+          href="#"
+          id="search_mob_transfer"
+        >
+        </a>
+      </div>
+      <div class="ads" id="ads_mob_transfer"></div>
+      <div class="side_menu my-3" id="side_menu_mob_transfer"></div>
+      <ul
+        class="d-flex flex-wrap justify-content-between align-items-center list-unstyled px-2 social_networks mt-0 mb-3"
+        id="social_mob_transfer"
+      ></ul>
+    </div>
+
+    <!-- MOBILE_FIXED_MENU -->
     <div class="container-fluid mob_nav_back">
       <div class="container">
         <div
           class="heber_info_header d-flex justify-content-center align-items-center"
         >
-          <p class="m-0 py-2">Ən son xəbərləri <a href="#">burdan</a> gör</p>
+          <p class="m-0 py-0">Ən son xəbərləri <a href="#">burdan</a> gör</p>
         </div>
       </div>
     </div>
     <nav class="navbar navbar-expand-lg navbar_back">
       <div class="container">
-        <a href="./index_transfer_istifa.html" class="navbar-brand"
-          ><img src="./img/loqopsixoyazılı.png" alt=""
-        /></a>
-
-        <div class="d-flex">
-          <div
-            id="mobileFrom"
-            class="d-lg-none"
-            class="justify-content-center align-items-center"
-            style="flex-direction: row; display: flex"
-          ></div>
-          <!-- <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarText"
-          aria-controls="navbarText"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+        <div
+          class="d-flex justify-content-between align-items-center nav_width_edit"
         >
-          <span class="navbar-toggler-icon"></span>
-        </button> -->
+          <a
+            href="./index_istifat.html"
+            class="navbar-brand"
+            id="logo_desk_transfer"
+            ><img src="./img/loqopsixoyazılı.png" alt=""
+          /></a>
+          <div class="d-flex align-items-center">
+            <a
+              class="nav-item nav-link active d-lg-none"
+              aria-current="page"
+              href="#"
+              id="anon_mob_transfer2"
+            ></a>
+            <a
+              class="nav-item nav-link active d-lg-none"
+              aria-current="page"
+              href="#"
+              ><button type="button" class="money_btn">
+                <span>133 azn</span>
+              </button>
+            </a>
+          </div>
         </div>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <div id="esasbolme" class="d-none">
+
+        <div
+          class="collapse navbar-collapse after_transfer_disp_none"
+          id="navbarText"
+        >
+          <div class="d-none" id="esas_desk_transfer">
             <a class="nav-item nav-link active" aria-current="page" href="#"
               ><button type="button" class="eses_btn">
                 <img
@@ -96,70 +176,63 @@
             </a>
           </div>
           <div class="navbar-nav ms-auto align-items-center">
-            <div
-              id="mobileButtons"
-              class="d-lg-none"
-              style="
-                flex-direction: row;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-              "
-            ></div>
-            <div
-              id="desktopButtons"
-              class="d-none d-lg-flex"
-              style="display: flex; flex-direction: row"
-            >
-              <a class="nav-item nav-link active" aria-current="page" href="#"
-                ><button type="button" class="tehsil_btn">
-                  <img
-                    src="./img/tehsil.svg"
-                    width="26px"
-                    height="26px"
-                    alt=""
-                    srcset=""
-                  />
-                  <span> Təhsil bölməsi </span>
-                </button>
-              </a>
+            <a
+              class="nav-item nav-link active"
+              aria-current="page"
+              href="#"
+              id="tehsil_desk_transfer"
+              ><button type="button" class="tehsil_btn">
+                <img
+                  src="./img/tehsil.svg"
+                  width="26px"
+                  height="26px"
+                  alt=""
+                  srcset=""
+                />
+                <span> Təhsil bölməsi </span>
+              </button>
+            </a>
 
-              <a class="nav-item nav-link active" aria-current="page" href="#"
-                ><button type="button" class="usaq_btn">
-                  <img
-                    src="./img/usag.svg"
-                    width="26px"
-                    height="26px"
-                    alt=""
-                    srcset=""
-                  />
-                  <span>Uşaq bölməsi</span>
-                </button>
-              </a>
-            </div>
-            <div id="desktopFrom" class="d-none d-lg-flex">
-              <a class="nav-item nav-link active" aria-current="page" href="#"
-                ><button type="button" class="anonim_btn">
-                  <img
-                    src="./img/anobim.svg"
-                    width="26px"
-                    height="26px"
-                    alt=""
-                    srcset=""
-                  />
-                  <span> Anonim dinləyici çatı </span>
-                </button>
-              </a>
-              <a
-                class="nav-item nav-link active d-lg-none"
-                aria-current="page"
-                href="#"
-                ><button type="button" class="money_btn">
-                  <span>133 azn</span>
-                </button>
-              </a>
-            </div>
-            <a class="nav-item nav-link active" aria-current="page" href="#">
+            <a
+              class="nav-item nav-link active"
+              aria-current="page"
+              href="#"
+              id="usaq_desk_transfer"
+              ><button type="button" class="usaq_btn">
+                <img
+                  src="./img/usag.svg"
+                  width="26px"
+                  height="26px"
+                  alt=""
+                  srcset=""
+                />
+                <span>Uşaq bölməsi</span>
+              </button>
+            </a>
+
+            <a
+              class="nav-item nav-link active"
+              aria-current="page"
+              href="#"
+              id="anon_desk_transfer"
+              ><button type="button" class="anonim_btn">
+                <img
+                  src="./img/anobim.svg"
+                  width="26px"
+                  height="26px"
+                  alt=""
+                  srcset=""
+                />
+                <span> Anonim dinləyici çatı </span>
+              </button>
+            </a>
+
+            <a
+              class="nav-item nav-link active"
+              aria-current="page"
+              href="#"
+              id="search_desk_transfer"
+            >
               <div class="input-group">
                 <div class="input-group-append">
                   <button class="search_button_nav" type="button">
@@ -182,14 +255,22 @@
                 </i>
               </div>
             </a>
-            <a class="nav-item nav-link active" aria-current="page" href="#"
-              ><button type="button" class="user_btn">
-                133 <br />
-                AZN
+            <!-- IZMENENIYA -->
+            <a
+              class="nav-item nav-link active"
+              aria-current="page"
+              href="./user1.html"
+              ><button
+                type="button"
+                class="user_btn"
+                id="signup-btn2"
+                style="background-color: #3e588a"
+              >
+                <span>133 AZN</span>
               </button>
             </a>
+            <!-- IZMENENIYA -->
           </div>
-          <div id="mobile_menu_transfer" class="d-lg-none"></div>
         </div>
       </div>
     </nav>
@@ -254,8 +335,8 @@
             </div>
             <div class="col-lg-9 col-md-8 col-sm-8 col-xs-8 col-8">
               <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-8">
-                  <h5 style="font-size: 19px" class="mt-4 mob_style mytext1">
+                <div class="col-lg-8 col-md-6 col-sm-6 col-xs-6 col-8">
+                  <h5 style="" class="mt-4 mob_style mytext1">
                     Səadət Əliyeva
                   </h5>
                   <button
@@ -280,13 +361,14 @@
                   <br />
                   <br />
                   <span class="mobile_text">
-                    Azərbaycanın ilk psixoloji və özünü inkişaf platforması
-                    <br />
-                    Sənin həyatın, sənin psixologiyan <br />
-                    Yeni həyata başlamaq sənin əlindədir
+                    Mən Aynur Şıxalıyeva hal-hazırda Nur kids tədris mərkəzində
+                    Psixoloq kimi fəaliyyət göstərirəm. Təlimçi-psixoloq kimi
+                    Asan xidmət mərkəzində və digər yerlərdə təlimlər verirəm.
+                    Tipik,atipik uşaqlar və böyüklərlə reablitasiya işi
+                    aparıram.
                   </span>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-4 pt-3">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 col-4 pt-3">
                   <div class="row">
                     <div class="col-12" style="float: right">
                       <div class="button_wraper position-relative sht1">
@@ -733,10 +815,15 @@
                 <option value="6">Yorğun</option>
               </select>
             </div>
-            <div class="side_menu" id="side_menu">
-              <a href="#" class="active menu_buttons d-flex align-items-center">
+            <div class="side_menu" id="side_menu_desk_transfer">
+              <a href="#" class="menu_buttons d-flex align-items-center">
                 <div class="d-flex align-items-center">
-                  <img src="./img/esas_sephe.svg" alt="" height="16px" />
+                  <img
+                    src="./img/esas_sephe.svg"
+                    alt=""
+                    height="16px"
+                    style="filter: invert(0)"
+                  />
                   <span>Əsas səhifə</span>
                 </div>
               </a>
@@ -751,9 +838,12 @@
               >
                 <div class="d-flex justify-content-between align-items-center">
                   <span class="p-0"
-                    ><i class="fa-regular fa-user"></i
-                    ><span class="span_move">Mütəxəssislər</span></span
-                  ><i class="fa-solid fa-chevron-down"></i>
+                    ><img
+                      style="height: 16px; filter: invert(1)"
+                      src="./img/haqqimda1.svg "
+                      alt=""
+                    /><span class="span_move">Haqqımda</span></span
+                  >
                 </div>
               </a>
               <div
@@ -769,53 +859,74 @@
                 </div>
               </div>
               <a href="#" class="menu_buttons">
-                <div class="d-flex align-items-center">
-                  <img
-                    src="./img/tehsil.svg"
-                    alt=""
-                    height="16px"
-                    style="filter: invert(1)"
-                  />
-                  <span>Təhsil bölməsi</span>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="1">
+                    <img
+                      src="./img/paylash1.svg"
+                      alt=""
+                      style="filter: invert(1)"
+                      height="16px"
+                    />
+                    <span>Paylaşımlarım</span>
+                  </div>
+                  <div class="1"><i class="fa-solid fa-chevron-down"></i></div>
                 </div>
               </a>
               <a href="#" class="menu_buttons">
-                <div class="d-flex align-items-center">
-                  <img
-                    src="./img/usag.svg"
-                    alt=""
-                    height="16px"
-                    style="filter: invert(1)"
-                  />
-                  <span>Uşaq bölməsi</span>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="1">
+                    <img
+                      src="./img/faaliyat1.svg"
+                      alt=""
+                      style="filter: invert(1)"
+                      height="16px"
+                    />
+                    <span>Fəaliyyətim</span>
+                  </div>
+                  <div class="2"><i class="fa-solid fa-chevron-down"></i></div>
                 </div>
               </a>
               <a href="#" class="menu_buttons">
-                <div class="d-flex align-items-center">
-                  <img src="./img/psi_academy.svg" alt="" height="16px" />
-                  <span>PSİ akademiyası</span>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="1">
+                    <img
+                      src="./img/QRCode.svg"
+                      alt=""
+                      height="16px"
+                      style="filter: invert(1); color: white"
+                    />
+                    <span>Xidmətlərim</span>
+                  </div>
+                  <div class="2"><i class="fa-solid fa-chevron-down"></i></div>
                 </div>
               </a>
               <a
                 href="#"
                 class="menu_buttons"
-                style="
-                  background-color: #1e1e1e !important;
-                  color: white !important;
-                "
+                style="background-color: ; color: white !important"
               >
                 <div class="d-flex align-items-center">
-                  <img src="./img/anobim.svg" alt="" height="16px" />
-                  <span>Anonim dinləyici çatı</span>
+                  <img
+                    src="./img/karyera1.svg"
+                    alt=""
+                    height="16px"
+                    style="filter: invert(1)"
+                  />
+                  <span style="color: black">Karyera xəritəsi</span>
                 </div>
               </a>
               <a
                 href="#"
-                class="menu_buttons d-flex justify-content-start align-items-center"
+                class="active menu_buttons d-flex justify-content-start align-items-center"
               >
                 <div class="d-flex align-items-center">
-                  <img src="./img/tedbir.svg" alt="" height="16px" />
-                  <span>Tədbir və elan</span>
+                  <img
+                    src="./img/psi.svg"
+                    alt=""
+                    height="16px"
+                    style="filter: invert(0)"
+                  />
+                  <span style="color: white">PSİ akademiyası</span>
                 </div>
               </a>
               <a
@@ -829,10 +940,14 @@
               >
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="d-flex align-items-center">
-                    <img src="./img/xidmet.svg" alt="" height="16px" />
-                    <span>Xidmetler</span>
+                    <img
+                      src="./img/magaza.svg"
+                      alt=""
+                      height="16px"
+                      style="filter: invert(1)"
+                    />
+                    <span>Mağaza</span>
                   </div>
-                  <i class="fa-solid fa-chevron-down"></i>
                 </div>
               </a>
               <div
@@ -853,26 +968,79 @@
               </div>
               <a href="#" class="menu_buttons">
                 <div class="d-flex align-items-center">
-                  <img src="./img/magaza.svg" alt="" height="16px" />
-                  <span>Mağaza</span>
+                  <img
+                    src="./img/terzim.svg"
+                    alt=""
+                    height="16px"
+                    style="filter: invert(1)"
+                  />
+                  <span>Tərzim</span>
                 </div>
               </a>
               <a href="#" class="menu_buttons">
                 <div class="d-flex align-items-center">
-                  <img src="./img/xeber.svg" alt="" height="16px" />
-                  <span>Xəbərlər</span>
+                  <img
+                    src="./img/abonik.svg"
+                    alt=""
+                    height="16px"
+                    style="filter: invert(1)"
+                  />
+                  <span>Abonəliklər</span>
                 </div>
               </a>
               <a href="#" class="menu_buttons">
                 <div class="d-flex align-items-center">
-                  <img src="./img/layihe.svg" alt="" height="16px" />
-                  <span>Layihələrimiz</span>
+                  <img
+                    src="./img/qeyd.svg"
+                    alt=""
+                    height="16px"
+                    style="filter: invert(1)"
+                  />
+                  <span>Qeyd dəftərim</span>
                 </div>
               </a>
               <a href="#" class="menu_buttons">
                 <div class="d-flex align-items-center">
-                  <img src="./img/haqq.svg" alt="" height="16px" />
-                  <span>Haqqımızda</span>
+                  <img
+                    src="./img/maaliye.svg"
+                    alt=""
+                    height="16px"
+                    style="filter: invert(1)"
+                  />
+                  <span>Maliyyə</span>
+                </div>
+              </a>
+              <a href="#" class="menu_buttons">
+                <div class="d-flex align-items-center">
+                  <img
+                    src="./img/sual.svg"
+                    alt=""
+                    height="16px"
+                    style="filter: invert(0)"
+                  />
+                  <span>Sual-cavab</span>
+                </div>
+              </a>
+              <a href="#" class="menu_buttons">
+                <div class="d-flex align-items-center">
+                  <img
+                    src="./img/bildirish.svg"
+                    alt=""
+                    height="16px"
+                    style="filter: invert(1)"
+                  />
+                  <span>Bildirişlər</span>
+                </div>
+              </a>
+              <a href="#" class="menu_buttons">
+                <div class="d-flex align-items-center">
+                  <img
+                    src="./img/tenzim.svg"
+                    alt=""
+                    height="16px"
+                    style="filter: invert(1)"
+                  />
+                  <span>Tənzimləmələr</span>
                 </div>
               </a>
             </div>
@@ -1434,8 +1602,8 @@
         </div>
       </div>
       <div
-        class="container-fluid mob_nav_back py-3 position-fixed d-lg-none"
-        style="bottom: 0"
+        class="container-fluid mob_nav_back position-fixed d-lg-none"
+        style="bottom: 0; z-index: 999999999"
       >
         <div class="mobile_bottom_nav container">
           <ul
@@ -1452,16 +1620,14 @@
               </a>
             </li>
             <li>
+              <!-- IZMENENIYA -->
               <a
-                class="navbar-toggler"
+                class="navbar-toggler infinit_mob_nav_a"
+                id="infinit_button"
                 type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarText"
-                aria-controls="navbarText"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-                onclick="changeIcon(this)"
+                onclick="changeIcon(this), openMenu()"
               >
+                <!-- IZMENENIYA -->
                 <div class="infinit_mob_nav position-relative">
                   <i
                     class="fa-solid fa-infinity fa-2x"
@@ -1478,7 +1644,7 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="./user1.html" type="button">
                 <i
                   class="fa-solid fa-user fa-2x"
                   style="color: white; width: 32px; height: 32px"
@@ -1492,6 +1658,16 @@
                 icon.classList.toggle("fa-circle-xmark");
               }
             </script>
+            <!-- IZMENENIYA -->
+
+            <script>
+              function changeIcon2(anchor) {
+                var icon = anchor.querySelector("i");
+                icon.classList.toggle("fa-regular");
+                icon.classList.toggle("fa-solid");
+              }
+            </script>
+            <!-- IZMENENIYA -->
           </ul>
         </div>
       </div>
@@ -1605,31 +1781,6 @@
 
     <script>
       $(function () {
-        var desktopForm = $("#desktopFrom").html();
-        $(window).on("load resize", function () {
-          if ($(window).width() <= 991) {
-            $("#mobileFrom").html(desktopForm);
-          } else {
-            $("#mobileFrom").empty();
-          }
-        });
-      });
-    </script>
-
-    <script>
-      $(function () {
-        var desktopForm = $("#navTransfer").html();
-        $(window).on("load resize", function () {
-          if ($(window).width() <= 991) {
-            $("#mobile_menu_transfer").html(desktopForm);
-          } else {
-            $("#mobile_menu_transfer").empty();
-          }
-        });
-      });
-    </script>
-    <script>
-      $(function () {
         var desktopForm = $("#audiimgtransferdeask").html();
         $(window).on("load resize", function () {
           if ($(window).width() <= 991) {
@@ -1642,12 +1793,96 @@
     </script>
     <script>
       $(function () {
-        var desktopForm = $("#audusertransfdesk").html();
+        var desktopForm = $("#logo_desk_transfer").html();
         $(window).on("load resize", function () {
           if ($(window).width() <= 991) {
-            $("#audusertransfmob").html(desktopForm);
+            $("#logo_mob_transfer").html(desktopForm);
           } else {
-            $("#audusertransfmob").empty();
+            $("#logo_mob_transfer").empty();
+          }
+        });
+      });
+    </script>
+    <script>
+      $(function () {
+        var desktopForm = $("#anon_desk_transfer").html();
+        $(window).on("load resize", function () {
+          if ($(window).width() <= 991) {
+            $("#anon_mob_transfer").html(desktopForm);
+          } else {
+            $("#anon_mob_transfer").empty();
+          }
+        });
+      });
+    </script>
+    <script>
+      $(function () {
+        var desktopForm = $("#esas_desk_transfer").html();
+        $(window).on("load resize", function () {
+          if ($(window).width() <= 991) {
+            $("#esas_mob_transfer").html(desktopForm);
+          } else {
+            $("#esas_mob_transfer").empty();
+          }
+        });
+      });
+    </script>
+    <script>
+      $(function () {
+        var desktopForm = $("#usaq_desk_transfer").html();
+        $(window).on("load resize", function () {
+          if ($(window).width() <= 991) {
+            $("#usaq_mob_transfer").html(desktopForm);
+          } else {
+            $("#usaq_mob_transfer").empty();
+          }
+        });
+      });
+    </script>
+    <script>
+      $(function () {
+        var desktopForm = $("#tehsil_desk_transfer").html();
+        $(window).on("load resize", function () {
+          if ($(window).width() <= 991) {
+            $("#tehsil_mob_transfer").html(desktopForm);
+          } else {
+            $("#tehsil_mob_transfer").empty();
+          }
+        });
+      });
+    </script>
+    <script>
+      $(function () {
+        var desktopForm = $("#search_desk_transfer").html();
+        $(window).on("load resize", function () {
+          if ($(window).width() <= 991) {
+            $("#search_mob_transfer").html(desktopForm);
+          } else {
+            $("#search_mob_transfer").empty();
+          }
+        });
+      });
+    </script>
+    <script>
+      $(function () {
+        var desktopForm = $("#ads_desk_transfer").html();
+        $(window).on("load resize", function () {
+          if ($(window).width() <= 991) {
+            $("#ads_mob_transfer").html(desktopForm);
+          } else {
+            $("#ads_mob_transfer").empty();
+          }
+        });
+      });
+    </script>
+    <script>
+      $(function () {
+        var desktopForm = $("#side_menu_desk_transfer").html();
+        $(window).on("load resize", function () {
+          if ($(window).width() <= 991) {
+            $("#side_menu_mob_transfer").html(desktopForm);
+          } else {
+            $("#side_menu_mob_transfer").empty();
           }
         });
       });
@@ -1655,12 +1890,24 @@
 
     <script>
       $(function () {
-        var desktopForm = $("#esasbolme").html() + $("#desktopButtons").html();
+        var desktopForm = $("#anon_desk_transfer").html();
         $(window).on("load resize", function () {
           if ($(window).width() <= 991) {
-            $("#mobileButtons").html(desktopForm);
+            $("#anon_mob_transfer2").html(desktopForm);
           } else {
-            $("#mobileButtons").empty();
+            $("#anon_mob_transfer2").empty();
+          }
+        });
+      });
+    </script>
+    <script>
+      $(function () {
+        var desktopForm = $("#social_desk_transfer").html();
+        $(window).on("load resize", function () {
+          if ($(window).width() <= 991) {
+            $("#social_mob_transfer").html(desktopForm);
+          } else {
+            $("#social_mob_transfer").empty();
           }
         });
       });
@@ -1670,6 +1917,12 @@
         var icon = anchor.querySelector("i");
         icon.classList.toggle("fa-regular");
         icon.classList.toggle("fa-solid");
+      }
+    </script>
+    <script>
+      function openMenu() {
+        var element = document.getElementById("fixed_nav");
+        element.classList.toggle("my_fixed_nav");
       }
     </script>
   </body>
