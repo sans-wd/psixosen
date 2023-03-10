@@ -1426,6 +1426,11 @@ input {
   .my_modal_body button {
     margin: 6px;
   }
+  .slide_info .row .col-lg-1,
+  .slide_info .row .col-lg-8 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 }
 
 @media (max-width: 767px) {
