@@ -44,17 +44,17 @@
     <link rel="stylesheet" href="./css/Expert_profile.css" />
     <link rel="stylesheet" href="./css/last.css" />
   </head>
-
+  <script
+    src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+    crossorigin="anonymous"
+  ></script>
   <body class="istifa_selector">
     <!-- MOBILE_FIXED_MENU -->
-    <div class="fixed_pos_contruction px-2" id="fixed_nav">
-      <div class="d-flex justify-content-between align-items-center my-3">
+    <div class="fixed_pos_contruction" id="fixed_nav">
+      <div class="d-flex justify-content-between align-items-center my-3 px-2">
         <div class="navbar_logo">
-          <a
-            href="./index_istifat.html"
-            class="navbar-brand"
-            id="logo_mob_transfer"
-          ></a>
+          <a href="#" class="navbar-brand" id="logo_mob_transfer"></a>
         </div>
         <div
           class="anonim_mutton_nav d-flex justify-content-between align-items-center"
@@ -69,7 +69,7 @@
             class="nav-item nav-link active ms-2 d-lg-none"
             aria-current="page"
             href="#"
-            onclick="openMenu(),changeIcon(infinit_button)"
+            onclick="openMenu(), openMenu2(),changeIcon(infinit_button)"
           >
             <button class="btn btn-lg btn-close fixed_nav_close"></button>
           </a>
@@ -80,10 +80,11 @@
       >
         <h1>İstifadəçi bölməsi</h1>
       </div>
-      <div class="d-flex justify-content-between align-items-center">
-        <div id="esas_mob_transfer"></div>
+      <div class="d-flex justify-content-between align-items-center px-2">
+        <div onclick="myFunction_set_esas()" id="esas_mob_transfer"></div>
         <div>
           <a
+            onclick="myFunction_set_us()"
             class="nav-item nav-link active"
             aria-current="page"
             href="#"
@@ -96,6 +97,7 @@
             class="nav-item nav-link active"
             aria-current="page"
             href="#"
+            onclick="myFunction_set_teh()"
             id="tehsil_mob_transfer"
           >
           </a>
@@ -110,16 +112,21 @@
         >
         </a>
       </div>
-      <div class="ads" id="ads_mob_transfer"></div>
+      <div class="ads px-2" id="ads_mob_transfer"></div>
       <div class="side_menu my-3" id="side_menu_mob_transfer"></div>
       <ul
-        class="d-flex flex-wrap justify-content-between align-items-center list-unstyled px-2 social_networks mt-0 mb-3"
+        class="d-flex flex-wrap justify-content-evenly align-items-center list-unstyled px-2 social_networks mt-0 mb-3"
         id="social_mob_transfer"
       ></ul>
     </div>
 
     <!-- MOBILE_FIXED_MENU -->
-    <div class="container-fluid mob_nav_back">
+    <div class="container-fluid mob_nav_back position-relative" id="close_link">
+      <div
+        class="btn btn-close position-absolute"
+        style="right: 13px; top: 5px"
+        onclick="closehead()"
+      ></div>
       <div class="container">
         <div
           class="heber_info_header d-flex justify-content-center align-items-center"
@@ -249,9 +256,9 @@
             <a class="nav-item nav-link active" aria-current="page" href="#">
               <div class="shopping_cart">
                 <i class="fa-solid fa-cart-shopping fa-2x position-relative">
-                  <!-- <div class="shopping_cart_count position-absolute">
-                  <span>5</span>
-                </div> -->
+                  <div class="shopping_cart_count position-absolute">
+                    <span>5</span>
+                  </div>
                 </i>
               </div>
             </a>
@@ -280,7 +287,7 @@
         margin: 0 auto;
         overflow: hidden;
         padding: 5px;
-        min-height: 39px;
+        min-height: 37px;
         background: var(--first) !important;
       }
 
@@ -316,34 +323,64 @@
 
     <body>
       <div class="container mt-2">
-        <div class="container profile_main">
+        <div class="container profile_main mobile_padding">
           <div class="row mobstyle123">
             <div
-              class="col-lg-3 col-md-4 col-sm-4 col-xs-4 col-4 img_box"
-              style="
-                padding: 0px;
-                position: relative;
-                height: 100%;
-                border-radius: 40px;
-              "
+              class="col-lg-3 col-md-3 col-sm-4 col-xs-3 col-5 img_box"
+              style="padding: 0px; position: relative; height: 100%"
             >
-              <img
-                class="img-fluid mob_padd mobilephoto1"
-                src="png/Rectangle 45.png"
-                alt=""
-              />
+              <div
+                style="margin-right: 16px"
+                class="wrapper_div position-relative"
+              >
+                <img
+                  id="change"
+                  style="object-fit: cover"
+                  class="img-fluid mob_padd mobilephoto"
+                  src="png/profile2.png"
+                  alt=""
+                />
+                <img class="ladno_iconca" src="img/iconcu.svg" alt="" />
+              </div>
             </div>
-            <div class="col-lg-9 col-md-8 col-sm-8 col-xs-8 col-8">
+            <script>
+              var change = document.getElementById("change");
+
+              document
+                .getElementById("foreground")
+                .addEventListener("change", function () {
+                  change.style.color = this.value;
+                });
+
+              document
+                .getElementById("font")
+                .addEventListener("change", function () {
+                  change.style.fontFamily = this.value;
+                });
+
+              document
+                .getElementById("border")
+                .addEventListener("change", function () {
+                  change.style.borderColor = this.value;
+                });
+            </script>
+            <div
+              style="position: relative"
+              class="col-lg-9 col-md-9 col-sm-7 col-xs-7 col-7"
+            >
               <div class="row">
-                <div class="col-lg-8 col-md-6 col-sm-6 col-xs-6 col-8">
-                  <h5 style="" class="mt-4 mob_style mytext1">
-                    Səadət Əliyeva
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-12">
+                  <h5
+                    style="font-size: px; color: black"
+                    class="mt-3 mob_style mytext1"
+                  >
+                    Osman Alibey Nasirov
                   </h5>
                   <button
                     style="
                       min-width: 125px;
                       min-height: 30px;
-
+                      padding: 5px;
                       background: var(--second) !important;
                       border-radius: 6px;
                       border: none;
@@ -356,24 +393,49 @@
                       color: #e3e3e3;
                     "
                   >
-                    Tələbə
+                    Uşaq psixoloqu
                   </button>
                   <br />
                   <br />
-                  <span class="mobile_text">
+                  <span
+                    class="mobile_text mobile_ext11 dispblock13"
+                    style="color: black; !important"
+                  >
                     Mən Aynur Şıxalıyeva hal-hazırda Nur kids tədris mərkəzində
                     Psixoloq kimi fəaliyyət göstərirəm. Təlimçi-psixoloq kimi
                     Asan xidmət mərkəzində və digər yerlərdə təlimlər verirəm.
-                    Tipik,atipik uşaqlar və böyüklərlə reablitasiya işi
-                    aparıram.
                   </span>
+                  <div class="d-flex justify-content-start">
+                    <div
+                      style="margin-right: 20px"
+                      id="button1_mob_transfer"
+                      class="button_wraper position-relative sht1 d-md-none"
+                    ></div>
+                    <div
+                      id="button2_mob_transfer"
+                      class="button_wraper position-relative shtoot d-md-none"
+                    ></div>
+                  </div>
+
+                  <style>
+                    @media only screen and (max-width: 991px) {
+                      .status_dnone {
+                        display: none;
+                      }
+                    }
+                  </style>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 col-4 pt-3">
+                <div
+                  class="col-lg-4 col-md-4 col-sm-6 col-xs-6 col-4 pt-3 dnonetransfer"
+                >
                   <div class="row">
                     <div class="col-12" style="float: right">
-                      <div class="button_wraper position-relative sht1">
+                      <div
+                        id="button1_desk_transfer"
+                        class="button_wraper position-relative sht1"
+                      >
                         <div class="sdd position-absolute">
-                          <h5>
+                          <h5 style="color: rgb(247, 245, 245)">
                             Bu bölmə sizin fəaliyyət üzrə reytinqinizi əks
                             etdirir
                           </h5>
@@ -389,6 +451,7 @@
                             border: none;
                             padding: 17px 30px;
                             float: right;
+                            margin-right: 14px;
                           "
                         >
                           <i
@@ -400,20 +463,16 @@
                         </button>
                       </div>
                     </div>
-                    <!-- <script>
-                    $(function () {
-                      $('[data-bs-toggle="tooltip"]').tooltip()
-                    })
-                  </script> -->
                     <style>
                       .sdd {
                         display: none;
-                        background: rgba(234, 47, 47, 0.85);
+                        background: rgba(240, 15, 15, 0.65);
                         text-align: center;
 
                         border-radius: 15px;
-                        top: 20px;
-                        width: 200px;
+                        top: 5px;
+
+                        width: 150px;
                         padding: 2px;
                       }
 
@@ -428,17 +487,12 @@
                         display: block;
                       }
                     </style>
+                    <!-- <script>
+                    $(function () {
+                      $('[data-bs-toggle="tooltip"]').tooltip()
+                    })
+                  </script> -->
                     <style>
-                      .sdsdf {
-                        display: none;
-                        top: 15px;
-                        right: 95px;
-                        width: 190px;
-                        text-align: center;
-                        background: #2c8cc0cc;
-                        border-radius: 15px;
-                      }
-
                       .sdsdf h5 {
                         font-size: 14px;
                         color: white;
@@ -451,7 +505,10 @@
                       }
                     </style>
                     <div class="col-12 pt-3">
-                      <div class="button_wraper position-relative shtoot">
+                      <div
+                        id="button2_desk_transfer"
+                        class="button_wraper position-relative shtoot"
+                      >
                         <div class="position-absolute sdsdf">
                           <h5>
                             Bu bölmə sizin inkişaf qiymətləndirilmənizi əks
@@ -459,7 +516,7 @@
                           </h5>
                         </div>
                         <button
-                          class="mob_button1"
+                          class="mob_button2"
                           data-bs-toggle="tooltip"
                           style="
                             background: #2c8bc0;
@@ -468,8 +525,8 @@
                             border-radius: 20px;
                             border: none;
                             float: right;
-                            padding: 17px 30px;
-                            margin-left: -25px;
+                            padding: 17px 33px;
+                            margin-right: 14px;
                             color: white;
                           "
                         >
@@ -487,7 +544,7 @@
                   </div>
                 </div>
               </div>
-              <div class="row mt-3 mb-3">
+              <div class="row mt-2">
                 <div class="d-flex justify-content-between">
                   <button
                     class="buttonstyle dispblock1"
@@ -502,7 +559,6 @@
                       align-items: center;
                       color: white;
                       padding: 0px 20px;
-
                       font-weight: 600;
                     "
                   >
@@ -510,16 +566,268 @@
                     <span class="me-4"> 32 izləyici</span>
                     <span>125 izlənilən</span>
                   </button>
-                  <div class="dispblock1" style="float: right">
+                  <div
+                    style="margin-right: 13px"
+                    class="dispblock1"
+                    style="float: right"
+                  >
+                    <div
+                      class="d-flex mobdiz"
+                      style="
+                        float: right;
+                        justify-content: center;
+                        align-items: center;
+                      "
+                    >
+                      <img
+                        class="img-fluid pt-1"
+                        style="
+                          float: right;
+                          float: left;
+                          justify-content: center;
+                          align-items: center;
+                          display: flex;
+                        "
+                        src="png/anonim.png"
+                        alt=""
+                      />
+                      <div
+                        class="checkbox-wrapper-22 pt-1"
+                        style="float: right"
+                      >
+                        <label class="switch" for="checkbox1">
+                          <input type="checkbox" id="checkbox1" />
+                          <div class="slider round"></div>
+                        </label>
+                      </div>
+
+                      <style>
+                        .checkbox-wrapper-22 .switch {
+                          display: inline-block;
+                          height: 34px;
+                          position: relative;
+                          width: 60px;
+                        }
+
+                        .checkbox-wrapper-22 .switch input {
+                          display: none;
+                        }
+
+                        .checkbox-wrapper-22 .slider {
+                          background-color: #ccc;
+                          bottom: 0;
+                          cursor: pointer;
+                          left: 0;
+                          position: absolute;
+                          right: 0;
+                          top: 0;
+                          transition: 0.4s;
+                        }
+
+                        .checkbox-wrapper-22 .slider:before {
+                          background-color: #fff;
+                          bottom: 4px;
+                          content: "";
+                          height: 26px;
+                          left: 4px;
+                          position: absolute;
+                          transition: 0.4s;
+                          width: 26px;
+                        }
+
+                        .checkbox-wrapper-22 input:checked + .slider {
+                          background-color: #66bb6a;
+                        }
+
+                        .checkbox-wrapper-22 input:checked + .slider:before {
+                          transform: translateX(26px);
+                        }
+
+                        .checkbox-wrapper-22 .slider.round {
+                          border-radius: 34px;
+                        }
+
+                        .checkbox-wrapper-22 .slider.round:before {
+                          border-radius: 50%;
+                        }
+                      </style>
+                      <img
+                        class="img-fluid pt-1"
+                        style="float: right"
+                        src="png/anonim2.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 dispblock mt-1" style="">
+            <div class="container mt-3 mb-4" style="padding: 0px">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="custom-select">
+                  <select>
+                    <option value="0">Depressiv</option>
+                    <option value="1">Depressiv</option>
+                    <option value="2">Pozitiv</option>
+                    <option value="3">Əsəbi</option>
+                    <option value="4">Stresli</option>
+                    <option value="5">Əyləncəli</option>
+                    <option value="6">Yorğun</option>
+                  </select>
+                </div>
+
+                <div class=" " style="">
+                  <div class="btn-group dropup mobile_margin1">
+                    <button
+                      type="button"
+                      class="btn dropdown-toggle d-flex align-items-center justify-content-center"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      style="
+                        background: var(--second) !important;
+                        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+                        border-radius: 10px;
+                        padding: 8px 16px;
+                        color: white;
+                        border: none;
+                        min-width: 90%;
+
+                        min-height: 35px;
+                        font-size: 12px;
+                      "
+                    >
+                      <i class="fa-solid fa-circle-plus fa-2x"></i>
+                    </button>
+                    <ul class="dropdown-menu mob_style_li">
+                      <li>
+                        <img
+                          style="width: 25px; height: 25px"
+                          class="me-2 img-fluid"
+                          src="png/first.png"
+                          alt=""
+                        />Məqalə
+                      </li>
+                      <li>
+                        <img
+                          style="width: 25px; height: 25px"
+                          class="me-2 mt-2 mb-2 img-fluid"
+                          src="png/first1.png"
+                          alt=""
+                        />Video
+                      </li>
+                      <li>
+                        <img
+                          style="width: 25px; height: 25px"
+                          class="me-2 img-fluid"
+                          src="png/first2.png"
+                          alt=""
+                        />Podkast
+                      </li>
+                      <li>
+                        <img
+                          style="width: 25px; height: 25px"
+                          class="me-2 mt-2 mb-2 img-fluid"
+                          src="png/first3.png"
+                          alt=""
+                        />Tədbir və elan
+                      </li>
+                      <li>
+                        <img
+                          style="width: 25px; height: 25px"
+                          class="me-2 img-fluid"
+                          src="png/first4.png"
+                          alt=""
+                        />Kitab tövsiyəsi
+                      </li>
+                      <li>
+                        <img
+                          style="width: 25px; height: 25px"
+                          class="me-2 mt-2 mb-2 img-fluid"
+                          src="png/first5.png"
+                          alt=""
+                        />Film tövsiyəsi
+                      </li>
+                      <li>
+                        <img
+                          style="width: 25px; height: 25px"
+                          class="me-2 img-fluid"
+                          src="png/first6.png"
+                          alt=""
+                        />Musiqi tövsiyəsi
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  id="izle_mob"
+                  class="d- flex d-md-none"
+                  style="
+                    float: right;
+                    justify-content: center;
+                    align-items: center;
+
+                    display: flex;
+                  "
+                ></div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="mobile_st">
+                <button
+                  class="buttonstyle"
+                  style="
+                    background: var(--second) !important;
+                    border-radius: 14px;
+                    justify-content: space-between !important;
+                    border: none;
+                    height: 36px;
+                    align-items: center;
+                    color: white;
+                    padding: 0px 12px;
+                    min-width: 230px;
+                    font-weight: 600;
+                  "
+                >
+                  <span class="me-4">0 paylaşım</span>
+                  <span class="me-4"> 32 izləyici</span>
+                  <span>125 izlənilən</span>
+                </button>
+                <div
+                  id="izle_desk"
+                  class="d-flex dispblock13"
+                  style="
+                    float: right;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                >
+                  <div
+                    class="d-flex mobdiz"
+                    style="
+                      float: right;
+                      justify-content: center;
+                      align-items: center;
+                    "
+                  >
                     <img
-                      class="img-fluid"
-                      style="float: right"
-                      src="png/anonim2.png"
+                      class="img-fluid pt-1"
+                      style="
+                        float: right;
+                        float: left;
+                        justify-content: center;
+                        align-items: center;
+                        display: flex;
+                      "
+                      src="png/anonim.png"
                       alt=""
                     />
-                    <div class="checkbox-wrapper-22" style="float: right">
-                      <label class="switch" for="checkbox">
-                        <input type="checkbox" id="checkbox" />
+                    <div class="checkbox-wrapper-22 pt-1" style="float: right">
+                      <label class="switch" for="checkbox2">
+                        <input type="checkbox" id="checkbox2" />
                         <div class="slider round"></div>
                       </label>
                     </div>
@@ -575,9 +883,9 @@
                       }
                     </style>
                     <img
-                      class="img-fluid"
+                      class="img-fluid pt-1"
                       style="float: right"
-                      src="png/anonim.png"
+                      src="png/anonim2.png"
                       alt=""
                     />
                   </div>
@@ -585,212 +893,33 @@
               </div>
             </div>
           </div>
+          <div class="d-md-none pb-2">
+            <div>
+              <input type="checkbox" class="read-more-state" id="post-1" />
 
-          <div class="col-12 dispblock mt-1" style="">
-            <div class="container mt-3 mb-4" style="padding: 0px">
-              <div class="d-flex justify-content-between">
-                <div class="custom-select">
-                  <select>
-                    <option value="0">Depressiv</option>
-                    <option value="1">Depressiv</option>
-                    <option value="2">Pozitiv</option>
-                    <option value="3">Əsəbi</option>
-                    <option value="4">Stresli</option>
-                    <option value="5">Əyləncəli</option>
-                    <option value="6">Yorğun</option>
-                  </select>
-                </div>
-                <div class="" style="width: 200px">
-                  <div class="btn-group dropup mobile_margin1">
-                    <button
-                      type="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                      class="dropdown-toggle d-flex justify-content-center align-items-center"
-                      style="
-                        background: var(--second) !important;
-                        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                        border-radius: 10px;
-                        padding: 11px 2px;
-                        color: white;
-                        border: none;
-                        min-width: 100%;
-                        min-height: 45px;
-                        font-size: 12px;
-                      "
-                    >
-                      <i class="fa-solid fa-circle-plus fa-2x me-2"></i>
-                      Paylaşım et
-                    </button>
-                    <ul class="dropdown-menu mob_style_li text-dark">
-                      <li>
-                        <img
-                          style="width: 25px; height: 25px; filter: invert(1)"
-                          class="me-2 img-fluid"
-                          src="png/first.png"
-                          alt=""
-                        />Məqalə
-                      </li>
-                      <li>
-                        <img
-                          style="width: 25px; height: 25px; filter: invert(1)"
-                          class="me-2 mt-2 mb-2 img-fluid"
-                          src="png/first1.png"
-                          alt=""
-                        />Video
-                      </li>
-                      <li>
-                        <img
-                          style="width: 25px; height: 25px; filter: invert(1)"
-                          class="me-2 img-fluid"
-                          src="png/first2.png"
-                          alt=""
-                        />Podkast
-                      </li>
-                      <li>
-                        <img
-                          style="width: 25px; height: 25px; filter: invert(1)"
-                          class="me-2 mt-2 mb-2 img-fluid"
-                          src="png/first3.png"
-                          alt=""
-                        />Tədbir və elan
-                      </li>
-                      <li>
-                        <img
-                          style="width: 25px; height: 25px; filter: invert(1)"
-                          class="me-2 img-fluid"
-                          src="png/first4.png"
-                          alt=""
-                        />Kitab tövsiyəsi
-                      </li>
-                      <li>
-                        <img
-                          style="width: 25px; height: 25px; filter: invert(1)"
-                          class="me-2 mt-2 mb-2 img-fluid"
-                          src="png/first5.png"
-                          alt=""
-                        />Film tövsiyəsi
-                      </li>
-                      <li>
-                        <img
-                          style="width: 25px; height: 25px; filter: invert(1)"
-                          class="me-2 img-fluid"
-                          src="png/first6.png"
-                          alt=""
-                        />Musiqi tövsiyəsi
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              <p class="read-more-wrap mb-1">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                <span class="read-more-target"
+                  >Libero fuga facilis vel consectetur quos sapiente deleniti
+                  eveniet dolores tempore eos deserunt officia quis ab?
+                  Excepturi vero tempore minus beatae voluptatem!</span
+                >
+              </p>
+              <label
+                style="background: var(--second)"
+                for="post-1"
+                class="mx-auto read-more-trigger show_more_lab"
+              >
+              </label>
             </div>
 
-            <div class="row">
-              <div class="mobile_st">
-                <button
-                  class="buttonstyle"
-                  style="
-                    background: var(--second) !important;
-                    border-radius: 14px;
-                    justify-content: space-between !important;
-                    border: none;
-                    height: 36px;
-                    align-items: center;
-                    color: white;
-                    padding: 0px 4px;
-                    width: 230px;
-                    font-weight: 600;
-                  "
-                >
-                  <span class="me-4">0 paylaşım</span>
-                  <span class="me-4"> 32 izləyici</span>
-                  <span>125 izlənilən</span>
-                </button>
-                <div
-                  class="d-flex mobdiz"
-                  style="
-                    float: right;
-                    justify-content: center;
-                    align-items: center;
-                  "
-                >
-                  <img
-                    class="img-fluid pt-1"
-                    style="
-                      float: right;
-                      float: left;
-                      justify-content: center;
-                      align-items: center;
-                      display: flex;
-                    "
-                    src="png/anonim.png"
-                    alt=""
-                  />
-                  <div class="checkbox-wrapper-22 pt-1" style="float: right">
-                    <label class="switch" for="checkbox1">
-                      <input type="checkbox" id="checkbox1" />
-                      <div class="slider round"></div>
-                    </label>
-                  </div>
-
-                  <style>
-                    .checkbox-wrapper-22 .switch {
-                      display: inline-block;
-                      height: 34px;
-                      position: relative;
-                      width: 60px;
-                    }
-
-                    .checkbox-wrapper-22 .switch input {
-                      display: none;
-                    }
-
-                    .checkbox-wrapper-22 .slider {
-                      background-color: #ccc;
-                      bottom: 0;
-                      cursor: pointer;
-                      left: 0;
-                      position: absolute;
-                      right: 0;
-                      top: 0;
-                      transition: 0.4s;
-                    }
-
-                    .checkbox-wrapper-22 .slider:before {
-                      background-color: #fff;
-                      bottom: 4px;
-                      content: "";
-                      height: 26px;
-                      left: 4px;
-                      position: absolute;
-                      transition: 0.4s;
-                      width: 26px;
-                    }
-
-                    .checkbox-wrapper-22 input:checked + .slider {
-                      background-color: #66bb6a;
-                    }
-
-                    .checkbox-wrapper-22 input:checked + .slider:before {
-                      transform: translateX(26px);
-                    }
-
-                    .checkbox-wrapper-22 .slider.round {
-                      border-radius: 34px;
-                    }
-
-                    .checkbox-wrapper-22 .slider.round:before {
-                      border-radius: 50%;
-                    }
-                  </style>
-                  <img
-                    class="img-fluid pt-1"
-                    style="float: right"
-                    src="png/anonim2.png"
-                    alt=""
-                  />
-                </div>
-              </div>
+            <div class="d-flex justify-content-center align-items-center">
+              <input
+                style="color: white"
+                type="checkbox"
+                class="read-more-state"
+                id="post-2"
+              />
             </div>
           </div>
         </div>
@@ -827,17 +956,41 @@
                   <span>Əsas səhifə</span>
                 </div>
               </a>
-              <a href="#" class="menu_buttons">
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="p-0"
-                    ><img
-                      style="height: 16px; filter: invert(1)"
-                      src="./img/haqqimda1.svg "
+
+              <a
+                data-bs-toggle="collapse"
+                href="#collapseExample4"
+                role="button"
+                aria-expanded="false"
+                aria-controls="collapseExample1"
+                bis_skin_checked="1"
+                class="collapsed menu_buttons"
+              >
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="1">
+                    <img
+                      src="./img/menim.svg "
                       alt=""
-                    /><span class="span_move">Haqqımda</span></span
-                  >
+                      style="filter: invert(0)"
+                      height="16px"
+                    />
+                    <span>Mənim qutum</span>
+                  </div>
+                  <div class="1"><i class="fa-solid fa-chevron-down"></i></div>
                 </div>
               </a>
+              <div
+                class="child_mobile colapse_body collapse"
+                id="collapseExample4"
+                bis_skin_checked="1"
+                style=""
+              >
+                <div class="">
+                  <a href="#" class="menu_buttons">Psixoloq</a>
+                  <a href="#" class="menu_buttons">Təlimçi</a>
+                  <a href="#" class="menu_buttons">Təlimçi</a>
+                </div>
+              </div>
 
               <a
                 data-bs-toggle="collapse"
@@ -851,16 +1004,17 @@
                 <div class="d-flex align-items-center justify-content-between">
                   <div class="1">
                     <img
-                      src="./img/paylash1.svg"
+                      src="./img/faaliyetim.svg"
                       alt=""
-                      style="filter: invert(1)"
+                      style="filter: invert(0)"
                       height="16px"
                     />
-                    <span>Paylaşımlarım</span>
+                    <span>Fəaliyyətim</span>
                   </div>
                   <div class="1"><i class="fa-solid fa-chevron-down"></i></div>
                 </div>
               </a>
+
               <div
                 class="child_mobile colapse_body collapse"
                 id="collapseExample1"
@@ -873,40 +1027,7 @@
                   <a href="#" class="menu_buttons">Təlimçi</a>
                 </div>
               </div>
-              <a
-                data-bs-toggle="collapse"
-                href="#collapseExample2"
-                role="button"
-                aria-expanded="false"
-                aria-controls="collapseExample2"
-                bis_skin_checked="1"
-                class="collapsed menu_buttons"
-              >
-                <div class="d-flex align-items-center justify-content-between">
-                  <div class="1">
-                    <img
-                      src="./img/faaliyat1.svg"
-                      alt=""
-                      style="filter: invert(1)"
-                      height="16px"
-                    />
-                    <span>Fəaliyyətim</span>
-                  </div>
-                  <div class="2"><i class="fa-solid fa-chevron-down"></i></div>
-                </div>
-              </a>
-              <div
-                class="child_mobile colapse_body collapse"
-                id="collapseExample2"
-                bis_skin_checked="1"
-                style=""
-              >
-                <div class="">
-                  <a href="#" class="menu_buttons">Psixoloq</a>
-                  <a href="#" class="menu_buttons">Təlimçi</a>
-                  <a href="#" class="menu_buttons">Təlimçi</a>
-                </div>
-              </div>
+
               <a
                 data-bs-toggle="collapse"
                 href="#collapseExample3"
@@ -941,11 +1062,18 @@
                   <a href="#" class="menu_buttons">Təlimçi</a>
                 </div>
               </div>
-              <a
-                href="#"
-                class="menu_buttons"
-                style="background-color: ; color: white !important"
-              >
+              <a href="#" class="menu_buttons">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="p-0"
+                    ><img
+                      style="height: 16px; filter: invert(0)"
+                      src="./img/anon_kec.svg"
+                      alt=""
+                    /><span class="span_move">Anonim çat keçmişi</span></span
+                  >
+                </div>
+              </a>
+              <a href="#" class="menu_buttons" style="color: white !important">
                 <div class="d-flex align-items-center">
                   <img
                     src="./img/karyera1.svg"
@@ -1063,14 +1191,19 @@
                 </div>
               </a>
               <a href="#" class="menu_buttons">
-                <div class="d-flex align-items-center">
-                  <img
-                    src="./img/bildirish.svg"
-                    alt=""
-                    height="16px"
-                    style="filter: invert(1)"
-                  />
-                  <span>Bildirişlər</span>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="./img/bildirish.svg"
+                      alt=""
+                      height="16px"
+                      style="filter: invert(1)"
+                    />
+                    <span>Bildirişlər</span>
+                  </div>
+                  <div class="shopping_cart_count">
+                    <span style="height: 20px; width: 20px">5</span>
+                  </div>
                 </div>
               </a>
               <a href="#" class="menu_buttons">
@@ -1319,7 +1452,7 @@
                       class="first_content d-flex justify-content-between pt-3"
                     >
                       <div style="margin-left: 12px" class="left">
-                        <span>Yeni</span>
+                        <span style="color: red">Yeni</span>
                         <button
                           class="ms-3"
                           style="
@@ -1333,7 +1466,7 @@
                         </button>
                       </div>
                       <div class="right">
-                        <span>
+                        <span class="mobile_design11">
                           <i class="fa-regular fa-clock me-1"></i>12
                           dəqiqə</span
                         >
@@ -1356,11 +1489,12 @@
                                 />
                               </div>
                               <div class="user_news_info d-inline-block ps-2">
-                                <span class="user_news_name"
+                                <span class="user_news_name mobile_design1111"
                                   >Kənan Zərbiyev</span
                                 >
                                 <br />
-                                <span class="user_news_position"
+                                <span
+                                  class="user_news_position mobile_design111"
                                   >Pedaqoq, Təhsil koçu</span
                                 >
                               </div>
@@ -1954,6 +2088,42 @@
       });
     </script>
     <script>
+      $(function () {
+        var desktopForm = $("#button1_desk_transfer").html();
+        $(window).on("load resize", function () {
+          if ($(window).width() <= 767) {
+            $("#button1_mob_transfer").html(desktopForm);
+          } else {
+            $("#button1 _mob_transfer").empty();
+          }
+        });
+      });
+    </script>
+    <script>
+      $(function () {
+        var desktopForm = $("#button2_desk_transfer").html();
+        $(window).on("load resize", function () {
+          if ($(window).width() <= 767) {
+            $("#button2_mob_transfer").html(desktopForm);
+          } else {
+            $("#button2 _mob_transfer").empty();
+          }
+        });
+      });
+    </script>
+    <script>
+      $(function () {
+        var desktopForm = $("#izle_desk").html();
+        $(window).on("load resize", function () {
+          if ($(window).width() <= 767) {
+            $("#izle_mob").html(desktopForm);
+          } else {
+            $("#izle_mob").empty();
+          }
+        });
+      });
+    </script>
+    <script>
       function changeIcon2(anchor) {
         var icon = anchor.querySelector("i");
         icon.classList.toggle("fa-regular");
@@ -1964,6 +2134,12 @@
       function openMenu() {
         var element = document.getElementById("fixed_nav");
         element.classList.toggle("my_fixed_nav");
+      }
+    </script>
+    <script>
+      function closehead() {
+        var head = document.getElementById("close_link");
+        head.style.display = "none";
       }
     </script>
   </body>

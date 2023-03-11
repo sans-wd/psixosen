@@ -60,7 +60,7 @@
     <link rel="stylesheet" href="./css/index.css" />
   </head>
 
-  <body>
+  <body class="mob_width_adder">
     <!-- Modal -->
     <!-- Check your browser's console to see the logging when the submit button is clicked. -->
 
@@ -576,6 +576,7 @@
     <!-- Modal -->
 
     <!-- MOBILE_FIXED_MENU -->
+    <div id="fixed_nav2"></div>
     <div class="fixed_pos_contruction" id="fixed_nav">
       <div class="d-flex justify-content-between align-items-center px-2 my-3">
         <div class="navbar_logo">
@@ -645,7 +646,12 @@
 
     <!-- MOBILE_FIXED_MENU -->
 
-    <div class="container-fluid mob_nav_back">
+    <div class="container-fluid mob_nav_back position-relative" id="close_link">
+      <div
+        class="btn btn-close position-absolute"
+        style="right: 13px; top: 5px"
+        onclick="closehead()"
+      ></div>
       <div class="container">
         <div
           class="heber_info_header d-flex justify-content-center align-items-center"
@@ -659,10 +665,7 @@
         <div
           class="d-flex justify-content-between align-items-center nav_width_edit"
         >
-          <a
-            href="./Expert_profile.html"
-            class="navbar-brand"
-            id="logo_desk_transfer"
+          <a href="#" class="navbar-brand" id="logo_desk_transfer"
             ><img src="./img/loqopsixoyazılı.png" alt=""
           /></a>
           <div class="d-flex align-items-center">
@@ -775,9 +778,9 @@
             <a class="nav-item nav-link active" aria-current="page" href="#">
               <div class="shopping_cart">
                 <i class="fa-solid fa-cart-shopping fa-2x position-relative">
-                  <!-- <div class="shopping_cart_count position-absolute">
-                  <span>5</span>
-                </div> -->
+                  <div class="shopping_cart_count position-absolute">
+                    <span>5</span>
+                  </div>
                 </i>
               </div>
             </a>
@@ -2121,7 +2124,7 @@
               class="navbar-toggler infinit_mob_nav_a"
               id="infinit_button"
               type="button"
-              onclick="changeIcon(this), openMenu()"
+              onclick="changeIcon(this), openMenu(), openMenu2() "
             >
               <!-- IZMENENIYA -->
               <div class="infinit_mob_nav position-relative">
@@ -2226,6 +2229,18 @@
         $("#audiimgtransfermob").html(desktopForm);
       } else {
         $("#audiimgtransfermob").empty();
+      }
+    });
+  });
+</script>
+<script>
+  $(function () {
+    var desktopForm = $("#audusertransfdesk").html();
+    $(window).on("load resize", function () {
+      if ($(window).width() <= 991) {
+        $("#audusertransfmob").html(desktopForm);
+      } else {
+        $("#audusertransfmob").empty();
       }
     });
   });
@@ -2354,6 +2369,12 @@
 <script>
   function openMenu() {
     var element = document.getElementById("fixed_nav");
+    element.classList.toggle("my_fixed_nav");
+  }
+</script>
+<script>
+  function openMenu2() {
+    var element = document.getElementById("fixed_nav2");
     element.classList.toggle("my_fixed_nav");
   }
 </script>
@@ -2548,4 +2569,11 @@
     document.getElementsByClassName("myautoplay")[2].click();
   }
   setInterval(autoplayFunction, 5000);
+</script>
+
+<script>
+  function closehead() {
+    var head = document.getElementById("close_link");
+    head.style.display = "none";
+  }
 </script>

@@ -43,17 +43,17 @@
     <link rel="stylesheet" href="./css/index1.css" />
     <link rel="stylesheet" href="./css/Expert_profile.css" />
   </head>
-
+  <script
+    src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+    crossorigin="anonymous"
+  ></script>
   <body class="istifa_selector">
     <!-- MOBILE_FIXED_MENU -->
     <div class="fixed_pos_contruction" id="fixed_nav">
-      <div class="d-flex justify-content-between align-items-center px-2 my-3">
+      <div class="d-flex justify-content-between align-items-center my-3 px-2">
         <div class="navbar_logo">
-          <a
-            href="./index_expt.html"
-            class="navbar-brand"
-            id="logo_mob_transfer"
-          ></a>
+          <a href="#" class="navbar-brand" id="logo_mob_transfer"></a>
         </div>
         <div
           class="anonim_mutton_nav d-flex justify-content-between align-items-center"
@@ -68,7 +68,7 @@
             class="nav-item nav-link active ms-2 d-lg-none"
             aria-current="page"
             href="#"
-            onclick="openMenu(),changeIcon(infinit_button)"
+            onclick="openMenu(), openMenu2(),changeIcon(infinit_button)"
           >
             <button class="btn btn-lg btn-close fixed_nav_close"></button>
           </a>
@@ -80,9 +80,10 @@
         <h1>İstifadəçi bölməsi</h1>
       </div>
       <div class="d-flex justify-content-between align-items-center px-2">
-        <div id="esas_mob_transfer"></div>
+        <div onclick="myFunction_set_esas()" id="esas_mob_transfer"></div>
         <div>
           <a
+            onclick="myFunction_set_us()"
             class="nav-item nav-link active"
             aria-current="page"
             href="#"
@@ -95,6 +96,7 @@
             class="nav-item nav-link active"
             aria-current="page"
             href="#"
+            onclick="myFunction_set_teh()"
             id="tehsil_mob_transfer"
           >
           </a>
@@ -112,13 +114,18 @@
       <div class="ads px-2" id="ads_mob_transfer"></div>
       <div class="side_menu my-3" id="side_menu_mob_transfer"></div>
       <ul
-        class="d-flex flex-wrap justify-content-between align-items-center list-unstyled px-2 social_networks mt-0 mb-3"
+        class="d-flex flex-wrap justify-content-evenly align-items-center list-unstyled px-2 social_networks mt-0 mb-3"
         id="social_mob_transfer"
       ></ul>
     </div>
 
     <!-- MOBILE_FIXED_MENU -->
-    <div class="container-fluid mob_nav_back">
+    <div class="container-fluid mob_nav_back position-relative" id="close_link">
+      <div
+        class="btn btn-close position-absolute"
+        style="right: 13px; top: 5px"
+        onclick="closehead()"
+      ></div>
       <div class="container">
         <div
           class="heber_info_header d-flex justify-content-center align-items-center"
@@ -248,9 +255,9 @@
             <a class="nav-item nav-link active" aria-current="page" href="#">
               <div class="shopping_cart">
                 <i class="fa-solid fa-cart-shopping fa-2x position-relative">
-                  <!-- <div class="shopping_cart_count position-absolute">
-                  <span>5</span>
-                </div> -->
+                  <div class="shopping_cart_count position-absolute">
+                    <span>5</span>
+                  </div>
                 </i>
               </div>
             </a>
@@ -279,7 +286,7 @@
         margin: 0 auto;
         overflow: hidden;
         padding: 5px;
-        min-height: 38px;
+        min-height: 36px;
         background: var(--first) !important;
       }
 
@@ -315,19 +322,25 @@
 
     <body>
       <div class="container mt-2">
-        <div class="container profile_main">
+        <div class="container profile_main mobile_padding">
           <div class="row mobstyle123">
             <div
-              class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-4 img_box"
+              class="col-lg-3 col-md-3 col-sm-4 col-xs-3 col-5 img_box"
               style="padding: 0px; position: relative; height: 100%"
             >
-              <img
-                id="change"
-                style="border: 6px solid green; object-fit: cover"
-                class="img-fluid mob_padd mobilephoto"
-                src="png/profile2.png"
-                alt=""
-              />
+              <div
+                style="margin-right: 16px"
+                class="wrapper_div position-relative"
+              >
+                <img
+                  id="change"
+                  style="border: 6px solid green; object-fit: cover"
+                  class="img-fluid mob_padd mobilephoto"
+                  src="png/profile2.png"
+                  alt=""
+                />
+                <img class="ladno_iconca" src="img/iconcu.svg" alt="" />
+              </div>
             </div>
             <script>
               var change = document.getElementById("change");
@@ -352,15 +365,15 @@
             </script>
             <div
               style="position: relative"
-              class="col-lg-9 col-md-9 col-sm-9 col-xs-9 col-8"
+              class="col-lg-9 col-md-9 col-sm-7 col-xs-7 col-7"
             >
               <div class="row">
-                <div class="col-lg-8 col-md-6 col-sm-6 col-xs-6 col-8">
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-12">
                   <h5
                     style="font-size: px; color: #fff"
-                    class="mt-4 mob_style mytext1"
+                    class="mt-3 mob_style mytext1"
                   >
-                    Səadət Əliyeva
+                    Osman Alibey Nasirov
                   </h5>
                   <button
                     style="
@@ -384,13 +397,25 @@
                   <br />
                   <br />
                   <span
-                    class="mobile_text mobile_ext11"
+                    class="mobile_text mobile_ext11 dispblock13"
                     style="color: #fff; !important"
                   >
                     Mən Aynur Şıxalıyeva hal-hazırda Nur kids tədris mərkəzində
                     Psixoloq kimi fəaliyyət göstərirəm. Təlimçi-psixoloq kimi
                     Asan xidmət mərkəzində və digər yerlərdə təlimlər verirəm.
                   </span>
+                  <div class="d-flex justify-content-start">
+                    <div
+                      style="margin-right: 20px"
+                      id="button1_mob_transfer"
+                      class="button_wraper position-relative sht1 d-md-none"
+                    ></div>
+                    <div
+                      id="button2_mob_transfer"
+                      class="button_wraper position-relative shtoot d-md-none"
+                    ></div>
+                  </div>
+
                   <style>
                     @media only screen and (max-width: 991px) {
                       .status_dnone {
@@ -399,10 +424,15 @@
                     }
                   </style>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 col-4 pt-3">
+                <div
+                  class="col-lg-4 col-md-4 col-sm-6 col-xs-6 col-4 pt-3 dnonetransfer"
+                >
                   <div class="row">
                     <div class="col-12" style="float: right">
-                      <div class="button_wraper position-relative sht1">
+                      <div
+                        id="button1_desk_transfer"
+                        class="button_wraper position-relative sht1"
+                      >
                         <div class="sdd position-absolute">
                           <h5 style="color: black">
                             Bu bölmə sizin fəaliyyət üzrə reytinqinizi əks
@@ -420,6 +450,7 @@
                             border: none;
                             padding: 17px 30px;
                             float: right;
+                            margin-right: 14px;
                           "
                         >
                           <i
@@ -439,7 +470,7 @@
 
                         border-radius: 15px;
                         top: 20px;
-                        width: 200px;
+                        width: 146px;
                         padding: 2px;
                       }
 
@@ -465,7 +496,6 @@
                         color: white;
                         margin: 0px;
                         padding: 5px 5px;
-                        width: 200px;
                       }
 
                       .shtoot:hover .sdsdf {
@@ -473,7 +503,10 @@
                       }
                     </style>
                     <div class="col-12 pt-3">
-                      <div class="button_wraper position-relative shtoot">
+                      <div
+                        id="button2_desk_transfer"
+                        class="button_wraper position-relative shtoot"
+                      >
                         <div class="position-absolute sdsdf">
                           <h5>
                             Bu bölmə sizin inkişaf qiymətləndirilmənizi əks
@@ -491,7 +524,7 @@
                             border: none;
                             float: right;
                             padding: 17px 33px;
-                            margin-left: -25px;
+                            margin-right: 14px;
                             color: white;
                           "
                         >
@@ -524,7 +557,6 @@
                       align-items: center;
                       color: white;
                       padding: 0px 20px;
-
                       font-weight: 600;
                     "
                   >
@@ -532,7 +564,11 @@
                     <span class="me-4"> 32 izləyici</span>
                     <span>125 izlənilən</span>
                   </button>
-                  <div class="dispblock1" style="float: right">
+                  <div
+                    style="margin-right: 13px"
+                    class="dispblock1"
+                    style="float: right"
+                  >
                     <button style="color: rgba(40, 24, 222, 0.7)" class="izle">
                       <i class="fa-solid fa-user-plus me-2"></i> Izlə
                     </button>
@@ -544,15 +580,14 @@
 
           <div class="col-12 dispblock mt-1" style="">
             <div class="container mt-3 mb-4" style="padding: 0px">
-              <div class="d-flex justify-content-between">
+              <div class="d-flex justify-content-between align-items-center">
                 <select
-                  class="fff"
+                  class="fff bomba_button"
                   style="
                     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
                     background: green;
                     border: none;
-                    min-width: 40%;
-                    min-height: 47px;
+                    min-height: 35px;
                     border-radius: 15px;
                     text-align: center;
                     color: white;
@@ -567,7 +602,7 @@
                   </option>
                 </select>
 
-                <div class=" " style="width: 200px">
+                <div class=" " style="">
                   <div class="btn-group dropup mobile_margin1">
                     <button
                       type="button"
@@ -576,19 +611,18 @@
                       aria-expanded="false"
                       style="
                         background: var(--second) !important;
-                        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
                         border-radius: 10px;
-                        padding: 11px 2px;
+                        padding: 8px 16px;
                         color: white;
                         border: none;
                         min-width: 90%;
-                        min-height: 30px;
-                        min-height: 47px;
+
+                        min-height: 35px;
                         font-size: 12px;
                       "
                     >
-                      <i class="fa-solid fa-circle-plus fa-2x me-2"></i>
-                      Paylaşım et
+                      <i class="fa-solid fa-circle-plus fa-2x"></i>
                     </button>
                     <ul class="dropdown-menu mob_style_li">
                       <li>
@@ -650,6 +684,11 @@
                     </ul>
                   </div>
                 </div>
+                <div
+                  id="izle_mob"
+                  class="d-flex d-md-none"
+                  style="float: right; justify-content: center"
+                ></div>
               </div>
             </div>
 
@@ -665,7 +704,7 @@
                     height: 36px;
                     align-items: center;
                     color: white;
-                    padding: 0px 4px;
+                    padding: 0px 12px;
                     min-width: 230px;
                     font-weight: 600;
                   "
@@ -675,7 +714,8 @@
                   <span>125 izlənilən</span>
                 </button>
                 <div
-                  class="d-flex mobdiz"
+                  id="izle_desk"
+                  class="d-flex dispblock13"
                   style="
                     float: right;
                     justify-content: center;
@@ -683,10 +723,28 @@
                   "
                 >
                   <button style="color: rgba(40, 24, 222, 0.7)" class="izle">
-                    <i class="fa-solid fa-user-plus me-2"></i> Izlə
+                    <i class="fa-solid fa-user-plus"></i>
                   </button>
                 </div>
               </div>
+            </div>
+          </div>
+          <div class="d-md-none pb-2">
+            <div>
+              <input type="checkbox" class="read-more-state" id="post-1" />
+
+              <p class="read-more-wrap mb-1">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                <span class="read-more-target"
+                  >Libero fuga facilis vel consectetur quos sapiente deleniti
+                  eveniet dolores tempore eos deserunt officia quis ab?
+                  Excepturi vero tempore minus beatae voluptatem!</span
+                >
+              </p>
+              <label
+                for="post-1"
+                class="read-more-trigger show_more_lab mx-auto"
+              ></label>
             </div>
           </div>
         </div>
@@ -952,14 +1010,19 @@
                 </div>
               </a>
               <a href="#" class="menu_buttons">
-                <div class="d-flex align-items-center">
-                  <img
-                    src="./img/bildirish.svg"
-                    alt=""
-                    height="16px"
-                    style="filter: invert(0)"
-                  />
-                  <span>Bildirişlər</span>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="./img/bildirish.svg"
+                      alt=""
+                      height="16px"
+                      style="filter: invert(0)"
+                    />
+                    <span>Bildirişlər</span>
+                  </div>
+                  <div class="shopping_cart_count">
+                    <span style="height: 20px; width: 20px">5</span>
+                  </div>
                 </div>
               </a>
               <a href="#" class="menu_buttons">
@@ -1208,7 +1271,7 @@
                       class="first_content d-flex justify-content-between pt-3"
                     >
                       <div style="margin-left: 12px" class="left">
-                        <span>Yeni</span>
+                        <span style="color: red">Yeni</span>
                         <button
                           class="ms-3"
                           style="
@@ -1222,7 +1285,7 @@
                         </button>
                       </div>
                       <div class="right">
-                        <span>
+                        <span class="mobile_design11">
                           <i class="fa-regular fa-clock me-1"></i>12
                           dəqiqə</span
                         >
@@ -1245,11 +1308,12 @@
                                 />
                               </div>
                               <div class="user_news_info d-inline-block ps-2">
-                                <span class="user_news_name"
-                                  >Kənan Zərbiyev</span
-                                >
+                                <span class="user_news_name mobile_design1111"
+                                  >Kənan Zərbiyev
+                                </span>
                                 <br />
-                                <span class="user_news_position"
+                                <span
+                                  class="user_news_position mobile_design111"
                                   >Pedaqoq, Təhsil koçu</span
                                 >
                               </div>
@@ -1859,6 +1923,48 @@
           }
         });
       });
+    </script>
+    <script>
+      $(function () {
+        var desktopForm = $("#button1_desk_transfer").html();
+        $(window).on("load resize", function () {
+          if ($(window).width() <= 767) {
+            $("#button1_mob_transfer").html(desktopForm);
+          } else {
+            $("#button1 _mob_transfer").empty();
+          }
+        });
+      });
+    </script>
+    <script>
+      $(function () {
+        var desktopForm = $("#button2_desk_transfer").html();
+        $(window).on("load resize", function () {
+          if ($(window).width() <= 767) {
+            $("#button2_mob_transfer").html(desktopForm);
+          } else {
+            $("#button2 _mob_transfer").empty();
+          }
+        });
+      });
+    </script>
+    <script>
+      $(function () {
+        var desktopForm = $("#izle_desk").html();
+        $(window).on("load resize", function () {
+          if ($(window).width() <= 767) {
+            $("#izle_mob").html(desktopForm);
+          } else {
+            $("#izle_mob").empty();
+          }
+        });
+      });
+    </script>
+    <script>
+      function closehead() {
+        var head = document.getElementById("close_link");
+        head.style.display = "none";
+      }
     </script>
   </body>
 </html>

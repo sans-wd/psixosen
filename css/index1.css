@@ -402,7 +402,7 @@ nav input:focus-visible {
 }
 
 .side_menu a.active {
-  background: #ff9f47 !important;
+  background-color: #ff9f47 !important;
 }
 
 .side_menu a span {
@@ -996,4 +996,13 @@ nav input:focus-visible {
     bottom: 10px;
     left: auto;
   }
+}
+
+
+
+
+
+
+.side_menu a.active {
+  background-color: #ff9f47 !important;
 }

@@ -32,6 +32,7 @@
   border-radius: 3px;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
 .modal .signup-modal-content {
   position: absolute;
   top: 15%;
@@ -160,4 +161,11 @@
     background-color: rgba(0, 0, 0, 0.5);
     overflow-x: scroll;
   } */
+}
+.class1 {
+  display: block;
+}
+
+.class2 {
+  display: none;
 }

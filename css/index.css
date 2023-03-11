@@ -44,7 +44,18 @@ body {
 }
 #fixed_nav {
   width: 100%;
-  height: calc(100vh - 62px);
+  height: calc(100vh - 80px);
+  background-color: #d4d1f8;
+  z-index: 9999;
+  float: left;
+  position: fixed;
+  top: -100%;
+  transition: 0.5s;
+  overflow-y: auto;
+}
+#fixed_nav2 {
+  width: 100%;
+  height: 100vh;
   background-color: #d4d1f8;
   z-index: 9999;
   float: left;
@@ -133,9 +144,12 @@ nav input:focus-visible {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  padding: 1.5px 7px;
+  padding: 1.5px 5px;
   border-radius: 40px;
 
   color: #1e1e1e;
@@ -160,7 +174,7 @@ nav input:focus-visible {
   justify-content: center;
   background: #3e588a;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  padding: 14px 23px;
+  padding: 14px 15px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -189,7 +203,8 @@ nav input:focus-visible {
   text-decoration: none;
 }
 .infinit_mob_nav {
-  background: var(--mob_infinit);
+  background: var(--sign-in-color);
+  transition: 0.5s;
 
   border-radius: 50px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -518,7 +533,8 @@ nav input:focus-visible {
   padding-right: 5px;
   display: block;
 }
-.wrapper-nav .nav-item {
+
+/* .wrapper-nav .nav-item {
   border: 1px solid transparent !important;
   transition: 0.2s;
 }
@@ -540,22 +556,16 @@ nav input:focus-visible {
   border-right: transparent;
   box-sizing: border-box;
   border-bottom: 3px solid #8a22f1 !important;
-}
-
+} */
+/* 
 .list {
   left: 105px;
-}
-.wrapper-nav {
+} */
+/* .wrapper-nav {
   background: #cf9fff81;
   border-radius: 13px;
 }
-.wrapper-nav a {
-  color: #1e1e1e;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 17px;
-}
+ */
 
 .side_menu a.active {
   background-color: #a9a2f7 !important;
@@ -911,7 +921,7 @@ input {
   font-size: 18px;
   position: absolute;
   top: 0;
-  left: 15px;
+  left: 25px;
   background: #fff;
   padding: 10px 8px;
   display: block;
@@ -928,7 +938,7 @@ input {
   content: "Fayl yüklə";
   position: absolute;
   top: 0;
-  right: -15px;
+  right: -22px;
   display: inline-block;
   height: 40px;
   background: #5b2cc0;
@@ -1027,6 +1037,26 @@ input {
   color: #1e1e1e;
 }
 
+.signup_submit_close {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.cv_postion_editor {
+  position: absolute;
+  left: -25px;
+  top: 8px;
+}
+.news_type_time span {
+  font-size: 16px !important;
+}
+.user_news_info span:first-of-type {
+  font-size: 20px;
+}
+.user_news_info span:last-of-type {
+  font-size: 15px;
+}
+
 @media (max-width: 1399px) {
   .istifa_selector .input-group {
     flex-wrap: nowrap;
@@ -1123,9 +1153,9 @@ input {
   .third_slider_info .post_date {
     font-size: 13px;
   }
-  .list {
+  /* .list {
     left: 0px;
-  }
+  } */
   .signup-modal-content {
     width: 80% !important;
   }
@@ -1208,9 +1238,9 @@ input {
   .third_slider_info .post_date {
     font-size: 12px;
   }
-  .list {
+  /* .list {
     left: 0px;
-  }
+  } */
   .ads_img_wrapper {
     margin-top: 0rem !important;
     width: 100%;
@@ -1218,6 +1248,9 @@ input {
   }
   .signup-modal-content {
     width: 86% !important;
+  }
+  .ads {
+    margin-top: 18px;
   }
 }
 
@@ -1336,7 +1369,7 @@ input {
     height: 60px;
   }
   .search_input_nav {
-    width: 80%;
+    width: 86%;
   }
   .side_menu {
     border-radius: 0px;
@@ -1431,6 +1464,21 @@ input {
     padding-top: 15px;
     padding-bottom: 15px;
   }
+  .eses_btn_sign,
+  .tehsil_btn_sign,
+  .usaq_btn_sign {
+    font-size: 13px;
+    padding: 9px;
+    width: 140px;
+  }
+  .signup_submit_close {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mob_width_adder {
+    padding-bottom: 95px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1496,6 +1544,25 @@ input {
   .signup-modal-content {
     width: 97% !important;
   }
+  .eses_btn_sign,
+  .tehsil_btn_sign,
+  .usaq_btn_sign {
+    font-size: 12px;
+    padding: 9px;
+    width: 130px;
+  }
+  .user_news_info span:first-of-type {
+    font-size: 18px;
+  }
+  .user_news_info span:last-of-type {
+    font-size: 14px;
+  }
+  .checkbox-wrapper-22 .switch {
+    display: inline-block;
+    height: 27px;
+    position: relative;
+    width: 54px;
+  }
 }
 
 @media (max-width: 475px) {
@@ -1519,7 +1586,7 @@ input {
   }
   #fixed_nav {
     width: 100%;
-    height: calc(100vh - 62px);
+    height: calc(100vh - 80px);
   }
   .btn-primary {
     font-size: 13px;
@@ -1554,6 +1621,23 @@ input {
   .slide_info {
     bottom: 0px;
     left: auto;
+  }
+  .eses_btn_sign,
+  .tehsil_btn_sign,
+  .usaq_btn_sign {
+    font-size: 10px;
+    padding: 11px 2px;
+    width: 100px;
+  }
+
+  .tehsil_btn_sign img,
+  .usaq_btn_sign img {
+    height: 18px;
+    width: auto;
+  }
+  .eses_btn_sign img {
+    height: 19px;
+    width: auto;
   }
 }
 
@@ -1595,17 +1679,87 @@ input {
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 391px) {
   .btn-primary {
     font-size: 12px;
   }
-  .other_info_imputs input {
-    width: 255px !important;
+  .other_info_imputs input,
+  .other_info_imputs select {
+    width: 245px !important;
   }
   .other_info_imputs input[type="checkbox"] {
     width: initial !important;
   }
   .name_last input {
     width: 140px;
+  }
+  .file-upload-wrapper:before {
+    right: -13px;
+    font-size: 11px;
+  }
+  .file-upload-wrapper:after {
+    left: 34px;
+    font-size: 14px;
+  }
+  .cv_postion_editor {
+    position: absolute;
+    left: -15px;
+    top: 8px;
+  }
+}
+@media (max-width: 364px) {
+  .btn-primary {
+    font-size: 12px;
+  }
+  .other_info_imputs input,
+  .other_info_imputs select {
+    width: 235px !important;
+  }
+  .other_info_imputs input[type="checkbox"] {
+    width: initial !important;
+  }
+  .name_last input {
+    width: 130px;
+  }
+  .file-upload-wrapper:before {
+    right: -9px;
+    font-size: 10px;
+  }
+  .file-upload-wrapper:after {
+    left: 40px;
+    font-size: 13px;
+  }
+  .cv_postion_editor {
+    position: absolute;
+    left: -10px;
+    top: 8px;
+  }
+}
+@media (max-width: 353px) {
+  .btn-primary {
+    font-size: 10.5px;
+  }
+  .other_info_imputs input,
+  .other_info_imputs select {
+    width: 205px !important;
+  }
+  .other_info_imputs input[type="checkbox"] {
+    width: initial !important;
+  }
+  .name_last input {
+    width: 120px;
+  }
+  .file-upload-wrapper:before {
+    right: 8px;
+    font-size: 9px;
+  }
+  .file-upload-wrapper:after {
+    left: 53px;
+    font-size: 13px;
+  }
+  .cv_postion_editor {
+    position: absolute;
+    left: 5px;
+    top: 8px;
   }
 }

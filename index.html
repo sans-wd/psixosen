@@ -41,17 +41,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
     <script>
       var r = document.querySelector(":root");
-      // Create a function for setting a variable value
+
       function myFunction_set_esas() {
-        // Set the value of variable --blue to another value (in this case "lightblue")
         r.style.setProperty("--sign-in-color", "#1e90ff");
       }
       function myFunction_set_teh() {
-        // Set the value of variable --blue to another value (in this case "lightblue")
         r.style.setProperty("--sign-in-color", "#281F8C");
       }
       function myFunction_set_us() {
-        // Set the value of variable --blue to another value (in this case "lightblue")
         r.style.setProperty("--sign-in-color", "#FF8D3B");
       }
     </script>
@@ -60,9 +57,8 @@
     <link rel="stylesheet" href="./css/index.css" />
   </head>
 
-  <body>
+  <body class="mob_width_adder">
     <!-- Modal -->
-    <!-- Check your browser's console to see the logging when the submit button is clicked. -->
 
     <div id="signup-modal" class="modal">
       <div id="modal-content" class="signup-modal-content">
@@ -211,8 +207,11 @@
                           class="d-flex justify-content-center align-items-center flex-column other_info_imputs"
                         >
                           <div class="mail my-3">
-                            <label for="email"
-                              ><img src="./img/email.svg" alt=""
+                            <label for="email">
+                              <img
+                                class="me-1"
+                                src="./img/required.svg"
+                                alt="" /><img src="./img/email.svg" alt=""
                             /></label>
                             <input
                               ng-model="suCtrl.email"
@@ -224,23 +223,35 @@
                           </div>
                           <div class="phone">
                             <label for="phone"
-                              ><img src="./img/nomre.svg" alt="" srcset=""
+                              ><img
+                                class="me-1"
+                                src="./img/required.svg"
+                                alt="" /><img
+                                src="./img/nomre.svg"
+                                alt=""
+                                srcset=""
                             /></label>
                             <input
                               ng-model="suCtrl.phone"
                               type="phone"
                               name="phone"
-                              placeholder="Nomre"
+                              placeholder="+994 __ ___ __ __"
                               required
                             />
                           </div>
                           <div class="password my-3">
                             <label for="password"
-                              ><img src="./img/pass.svg" alt="" srcset=""
+                              ><img
+                                class="me-1"
+                                src="./img/required.svg"
+                                alt="" /><img
+                                src="./img/pass.svg"
+                                alt=""
+                                srcset=""
                             /></label>
                             <input
                               ng-model="suCtrl.password"
-                              placeholder="Parol"
+                              placeholder="Şifrənizi daxil edin"
                               type="password"
                               name="password"
                               required
@@ -248,7 +259,13 @@
                           </div>
                           <div class="proffesion_type">
                             <label for="proffesion_type"
-                              ><img src="./img/sign_user.svg" alt="" srcset=""
+                              ><img
+                                class="me-1"
+                                src="./img/required.svg"
+                                alt="" /><img
+                                src="./img/sign_user.svg"
+                                alt=""
+                                srcset=""
                             /></label>
 
                             <select
@@ -272,14 +289,13 @@
                                 class="file-upload-wrapper"
                                 data-text="CV-ni yükləyin!"
                               >
-                                <label
-                                  for="form"
-                                  style="
-                                    position: absolute;
-                                    left: -14px;
-                                    top: 8px;
-                                  "
-                                >
+                                <label class="cv_postion_editor" for="form"
+                                  ><img
+                                    class="me-1"
+                                    src="./img/required.svg"
+                                    alt=""
+                                  />
+
                                   <img
                                     src="./img/cv_sign.svg"
                                     alt=""
@@ -332,7 +348,7 @@
                             /></label>
                             <input
                               ng-model="suCtrl.password"
-                              placeholder="Parol"
+                              placeholder="Şifrənizi daxil edin"
                               type="password"
                               name="password"
                               required
@@ -413,7 +429,13 @@
                       >
                         <div class="date_type my-3">
                           <label for="date_type"
-                            ><img src="./img/date.svg" alt="" srcset=""
+                            ><img
+                              class="me-1"
+                              src="./img/required.svg"
+                              alt="" /><img
+                              src="./img/date.svg"
+                              alt=""
+                              srcset=""
                           /></label>
 
                           <input
@@ -426,7 +448,13 @@
                         </div>
                         <div class="mail">
                           <label for="email"
-                            ><img src="./img/email.svg" alt="" srcset=""
+                            ><img
+                              class="me-1"
+                              src="./img/required.svg"
+                              alt="" /><img
+                              src="./img/email.svg"
+                              alt=""
+                              srcset=""
                           /></label>
                           <input
                             ng-model="suCtrl.email"
@@ -438,23 +466,36 @@
                         </div>
                         <div class="phone my-3">
                           <label for="phone"
-                            ><img src="./img/nomre.svg" alt="" srcset=""
+                            ><img
+                              class="me-1"
+                              style="opacity: 0"
+                              src="./img/required.svg"
+                              alt="" /><img
+                              src="./img/nomre.svg"
+                              alt=""
+                              srcset=""
                           /></label>
                           <input
                             ng-model="suCtrl.phone"
                             type="phone"
                             name="phone"
-                            placeholder="Nomre"
+                            placeholder="+994 __ ___ __ __"
                             required
                           />
                         </div>
                         <div class="password mb-3">
                           <label for="password"
-                            ><img src="./img/pass.svg" alt="" srcset=""
+                            ><img
+                              class="me-1"
+                              src="./img/required.svg"
+                              alt="" /><img
+                              src="./img/pass.svg"
+                              alt=""
+                              srcset=""
                           /></label>
                           <input
                             ng-model="suCtrl.password"
-                            placeholder="Parol"
+                            placeholder="Şifrənizi daxil edin"
                             type="password"
                             name="password"
                             required
@@ -498,7 +539,7 @@
                           /></label>
                           <input
                             ng-model="suCtrl.password"
-                            placeholder="Parol"
+                            placeholder="Şifrənizi daxil edin"
                             type="password"
                             name="password"
                             required
@@ -524,7 +565,7 @@
               </div>
             </div>
           </div>
-          <div class="d-flex justify-content-end align-items-center">
+          <div class="signup_submit_close">
             <div
               id="close-btn"
               class="close d-inline-flex justify-content-end"
@@ -548,7 +589,7 @@
             </div>
             <input
               type="submit"
-              placeholder="Təstiqlə"
+              value="Təstiqlə"
               class="my-2 px-2"
               style="
                 font-family: 'Inter';
@@ -576,6 +617,7 @@
     <!-- Modal -->
 
     <!-- MOBILE_FIXED_MENU -->
+    <div id="fixed_nav2"></div>
     <div class="fixed_pos_contruction" id="fixed_nav">
       <div class="d-flex justify-content-between align-items-center my-3 px-2">
         <div class="navbar_logo">
@@ -594,7 +636,7 @@
             class="nav-item nav-link active ms-2 d-lg-none"
             aria-current="page"
             href="#"
-            onclick="openMenu(),changeIcon(infinit_button)"
+            onclick="openMenu(), openMenu2(),changeIcon(infinit_button)"
           >
             <button class="btn btn-lg btn-close fixed_nav_close"></button>
           </a>
@@ -606,9 +648,10 @@
         <h1>İstifadəçi bölməsi</h1>
       </div>
       <div class="d-flex justify-content-between align-items-center px-2">
-        <div id="esas_mob_transfer"></div>
+        <div onclick="myFunction_set_esas()" id="esas_mob_transfer"></div>
         <div>
           <a
+            onclick="myFunction_set_us()"
             class="nav-item nav-link active"
             aria-current="page"
             href="#"
@@ -621,6 +664,7 @@
             class="nav-item nav-link active"
             aria-current="page"
             href="#"
+            onclick="myFunction_set_teh()"
             id="tehsil_mob_transfer"
           >
           </a>
@@ -645,7 +689,12 @@
 
     <!-- MOBILE_FIXED_MENU -->
 
-    <div class="container-fluid mob_nav_back">
+    <div class="container-fluid mob_nav_back position-relative" id="close_link">
+      <div
+        class="btn btn-close position-absolute"
+        style="right: 13px; top: 5px"
+        onclick="closehead()"
+      ></div>
       <div class="container">
         <div
           class="heber_info_header d-flex justify-content-center align-items-center"
@@ -675,7 +724,11 @@
           id="navbarText"
         >
           <div class="d-none" id="esas_desk_transfer">
-            <a class="nav-item nav-link active" aria-current="page" href="#"
+            <a
+              onclick="myFunction_set_esas"
+              class="nav-item nav-link active"
+              aria-current="page"
+              href="#"
               ><button type="button" class="eses_btn">
                 <img
                   src="./img/eses_bolme_logo.png"
@@ -770,9 +823,9 @@
             <a class="nav-item nav-link active" aria-current="page" href="#">
               <div class="shopping_cart">
                 <i class="fa-solid fa-cart-shopping fa-2x position-relative">
-                  <!-- <div class="shopping_cart_count position-absolute">
-                  <span>5</span>
-                </div> -->
+                  <div class="shopping_cart_count position-absolute">
+                    <span>5</span>
+                  </div>
                 </i>
               </div>
             </a>
@@ -2084,6 +2137,22 @@
               >
                 This is the content of Tab 8...
               </div>
+              <div
+                class="tab-pane fade mt-2"
+                id="tab9"
+                role="tabpanel"
+                aria-labelledby="group-dropdown2-tab"
+              >
+                This is the content of Tab 9...
+              </div>
+              <div
+                class="tab-pane fade mt-2"
+                id="tab10"
+                role="tabpanel"
+                aria-labelledby="group-dropdown2-tab"
+              >
+                This is the content of Tab 10...
+              </div>
             </div>
           </div>
         </div>
@@ -2113,7 +2182,7 @@
               class="navbar-toggler infinit_mob_nav_a"
               id="infinit_button"
               type="button"
-              onclick="changeIcon(this), openMenu()"
+              onclick="changeIcon(this), openMenu(), openMenu2(),close_infinit_modal() "
             >
               <!-- IZMENENIYA -->
               <div class="infinit_mob_nav position-relative">
@@ -2218,6 +2287,18 @@
         $("#audiimgtransfermob").html(desktopForm);
       } else {
         $("#audiimgtransfermob").empty();
+      }
+    });
+  });
+</script>
+<script>
+  $(function () {
+    var desktopForm = $("#audusertransfdesk").html();
+    $(window).on("load resize", function () {
+      if ($(window).width() <= 991) {
+        $("#audusertransfmob").html(desktopForm);
+      } else {
+        $("#audusertransfmob").empty();
       }
     });
   });
@@ -2346,6 +2427,12 @@
 <script>
   function openMenu() {
     var element = document.getElementById("fixed_nav");
+    element.classList.toggle("my_fixed_nav");
+  }
+</script>
+<script>
+  function openMenu2() {
+    var element = document.getElementById("fixed_nav2");
     element.classList.toggle("my_fixed_nav");
   }
 </script>
@@ -2536,8 +2623,33 @@
 <script>
   function autoplayFunction() {
     document.getElementsByClassName("myautoplay")[0].click();
+  }
+
+  setInterval(autoplayFunction, 4000);
+</script>
+<script>
+  function autoplayFunction1() {
     document.getElementsByClassName("myautoplay")[1].click();
+  }
+
+  setInterval(autoplayFunction1, 5000);
+</script>
+<script>
+  function autoplayFunction2() {
     document.getElementsByClassName("myautoplay")[2].click();
   }
-  setInterval(autoplayFunction, 5000);
+
+  setInterval(autoplayFunction2, 6000);
+</script>
+<script>
+  function closehead() {
+    var head = document.getElementById("close_link");
+    head.style.display = "none";
+  }
+</script>
+<script>
+  function close_infinit_modal() {
+    var mymodal = document.getElementById("signup-modal");
+    mymodal.style.display = "none";
+  }
 </script>
