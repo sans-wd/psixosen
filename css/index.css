@@ -1678,6 +1678,11 @@ input {
     left: auto;
   }
 }
+@media (max-width: 411px) {
+  .mypdf {
+    display: none;
+  }
+}
 
 @media (max-width: 391px) {
   .btn-primary {
