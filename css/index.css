@@ -226,10 +226,11 @@ nav input:focus-visible {
 
   z-index: -1;
 }
-.btn-close {
+#close_link .btn-close {
   filter: invert(1);
   opacity: 1;
 }
+
 .infinit_circle2 {
   height: 80px;
   width: 80px;
@@ -534,7 +535,7 @@ nav input:focus-visible {
 
 .side_menu .child_mobile a {
   background-color: #d4d1f8 !important;
-  padding-right: 5px;
+  padding-left: 31px;
   display: block;
 }
 
@@ -850,7 +851,7 @@ input {
   padding: 20px;
 }
 .name_last input {
-  width: 150px;
+  width: 173px;
   background: #fff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
@@ -1419,6 +1420,10 @@ input {
   }
   .child_mobile a {
     font-size: 20px;
+  }
+  .side_menu .child_mobile a {
+    padding-left: 38px;
+    display: block;
   }
   .side_menu a img {
     height: 22px;

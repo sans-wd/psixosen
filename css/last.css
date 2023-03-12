@@ -368,7 +368,6 @@ a {
   border-right-color: #2f4fff !important;
 }
 
-
 .scroller_style .scroller {
   color: var(--second) !important;
 }
@@ -430,19 +429,16 @@ a {
 }
 
 .read-more-state ~ .read-more-trigger:before {
-  content: 'Daha çox';
-  
-  color: white !important;
+  content: "Daha çox";
+
+  color: black !important;
 }
 
 .read-more-state:checked ~ .read-more-trigger:before {
-  content: 'Daha az';
-  color: white !important;
+  content: "Daha az";
+  color: black !important;
 }
 @media only screen and (min-width: 315px) {
-  .mobstyle123 {
-    margin-bottom: -25px;
-  }
   .mob_button1 {
     padding: 6px 17px !important;
   }
@@ -475,20 +471,23 @@ a {
   .mobile_text {
     font-size: 10px;
   }
-  .mobile_design11{
+  .mobile_design11 {
     font-size: 11px !important;
   }
-  .mobile_design111{
+  .mobile_design111 {
     font-size: 13px !important;
   }
   .select-items {
     width: 103% !important;
     right: -1px !important;
     font-size: 13px;
-}
-.select-selected {
-height: 39px;
-}
+  }
+  .select-selected {
+    height: 39px;
+  }
+  .mobstyle123 {
+    margin-bottom: -21px !important;
+  }
 }
 @media only screen and (min-width: 440px) {
   .mobile_margin1 {
@@ -512,7 +511,7 @@ height: 39px;
     width: 100% !important;
     font-size: 19px;
   }
-  .mobile_design11{
+  .mobile_design11 {
     font-size: 11px !important;
   }
   /* .select-selected{
@@ -523,6 +522,9 @@ height: 39px;
     width: 98% !important;
     right: 3px !important;
     font-size: 13px;
+  }
+  .mobstyle123 {
+    margin-bottom: -22px !important ;
   }
 }
 
@@ -628,7 +630,7 @@ height: 39px;
     width: 100% !important;
     font-size: 16px;
   }
-  .mobile_design11{
+  .mobile_design11 {
     font-size: 11px !important;
   }
   .select-items {
@@ -700,7 +702,7 @@ height: 39px;
   }
   .select-items {
     width: 155px;
-    right: 45px
+    right: 45px;
   }
   .background1 {
     min-height: 750px;
@@ -733,10 +735,13 @@ height: 39px;
   }
   .mob_button1 {
     padding: 4.5px 17.5px !important;
-}
-/* .select-selected{
+  }
+  /* .select-selected{
   width: 70%;
 } */
+  .mobstyle123 {
+    margin-bottom: 5px !important;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -785,7 +790,9 @@ height: 39px;
     width: 100% !important;
     font-size: 24px;
   }
-  
+  .mobstyle123 {
+    margin-bottom: -5px !important;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -868,17 +875,20 @@ height: 39px;
     width: 100% !important;
     font-size: 24px;
   }
-  .mobile_design11{
+  .mobile_design11 {
     font-size: 16px !important;
   }
   .select-items {
     width: 100% !important;
     right: 35px !important;
     font-size: 13px;
-}
-.sdd {
-  right: 122px;
-}
+  }
+  .sdd {
+    right: 122px;
+  }
+  .mobstyle123 {
+    margin-bottom: -10px;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -908,7 +918,7 @@ height: 39px;
     position: absolute;
     content: "";
     top: 20px;
-    right: 47px;
+    right: 12px;
     width: 0;
     height: 0;
     border: 6px solid transparent;
@@ -986,26 +996,29 @@ height: 39px;
     width: 100% !important;
     font-size: 26px;
   }
-  .mobile_design11{
+  .mobile_design11 {
     font-size: 17px !important;
   }
   .user_news_info .user_news_name {
     font-size: 18px !important;
-
-}
-.mobile_design111{
-  font-size: 14px !important;
-}
-.mobile_design1111{
-  font-size: 19px !important;
-}.select-selected{
-  width: 100%;
-}
-.select-selected {
-  height: 44px;
+  }
+  .mobile_design111 {
+    font-size: 14px !important;
+  }
+  .mobile_design1111 {
+    font-size: 19px !important;
+  }
+  .select-selected {
+    width: 100%;
+  }
+  .select-selected {
+    height: 44px;
   }
   .sdd {
     right: 116px;
+  }
+  .mobstyle123 {
+    margin-bottom: 0px;
   }
 }
 
@@ -1015,9 +1028,9 @@ height: 39px;
   }
   .select-selected {
     height: 44px;
-    }
+  }
 }
-.wrapper-nav{
+.wrapper-nav {
   height: 46px;
 }
 .side_menu a.active {
@@ -1027,18 +1040,15 @@ height: 39px;
   background-color: #ff9f47 !important;
 }
 .wrapper-nav .nav-tabs .nav-link.active {
-  
   border-bottom: none !important;
   border: none;
 }
 .wrapper-nav .nav-tabs .nav-link:hover {
- 
   border-bottom: none !important;
   border: none;
 }
 .wrapper-nav .nav-item {
   border: none;
- 
 }
 .wrapper-nav .nav-item {
   border: none !important;
@@ -1053,7 +1063,5 @@ height: 39px;
 }
 
 .mobilephoto {
-
   border: none;
- 
-} 
+}

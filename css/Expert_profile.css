@@ -418,8 +418,7 @@ a {
   background: rgba(238, 0, 129, 0.4);
 }
 .izle {
-  width: 109px;
-  height: 35px;
+  padding: 10px 15px;
 
   background: #ffffff;
   mix-blend-mode: hard-light;
@@ -456,7 +455,7 @@ a {
 }
 @media only screen and (min-width: 315px) {
   .mobstyle123 {
-    margin-bottom: -10px;
+    margin-bottom: -33px !important;
   }
   .mob_button1 {
     padding: 6px 17px !important;
@@ -587,6 +586,9 @@ a {
   }
   .bomba_button {
     width: 38%;
+  }
+  .mobstyle123 {
+    margin-bottom: -33px !important ;
   }
 }
 
@@ -835,6 +837,9 @@ a {
   .bomba_button {
     width: 30%;
   }
+  .mobstyle123 {
+    margin-bottom: -15px !important;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -897,6 +902,9 @@ a {
   }
   .dispblock13 {
     display: block !important;
+  }
+  .mobstyle123 {
+    margin-bottom: -5px !important;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -1034,6 +1042,9 @@ a {
   }
   .mobile_design11 {
     font-size: 16px !important;
+  }
+  .mobstyle123 {
+    margin-bottom: -10px;
   }
 }
 
@@ -1176,6 +1187,9 @@ a {
   .mobile_padding {
     padding: 0px;
   }
+  .mobstyle123 {
+    margin-bottom: -10px;
+  }
 }
 .select {
   background: red !important;
@@ -1238,12 +1252,12 @@ a {
 
 .read-more-state ~ .read-more-trigger:before {
   content: "Daha çox";
-  color: rgba(40, 24, 222, 0.7);
+  color: white;
 }
 
 .read-more-state:checked ~ .read-more-trigger:before {
   content: "Daha az";
-  color: rgba(40, 24, 222, 0.7);
+  color: white;
 }
 .ladno_iconca {
   filter: brightness(200%);
@@ -1270,8 +1284,8 @@ a {
 
 .show_more_lab {
   text-align: center;
-  background-color: white;
-  color: rgba(40, 24, 222, 0.7);
+  background-color: transparent;
+  color: black;
   width: 142px;
   height: 29px;
   font-size: 18px;
