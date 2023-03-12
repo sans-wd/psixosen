@@ -1042,6 +1042,9 @@ a {
   .buttonstyle {
     height: 40px !important;
   }
+  #navTransfer {
+    padding-left: 0px;
+  }
 
   .mob_style {
     width: 100% !important;
