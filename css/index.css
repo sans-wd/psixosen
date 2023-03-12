@@ -226,6 +226,10 @@ nav input:focus-visible {
 
   z-index: -1;
 }
+.btn-close {
+  filter: invert(1);
+  opacity: 1;
+}
 .infinit_circle2 {
   height: 80px;
   width: 80px;
