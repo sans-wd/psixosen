@@ -437,11 +437,11 @@ a {
   color: white;
   text-decoration: none;
 }
-#border * {
+/* #border * {
   border-radius: 105px !important;
   padding: 1005px !important;
   color: white !important;
-}
+} */
 .side_menu a {
   background: transparent;
 }

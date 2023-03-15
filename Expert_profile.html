@@ -593,6 +593,9 @@
                     color: white;
                     outline: none;
                   "
+                  onfocus="this.size=2;"
+                  onblur="this.size=0;"
+                  onchange="this.size=1; this.blur();"
                   name="border"
                   id="border1"
                 >
@@ -758,6 +761,9 @@
             <div class="col-3 dispblock1 mb-3 mt-3" style="width: 100%">
               <select
                 class="fff"
+                onfocus="this.size=2;"
+                onblur="this.size=0;"
+                onchange="this.size=1; this.blur();"
                 style="
                   background: green;
                   border: none;
@@ -771,9 +777,24 @@
                 name="border"
                 id="border"
               >
-                <option value="green">Aktiv</option>
+                <option selected value="green">Aktiv</option>
                 <option value="red">Aktiv deyil</option>
               </select>
+
+              <style>
+                select option:hover {
+                  background-color: var(--first);
+                }
+
+                select option:checked {
+                  background-color: var(--first);
+                  font-weight: 700;
+                }
+                select option:sel {
+                  background-color: var(--first);
+                  font-weight: 700;
+                }
+              </style>
             </div>
             <div class="side_menu" id="side_menu_desk_transfer">
               <a href="#" class="menu_buttons d-flex align-items-center">
