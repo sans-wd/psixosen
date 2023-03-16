@@ -1693,7 +1693,7 @@ input {
   }
 }
 
-/* @media (max-width: 391px) {
+@media (max-width: 391px) {
   .btn-primary {
     font-size: 12px;
   }
@@ -1819,9 +1819,9 @@ input {
     left: 22px;
     top: 8px;
   }
-} */
+}
 
-@media (max-width: 391px) {
+/* @media (max-width: 391px) {
   .btn-primary {
     font-size: 12px;
   }
@@ -1943,4 +1943,4 @@ input {
     left: 22px;
     top: 8px;
   }
-}
+} */
