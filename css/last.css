@@ -431,12 +431,12 @@ a {
 .read-more-state ~ .read-more-trigger:before {
   content: "Daha çox";
 
-  color: black !important;
+  color: #626060 !important;
 }
 
 .read-more-state:checked ~ .read-more-trigger:before {
   content: "Daha az";
-  color: black !important;
+  color: #626060 !important;
 }
 @media only screen and (min-width: 315px) {
   .mob_button1 {
