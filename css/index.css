@@ -1777,3 +1777,37 @@ input {
     top: 8px;
   }
 }
+
+@media (max-width: 353px) {
+  .btn-primary {
+    font-size: 10px;
+  }
+  .other_info_imputs input,
+  .other_info_imputs select {
+    width: 190px !important;
+  }
+  .other_info_imputs input::placeholder,
+  .other_info_imputs select::placeholder {
+    font-size: 18px;
+  }
+
+  .other_info_imputs input[type="checkbox"] {
+    width: initial !important;
+  }
+  .name_last input {
+    width: 115px;
+  }
+  .file-upload-wrapper:before {
+    right: 15px;
+    font-size: 9px;
+  }
+  .file-upload-wrapper:after {
+    left: 61px;
+    font-size: 13px;
+  }
+  .cv_postion_editor {
+    position: absolute;
+    left: 12px;
+    top: 8px;
+  }
+}
