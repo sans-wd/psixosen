@@ -60,7 +60,7 @@ body {
   z-index: 9999;
   float: left;
   position: fixed;
-  top: -100%;
+  top: -120%;
   transition: 0.5s;
   overflow-y: auto;
 }
