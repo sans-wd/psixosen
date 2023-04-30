@@ -320,748 +320,746 @@
       }
     </style>
 
-    <body>
-      <div class="container mt-2">
-        <div class="container profile_main mobile_padding">
-          <div class="row mobstyle123">
+    <div class="container mt-2">
+      <div class="container profile_main mobile_padding">
+        <div class="row mobstyle123">
+          <div
+            class="col-lg-3 col-md-3 col-sm-4 col-xs-3 col-5 img_box"
+            style="padding: 0px; position: relative; height: 100%"
+          >
             <div
-              class="col-lg-3 col-md-3 col-sm-4 col-xs-3 col-5 img_box"
-              style="padding: 0px; position: relative; height: 100%"
+              style="margin-right: 16px"
+              class="wrapper_div position-relative"
             >
-              <div
-                style="margin-right: 16px"
-                class="wrapper_div position-relative"
-              >
-                <img
-                  id="change"
-                  style="border: 6px solid green; object-fit: cover"
-                  class="img-fluid mob_padd mobilephoto"
-                  src="png/profile2.png"
-                  alt=""
-                />
-                <img class="ladno_iconca" src="img/iconcu.svg" alt="" />
-              </div>
+              <img
+                id="change"
+                style="border: 6px solid green; object-fit: cover"
+                class="img-fluid mob_padd mobilephoto"
+                src="png/profile2.png"
+                alt=""
+              />
+              <img class="ladno_iconca" src="img/iconcu.svg" alt="" />
             </div>
-            <script>
-              var change = document.getElementById("change");
+          </div>
+          <script>
+            var change = document.getElementById("change");
 
-              document
-                .getElementById("foreground")
-                .addEventListener("change", function () {
-                  change.style.color = this.value;
-                });
+            document
+              .getElementById("foreground")
+              .addEventListener("change", function () {
+                change.style.color = this.value;
+              });
 
-              document
-                .getElementById("font")
-                .addEventListener("change", function () {
-                  change.style.fontFamily = this.value;
-                });
+            document
+              .getElementById("font")
+              .addEventListener("change", function () {
+                change.style.fontFamily = this.value;
+              });
 
-              document
-                .getElementById("border")
-                .addEventListener("change", function () {
-                  change.style.borderColor = this.value;
-                });
-            </script>
-            <div
-              style="position: relative"
-              class="col-lg-9 col-md-9 col-sm-7 col-xs-7 col-7"
-            >
-              <div class="row">
-                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-12">
-                  <h5
-                    style="font-size: px; color: #fff"
-                    class="mt-3 mob_style mytext1"
-                  >
-                    Osman Alibey Nasirov
-                  </h5>
-                  <button
-                    style="
-                      min-width: 125px;
-                      min-height: 30px;
-                      padding: 5px;
-                      background: var(--second) !important;
-                      border-radius: 6px;
-                      border: none;
-                      font-family: 'Inter';
-                      font-style: normal;
-                      font-weight: 400;
-                      font-size: 16px;
-                      line-height: 19px;
+            document
+              .getElementById("border")
+              .addEventListener("change", function () {
+                change.style.borderColor = this.value;
+              });
+          </script>
+          <div
+            style="position: relative"
+            class="col-lg-9 col-md-9 col-sm-7 col-xs-7 col-7"
+          >
+            <div class="row">
+              <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-12">
+                <h5
+                  style="font-size: px; color: #fff"
+                  class="mt-3 mob_style mytext1"
+                >
+                  Osman Alibey Nasirov
+                </h5>
+                <button
+                  style="
+                    min-width: 125px;
+                    min-height: 30px;
+                    padding: 5px;
+                    background: var(--second) !important;
+                    border-radius: 6px;
+                    border: none;
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 19px;
 
-                      color: #e3e3e3;
-                    "
-                  >
-                    Uşaq psixoloqu
-                  </button>
-                  <br />
-                  <br />
-                  <span
-                    class="mobile_text mobile_ext11 dispblock13"
-                    style="color: #fff; !important"
-                  >
-                    Mən Aynur Şıxalıyeva hal-hazırda Nur kids tədris mərkəzində
-                    Psixoloq kimi fəaliyyət göstərirəm. Təlimçi-psixoloq kimi
-                    Asan xidmət mərkəzində və digər yerlərdə təlimlər verirəm.
-                  </span>
-                  <div class="d-flex justify-content-start">
+                    color: #e3e3e3;
+                  "
+                >
+                  Uşaq psixoloqu
+                </button>
+                <br />
+                <br />
+                <span
+                  class="mobile_text mobile_ext11 dispblock13"
+                  style="color: #fff; !important"
+                >
+                  Mən Aynur Şıxalıyeva hal-hazırda Nur kids tədris mərkəzində
+                  Psixoloq kimi fəaliyyət göstərirəm. Təlimçi-psixoloq kimi Asan
+                  xidmət mərkəzində və digər yerlərdə təlimlər verirəm.
+                </span>
+                <div class="d-flex justify-content-start">
+                  <div
+                    style="margin-right: 20px"
+                    id="button1_mob_transfer"
+                    class="button_wraper position-relative sht1 d-md-none"
+                  ></div>
+                  <div
+                    id="button2_mob_transfer"
+                    class="button_wraper position-relative shtoot d-md-none"
+                  ></div>
+                </div>
+
+                <style>
+                  @media only screen and (max-width: 991px) {
+                    .status_dnone {
+                      display: none;
+                    }
+                  }
+                </style>
+              </div>
+              <div
+                class="col-lg-4 col-md-4 col-sm-6 col-xs-6 col-4 pt-3 dnonetransfer"
+              >
+                <div class="row">
+                  <div class="col-12" style="float: right">
                     <div
-                      style="margin-right: 20px"
-                      id="button1_mob_transfer"
-                      class="button_wraper position-relative sht1 d-md-none"
-                    ></div>
-                    <div
-                      id="button2_mob_transfer"
-                      class="button_wraper position-relative shtoot d-md-none"
-                    ></div>
+                      id="button1_desk_transfer"
+                      class="button_wraper position-relative sht1"
+                    >
+                      <div class="sdd position-absolute">
+                        <h5 style="color: black">
+                          Bu bölmə sizin fəaliyyət üzrə reytinqinizi əks etdirir
+                        </h5>
+                      </div>
+                      <button
+                        class="mob_button1"
+                        style="
+                          color: white !important;
+                          flex-direction: column;
+                          background: rgba(0, 255, 255, 0.75);
+                          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                          border-radius: 20px;
+                          border: none;
+                          padding: 17px 30px;
+                          float: right;
+                          margin-right: 14px;
+                        "
+                      >
+                        <i
+                          style="color: #e2720b"
+                          class="fa-regular fa-star fa-2x"
+                        ></i>
+                        <br />
+                        <a style="color: #fff" href="#">4.9</a>
+                      </button>
+                    </div>
                   </div>
-
                   <style>
-                    @media only screen and (max-width: 991px) {
-                      .status_dnone {
-                        display: none;
-                      }
+                    .sdd {
+                      display: none;
+                      background: rgba(0, 255, 255, 0.95);
+                      text-align: center;
+
+                      border-radius: 15px;
+                      top: 20px;
+                      width: 146px;
+                      padding: 2px;
+                    }
+
+                    .sdd h5 {
+                      font-size: 14px;
+                      color: white;
+                      margin: 0px;
+                      padding: 5px 5px;
+                    }
+
+                    .sht1:hover .sdd {
+                      display: block;
                     }
                   </style>
-                </div>
-                <div
-                  class="col-lg-4 col-md-4 col-sm-6 col-xs-6 col-4 pt-3 dnonetransfer"
-                >
-                  <div class="row">
-                    <div class="col-12" style="float: right">
-                      <div
-                        id="button1_desk_transfer"
-                        class="button_wraper position-relative sht1"
-                      >
-                        <div class="sdd position-absolute">
-                          <h5 style="color: black">
-                            Bu bölmə sizin fəaliyyət üzrə reytinqinizi əks
-                            etdirir
-                          </h5>
-                        </div>
-                        <button
-                          class="mob_button1"
-                          style="
-                            color: white !important;
-                            flex-direction: column;
-                            background: rgba(0, 255, 255, 0.75);
-                            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                            border-radius: 20px;
-                            border: none;
-                            padding: 17px 30px;
-                            float: right;
-                            margin-right: 14px;
-                          "
-                        >
-                          <i
-                            style="color: #e2720b"
-                            class="fa-regular fa-star fa-2x"
-                          ></i>
-                          <br />
-                          <a style="color: #fff" href="#">4.9</a>
-                        </button>
-                      </div>
-                    </div>
-                    <style>
-                      .sdd {
-                        display: none;
-                        background: rgba(0, 255, 255, 0.95);
-                        text-align: center;
-
-                        border-radius: 15px;
-                        top: 20px;
-                        width: 146px;
-                        padding: 2px;
-                      }
-
-                      .sdd h5 {
-                        font-size: 14px;
-                        color: white;
-                        margin: 0px;
-                        padding: 5px 5px;
-                      }
-
-                      .sht1:hover .sdd {
-                        display: block;
-                      }
-                    </style>
-                    <!-- <script>
+                  <!-- <script>
                     $(function () {
                       $('[data-bs-toggle="tooltip"]').tooltip()
                     })
                   </script> -->
-                    <style>
-                      .sdsdf h5 {
-                        font-size: 14px;
-                        color: white;
-                        margin: 0px;
-                        padding: 5px 5px;
-                      }
+                  <style>
+                    .sdsdf h5 {
+                      font-size: 14px;
+                      color: white;
+                      margin: 0px;
+                      padding: 5px 5px;
+                    }
 
-                      .shtoot:hover .sdsdf {
-                        display: block;
-                      }
-                    </style>
-                    <div class="col-12 pt-3">
-                      <div
-                        id="button2_desk_transfer"
-                        class="button_wraper position-relative shtoot"
-                      >
-                        <div class="position-absolute sdsdf">
-                          <h5>
-                            Bu bölmə sizin inkişaf qiymətləndirilmənizi əks
-                            etdirir
-                          </h5>
-                        </div>
-                        <button
-                          class="mob_button2"
-                          data-bs-toggle="tooltip"
-                          style="
-                            background: #2c8bc0;
-                            flex-direction: column;
-                            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                            border-radius: 20px;
-                            border: none;
-                            float: right;
-                            padding: 17px 33px;
-                            margin-right: 14px;
-                            color: white;
-                          "
-                        >
-                          <i class="fa-solid fa-chart-line fa-2x"></i>
-                          <br />
-                          786
-                        </button>
+                    .shtoot:hover .sdsdf {
+                      display: block;
+                    }
+                  </style>
+                  <div class="col-12 pt-3">
+                    <div
+                      id="button2_desk_transfer"
+                      class="button_wraper position-relative shtoot"
+                    >
+                      <div class="position-absolute sdsdf">
+                        <h5>
+                          Bu bölmə sizin inkişaf qiymətləndirilmənizi əks
+                          etdirir
+                        </h5>
                       </div>
+                      <button
+                        class="mob_button2"
+                        data-bs-toggle="tooltip"
+                        style="
+                          background: #2c8bc0;
+                          flex-direction: column;
+                          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                          border-radius: 20px;
+                          border: none;
+                          float: right;
+                          padding: 17px 33px;
+                          margin-right: 14px;
+                          color: white;
+                        "
+                      >
+                        <i class="fa-solid fa-chart-line fa-2x"></i>
+                        <br />
+                        786
+                      </button>
                     </div>
-                    <!-- <script>
+                  </div>
+                  <!-- <script>
                     $(function () {
                       $('[data-bs-toggle="tooltip2"]').tooltip()
                     })
                   </script> -->
-                  </div>
-                </div>
-              </div>
-              <div class="row mt-3 mb-3">
-                <div class="d-flex justify-content-between">
-                  <button
-                    class="buttonstyle dispblock1"
-                    style="
-                      background: var(--second) !important;
-                      border-radius: 14px;
-
-                      display: flex;
-                      justify-content: space-between !important;
-                      border: none;
-                      height: 36px;
-                      align-items: center;
-                      color: white;
-                      padding: 0px 20px;
-                      font-weight: 600;
-                    "
-                  >
-                    <span style="" class="me-4">7 paylaşım</span>
-                    <span class="me-4"> 32 izləyici</span>
-                    <span>125 izlənilən</span>
-                  </button>
-                  <div
-                    style="margin-right: 13px"
-                    class="dispblock1"
-                    style="float: right"
-                  >
-                    <button style="color: rgba(40, 24, 222, 0.7)" class="izle">
-                      <i class="fa-solid fa-user-plus me-2"></i> Izlə
-                    </button>
-                  </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div class="col-12 dispblock mt-1" style="">
-            <div class="container mt-3 mb-3" style="padding: 0px">
-              <div class="d-flex justify-content-between align-items-center">
-                <select
-                  class="fff bomba_button"
-                  style="
-                    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-                    background: green;
-                    border: none;
-                    min-height: 35px;
-                    border-radius: 10px;
-                    text-align: center;
-                    color: white;
-                    outline: none;
-                  "
-                  onfocus="this.size=2;"
-                  onblur="this.size=0;"
-                  onchange="this.size=1; this.blur();"
-                  name="border"
-                  id="border1"
-                >
-                  <option value="green">Aktiv</option>
-                  <option value="red">Aktiv deyil</option>
-                </select>
-
-                <div class=" " style="">
-                  <div class="btn-group dropup mobile_margin1">
-                    <button
-                      type="button"
-                      class="btn dropdown-toggle d-flex align-items-center justify-content-center"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                      style="
-                        background: var(--second) !important;
-                        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-                        border-radius: 10px;
-                        padding: 8px 16px;
-                        color: white;
-                        border: none;
-                        min-width: 90%;
-
-                        min-height: 35px;
-                        font-size: 12px;
-                      "
-                    >
-                      <i class="fa-solid fa-circle-plus fa-2x"></i>
-                    </button>
-                    <ul class="dropdown-menu mob_style_li">
-                      <li>
-                        <img
-                          style="width: 25px; height: 25px"
-                          class="me-2 img-fluid"
-                          src="png/first.png"
-                          alt=""
-                        />Məqalə
-                      </li>
-                      <li>
-                        <img
-                          style="width: 25px; height: 25px"
-                          class="me-2 mt-2 mb-2 img-fluid"
-                          src="png/first1.png"
-                          alt=""
-                        />Video
-                      </li>
-                      <li>
-                        <img
-                          style="width: 25px; height: 25px"
-                          class="me-2 img-fluid"
-                          src="png/first2.png"
-                          alt=""
-                        />Podkast
-                      </li>
-                      <li>
-                        <img
-                          style="width: 25px; height: 25px"
-                          class="me-2 mt-2 mb-2 img-fluid"
-                          src="png/first3.png"
-                          alt=""
-                        />Tədbir və elan
-                      </li>
-                      <li>
-                        <img
-                          style="width: 25px; height: 25px"
-                          class="me-2 img-fluid"
-                          src="png/first4.png"
-                          alt=""
-                        />Kitab tövsiyəsi
-                      </li>
-                      <li>
-                        <img
-                          style="width: 25px; height: 25px"
-                          class="me-2 mt-2 mb-2 img-fluid"
-                          src="png/first5.png"
-                          alt=""
-                        />Film tövsiyəsi
-                      </li>
-                      <li>
-                        <img
-                          style="width: 25px; height: 25px"
-                          class="me-2 img-fluid"
-                          src="png/first6.png"
-                          alt=""
-                        />Musiqi tövsiyəsi
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div
-                  id="izle_mob"
-                  class="d-flex d-md-none"
-                  style="float: right; justify-content: center"
-                ></div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="mobile_st">
+            <div class="row mt-3 mb-3">
+              <div class="d-flex justify-content-between">
                 <button
-                  class="buttonstyle"
+                  class="buttonstyle dispblock1"
                   style="
                     background: var(--second) !important;
                     border-radius: 14px;
+
+                    display: flex;
                     justify-content: space-between !important;
                     border: none;
                     height: 36px;
                     align-items: center;
                     color: white;
-                    padding: 0px 12px;
-                    min-width: 230px;
+                    padding: 0px 20px;
                     font-weight: 600;
                   "
                 >
-                  <span class="me-4">0 paylaşım</span>
+                  <span style="" class="me-4">7 paylaşım</span>
                   <span class="me-4"> 32 izləyici</span>
                   <span>125 izlənilən</span>
                 </button>
                 <div
-                  id="izle_desk"
-                  class="d-flex dispblock13"
-                  style="
-                    float: right;
-                    justify-content: center;
-                    align-items: center;
-                  "
+                  style="margin-right: 13px"
+                  class="dispblock1"
+                  style="float: right"
                 >
                   <button style="color: rgba(40, 24, 222, 0.7)" class="izle">
-                    <i class="fa-solid fa-user-plus"></i>
+                    <i class="fa-solid fa-user-plus me-2"></i> Izlə
                   </button>
                 </div>
               </div>
             </div>
           </div>
-          <div class="d-md-none pb-2">
-            <div>
-              <input type="checkbox" class="read-more-state" id="post-1" />
-
-              <p class="read-more-wrap mb-1">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                <span class="read-more-target"
-                  >Libero fuga facilis vel consectetur quos sapiente deleniti
-                  eveniet dolores tempore eos deserunt officia quis ab?
-                  Excepturi vero tempore minus beatae voluptatem!</span
-                >
-              </p>
-              <label
-                for="post-1"
-                class="read-more-trigger show_more_lab mx-auto"
-              ></label>
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div
-            class="mb-3 col-xxl-3 col-xl-3 col-lg-3 side_back_color mobile_slider_none"
-            id="navTransfer"
-          >
-            <div class="col-3 dispblock1 mb-3 mt-3" style="width: 100%">
+
+        <div class="col-12 dispblock mt-1" style="">
+          <div class="container mt-3 mb-3" style="padding: 0px">
+            <div class="d-flex justify-content-between align-items-center">
               <select
-                class="fff"
-                onfocus="this.size=2;"
-                onblur="this.size=0;"
-                onchange="this.size=1; this.blur();"
+                class="fff bomba_button"
                 style="
+                  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
                   background: green;
                   border: none;
-                  width: 100%;
-                  min-height: 37px;
+                  min-height: 35px;
                   border-radius: 10px;
                   text-align: center;
                   color: white;
                   outline: none;
                 "
+                onfocus="this.size=2;"
+                onblur="this.size=0;"
+                onchange="this.size=1; this.blur();"
                 name="border"
-                id="border"
+                id="border1"
               >
-                <option selected value="green">Aktiv</option>
+                <option value="green">Aktiv</option>
                 <option value="red">Aktiv deyil</option>
               </select>
 
-              <style>
-                select option:hover {
-                  background-color: var(--first);
-                }
+              <div class=" " style="">
+                <div class="btn-group dropup mobile_margin1">
+                  <button
+                    type="button"
+                    class="btn dropdown-toggle d-flex align-items-center justify-content-center"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    style="
+                      background: var(--second) !important;
+                      box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+                      border-radius: 10px;
+                      padding: 8px 16px;
+                      color: white;
+                      border: none;
+                      min-width: 90%;
 
-                select option:checked {
-                  background-color: var(--first);
-                  font-weight: 700;
-                }
-                select option:sel {
-                  background-color: var(--first);
-                  font-weight: 700;
-                }
-              </style>
-            </div>
-            <div class="side_menu" id="side_menu_desk_transfer">
-              <a href="#" class="menu_buttons d-flex align-items-center">
-                <div class="d-flex align-items-center">
-                  <img
-                    src="./img/esas_sephe.svg"
-                    alt=""
-                    height="16px"
-                    style="filter: invert(1)"
-                  />
-                  <span>Əsas səhifə</span>
-                </div>
-              </a>
-              <a href="#" class="menu_buttons">
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="p-0"
-                    ><img
-                      style="height: 16px"
-                      src="./img/haqqimda1.svg"
-                      alt=""
-                    /><span class="span_move">Haqqımda</span></span
+                      min-height: 35px;
+                      font-size: 12px;
+                    "
                   >
-                </div>
-              </a>
-
-              <a
-                data-bs-toggle="collapse"
-                href="#collapseExample1"
-                role="button"
-                aria-expanded="false"
-                aria-controls="collapseExample1"
-                bis_skin_checked="1"
-                class="collapsed menu_buttons"
-              >
-                <div class="d-flex align-items-center justify-content-between">
-                  <div class="1">
-                    <img src="./img/paylash1.svg" alt="" height="16px" />
-                    <span>Paylaşımlarım</span>
-                  </div>
-                  <div class="1"><i class="fa-solid fa-chevron-down"></i></div>
-                </div>
-              </a>
-              <div
-                class="child_mobile colapse_body collapse"
-                id="collapseExample1"
-                bis_skin_checked="1"
-                style=""
-              >
-                <div class="">
-                  <a href="#" class="menu_buttons">Psixoloq</a>
-                  <a href="#" class="menu_buttons">Təlimçi</a>
-                  <a href="#" class="menu_buttons">Təlimçi</a>
-                </div>
-              </div>
-              <a
-                data-bs-toggle="collapse"
-                href="#collapseExample2"
-                role="button"
-                aria-expanded="false"
-                aria-controls="collapseExample2"
-                bis_skin_checked="1"
-                class="collapsed menu_buttons"
-              >
-                <div class="d-flex align-items-center justify-content-between">
-                  <div class="1">
-                    <img src="./img/faaliyat1.svg" alt="" height="16px" />
-                    <span>Fəaliyyətim</span>
-                  </div>
-                  <div class="2"><i class="fa-solid fa-chevron-down"></i></div>
-                </div>
-              </a>
-              <div
-                class="child_mobile colapse_body collapse"
-                id="collapseExample2"
-                bis_skin_checked="1"
-                style=""
-              >
-                <div class="">
-                  <a href="#" class="menu_buttons">Psixoloq</a>
-                  <a href="#" class="menu_buttons">Təlimçi</a>
-                  <a href="#" class="menu_buttons">Təlimçi</a>
-                </div>
-              </div>
-              <a
-                data-bs-toggle="collapse"
-                href="#collapseExample3"
-                role="button"
-                aria-expanded="false"
-                aria-controls="collapseExample3"
-                bis_skin_checked="1"
-                class="collapsed menu_buttons"
-              >
-                <div class="d-flex align-items-center justify-content-between">
-                  <div class="1">
-                    <img
-                      src="./img/QRCode.svg"
-                      alt=""
-                      height="16px"
-                      style="filter: invert(1) color: white;"
-                    />
-                    <span>Xidmətlərim</span>
-                  </div>
-                  <div class="2"><i class="fa-solid fa-chevron-down"></i></div>
-                </div>
-              </a>
-              <div
-                class="child_mobile colapse_body collapse"
-                id="collapseExample3"
-                bis_skin_checked="1"
-                style=""
-              >
-                <div class="">
-                  <a href="#" class="menu_buttons">Məsləhət</a>
-
-                  <a href="#" class="menu_buttons">Seminar</a>
-
-                  <a href="#" class="menu_buttons">Təlim</a>
-
-                  <a href="#" class="menu_buttons">Onlayn kitabxana</a>
+                    <i class="fa-solid fa-circle-plus fa-2x"></i>
+                  </button>
+                  <ul class="dropdown-menu mob_style_li">
+                    <li>
+                      <img
+                        style="width: 25px; height: 25px"
+                        class="me-2 img-fluid"
+                        src="png/first.png"
+                        alt=""
+                      />Məqalə
+                    </li>
+                    <li>
+                      <img
+                        style="width: 25px; height: 25px"
+                        class="me-2 mt-2 mb-2 img-fluid"
+                        src="png/first1.png"
+                        alt=""
+                      />Video
+                    </li>
+                    <li>
+                      <img
+                        style="width: 25px; height: 25px"
+                        class="me-2 img-fluid"
+                        src="png/first2.png"
+                        alt=""
+                      />Podkast
+                    </li>
+                    <li>
+                      <img
+                        style="width: 25px; height: 25px"
+                        class="me-2 mt-2 mb-2 img-fluid"
+                        src="png/first3.png"
+                        alt=""
+                      />Tədbir və elan
+                    </li>
+                    <li>
+                      <img
+                        style="width: 25px; height: 25px"
+                        class="me-2 img-fluid"
+                        src="png/first4.png"
+                        alt=""
+                      />Kitab tövsiyəsi
+                    </li>
+                    <li>
+                      <img
+                        style="width: 25px; height: 25px"
+                        class="me-2 mt-2 mb-2 img-fluid"
+                        src="png/first5.png"
+                        alt=""
+                      />Film tövsiyəsi
+                    </li>
+                    <li>
+                      <img
+                        style="width: 25px; height: 25px"
+                        class="me-2 img-fluid"
+                        src="png/first6.png"
+                        alt=""
+                      />Musiqi tövsiyəsi
+                    </li>
+                  </ul>
                 </div>
               </div>
-              <a
-                href="#"
-                class="menu_buttons"
-                style="background-color: ; color: white !important"
-              >
-                <div class="d-flex align-items-center">
-                  <img src="./img/karyera1.svg" alt="" height="16px" />
-                  <span>Karyera xəritəsi</span>
-                </div>
-              </a>
-              <a
-                href="#"
-                class="active menu_buttons d-flex justify-content-start align-items-center"
-              >
-                <div class="d-flex align-items-center">
-                  <img
-                    src="./img/psi.svg"
-                    alt=""
-                    height="16px"
-                    style="filter: invert(0)"
-                  />
-                  <span>PSİ akademiyası</span>
-                </div>
-              </a>
-              <a
-                data-bs-toggle="collapse"
-                href="#collapseExample"
-                role="button"
-                aria-expanded="false"
-                aria-controls="collapseExample"
-                bis_skin_checked="1"
-                class="collapsed"
-              >
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="d-flex align-items-center">
-                    <img
-                      src="./img/magaza.svg"
-                      alt=""
-                      height="16px"
-                      style="filter: invert(1)"
-                    />
-                    <span>Mağaza</span>
-                  </div>
-                  <i class="fa-solid fa-chevron-down"></i>
-                </div>
-              </a>
               <div
-                class="child_mobile colapse_body collapse"
-                id="collapseExample"
-                bis_skin_checked="1"
-                style=""
-              >
-                <div class="">
-                  <a href="#" class="menu_buttons">Psixoloq</a>
-                  <a href="#" class="menu_buttons">Təlimçi</a>
-                  <a href="#" class="menu_buttons">Təlimçi</a>
-                </div>
-              </div>
-
-              <a href="#" class="menu_buttons">
-                <div class="d-flex align-items-center">
-                  <img
-                    src="./img/terzim.svg"
-                    alt=""
-                    height="16px"
-                    style="filter: invert(0)"
-                  />
-                  <span>Tərzim</span>
-                </div>
-              </a>
-              <a href="#" class="menu_buttons">
-                <div class="d-flex align-items-center">
-                  <img
-                    src="./img/abonik.svg"
-                    alt=""
-                    height="16px"
-                    style="filter: invert(0)"
-                  />
-                  <span>Abonəliklər</span>
-                </div>
-              </a>
-              <a href="#" class="menu_buttons">
-                <div class="d-flex align-items-center">
-                  <img
-                    src="./img/qeyd.svg"
-                    alt=""
-                    height="16px"
-                    style="filter: invert(0)"
-                  />
-                  <span>Qeyd dəftərim</span>
-                </div>
-              </a>
-              <a href="#" class="menu_buttons">
-                <div class="d-flex align-items-center">
-                  <img
-                    src="./img/maaliye.svg"
-                    alt=""
-                    height="16px"
-                    style="filter: invert(0)"
-                  />
-                  <span>Maliyyə</span>
-                </div>
-              </a>
-              <a href="#" class="menu_buttons">
-                <div class="d-flex align-items-center">
-                  <img
-                    src="./img/sual.svg"
-                    alt=""
-                    height="16px"
-                    style="filter: invert(1)"
-                  />
-                  <span>Sual-cavab</span>
-                </div>
-              </a>
-              <a href="#" class="menu_buttons">
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="d-flex align-items-center">
-                    <img
-                      src="./img/bildirish.svg"
-                      alt=""
-                      height="16px"
-                      style="filter: invert(0)"
-                    />
-                    <span>Bildirişlər</span>
-                  </div>
-                  <div class="shopping_cart_count">
-                    <span style="height: 20px; width: 20px">5</span>
-                  </div>
-                </div>
-              </a>
-              <a href="#" class="menu_buttons">
-                <div class="d-flex align-items-center">
-                  <img
-                    src="./img/tenzim.svg"
-                    alt=""
-                    height="16px"
-                    style="filter: invert(0)"
-                  />
-                  <span>Tənzimləmələr</span>
-                </div>
-              </a>
+                id="izle_mob"
+                class="d-flex d-md-none"
+                style="float: right; justify-content: center"
+              ></div>
             </div>
           </div>
-          <div
-            class="col-xxl-9 col-xl-9 col-lg-9"
-            style="display: block !important"
-          >
-            <!-- <div class="w-100 pt-3" style="">
+
+          <div class="row">
+            <div class="mobile_st">
+              <button
+                class="buttonstyle"
+                style="
+                  background: var(--second) !important;
+                  border-radius: 14px;
+                  justify-content: space-between !important;
+                  border: none;
+                  height: 36px;
+                  align-items: center;
+                  color: white;
+                  padding: 0px 12px;
+                  min-width: 230px;
+                  font-weight: 600;
+                "
+              >
+                <span class="me-4">0 paylaşım</span>
+                <span class="me-4"> 32 izləyici</span>
+                <span>125 izlənilən</span>
+              </button>
+              <div
+                id="izle_desk"
+                class="d-flex dispblock13"
+                style="
+                  float: right;
+                  justify-content: center;
+                  align-items: center;
+                "
+              >
+                <button style="color: rgba(40, 24, 222, 0.7)" class="izle">
+                  <i class="fa-solid fa-user-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-md-none pb-2">
+          <div>
+            <input type="checkbox" class="read-more-state" id="post-1" />
+
+            <p class="read-more-wrap mb-1">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              <span class="read-more-target"
+                >Libero fuga facilis vel consectetur quos sapiente deleniti
+                eveniet dolores tempore eos deserunt officia quis ab? Excepturi
+                vero tempore minus beatae voluptatem!</span
+              >
+            </p>
+            <label
+              for="post-1"
+              class="read-more-trigger show_more_lab mx-auto"
+            ></label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div
+          class="mb-3 col-xxl-3 col-xl-3 col-lg-3 side_back_color mobile_slider_none"
+          id="navTransfer"
+        >
+          <div class="col-3 dispblock1 mb-3 mt-3" style="width: 100%">
+            <select
+              class="fff"
+              onfocus="this.size=2;"
+              onblur="this.size=0;"
+              onchange="this.size=1; this.blur();"
+              style="
+                background: green;
+                border: none;
+                width: 100%;
+                min-height: 37px;
+                border-radius: 10px;
+                text-align: center;
+                color: white;
+                outline: none;
+              "
+              name="border"
+              id="border"
+            >
+              <option selected value="green">Aktiv</option>
+              <option value="red">Aktiv deyil</option>
+            </select>
+
+            <style>
+              select option:hover {
+                background-color: var(--first);
+              }
+
+              select option:checked {
+                background-color: var(--first);
+                font-weight: 700;
+              }
+              select option:sel {
+                background-color: var(--first);
+                font-weight: 700;
+              }
+            </style>
+          </div>
+          <div class="side_menu" id="side_menu_desk_transfer">
+            <a href="#" class="menu_buttons d-flex align-items-center">
+              <div class="d-flex align-items-center">
+                <img
+                  src="./img/esas_sephe.svg"
+                  alt=""
+                  height="16px"
+                  style="filter: invert(1)"
+                />
+                <span>Əsas səhifə</span>
+              </div>
+            </a>
+            <a href="#" class="menu_buttons">
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="p-0"
+                  ><img
+                    style="height: 16px"
+                    src="./img/haqqimda1.svg"
+                    alt=""
+                  /><span class="span_move">Haqqımda</span></span
+                >
+              </div>
+            </a>
+
+            <a
+              data-bs-toggle="collapse"
+              href="#collapseExample1"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseExample1"
+              bis_skin_checked="1"
+              class="collapsed menu_buttons"
+            >
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="1">
+                  <img src="./img/paylash1.svg" alt="" height="16px" />
+                  <span>Paylaşımlarım</span>
+                </div>
+                <div class="1"><i class="fa-solid fa-chevron-down"></i></div>
+              </div>
+            </a>
+            <div
+              class="child_mobile colapse_body collapse"
+              id="collapseExample1"
+              bis_skin_checked="1"
+              style=""
+            >
+              <div class="">
+                <a href="#" class="menu_buttons">Psixoloq</a>
+                <a href="#" class="menu_buttons">Təlimçi</a>
+                <a href="#" class="menu_buttons">Təlimçi</a>
+              </div>
+            </div>
+            <a
+              data-bs-toggle="collapse"
+              href="#collapseExample2"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseExample2"
+              bis_skin_checked="1"
+              class="collapsed menu_buttons"
+            >
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="1">
+                  <img src="./img/faaliyat1.svg" alt="" height="16px" />
+                  <span>Fəaliyyətim</span>
+                </div>
+                <div class="2"><i class="fa-solid fa-chevron-down"></i></div>
+              </div>
+            </a>
+            <div
+              class="child_mobile colapse_body collapse"
+              id="collapseExample2"
+              bis_skin_checked="1"
+              style=""
+            >
+              <div class="">
+                <a href="#" class="menu_buttons">Psixoloq</a>
+                <a href="#" class="menu_buttons">Təlimçi</a>
+                <a href="#" class="menu_buttons">Təlimçi</a>
+              </div>
+            </div>
+            <a
+              data-bs-toggle="collapse"
+              href="#collapseExample3"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseExample3"
+              bis_skin_checked="1"
+              class="collapsed menu_buttons"
+            >
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="1">
+                  <img
+                    src="./img/QRCode.svg"
+                    alt=""
+                    height="16px"
+                    style="filter: invert(1) color: white;"
+                  />
+                  <span>Xidmətlərim</span>
+                </div>
+                <div class="2"><i class="fa-solid fa-chevron-down"></i></div>
+              </div>
+            </a>
+            <div
+              class="child_mobile colapse_body collapse"
+              id="collapseExample3"
+              bis_skin_checked="1"
+              style=""
+            >
+              <div class="">
+                <a href="#" class="menu_buttons">Məsləhət</a>
+
+                <a href="#" class="menu_buttons">Seminar</a>
+
+                <a href="#" class="menu_buttons">Təlim</a>
+
+                <a href="#" class="menu_buttons">Onlayn kitabxana</a>
+              </div>
+            </div>
+            <a
+              href="#"
+              class="menu_buttons"
+              style="background-color: ; color: white !important"
+            >
+              <div class="d-flex align-items-center">
+                <img src="./img/karyera1.svg" alt="" height="16px" />
+                <span>Karyera xəritəsi</span>
+              </div>
+            </a>
+            <a
+              href="#"
+              class="active menu_buttons d-flex justify-content-start align-items-center"
+            >
+              <div class="d-flex align-items-center">
+                <img
+                  src="./img/psi.svg"
+                  alt=""
+                  height="16px"
+                  style="filter: invert(0)"
+                />
+                <span>PSİ akademiyası</span>
+              </div>
+            </a>
+            <a
+              data-bs-toggle="collapse"
+              href="#collapseExample"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+              bis_skin_checked="1"
+              class="collapsed"
+            >
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                  <img
+                    src="./img/magaza.svg"
+                    alt=""
+                    height="16px"
+                    style="filter: invert(1)"
+                  />
+                  <span>Mağaza</span>
+                </div>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </a>
+            <div
+              class="child_mobile colapse_body collapse"
+              id="collapseExample"
+              bis_skin_checked="1"
+              style=""
+            >
+              <div class="">
+                <a href="#" class="menu_buttons">Psixoloq</a>
+                <a href="#" class="menu_buttons">Təlimçi</a>
+                <a href="#" class="menu_buttons">Təlimçi</a>
+              </div>
+            </div>
+
+            <a href="#" class="menu_buttons">
+              <div class="d-flex align-items-center">
+                <img
+                  src="./img/terzim.svg"
+                  alt=""
+                  height="16px"
+                  style="filter: invert(0)"
+                />
+                <span>Tərzim</span>
+              </div>
+            </a>
+            <a href="#" class="menu_buttons">
+              <div class="d-flex align-items-center">
+                <img
+                  src="./img/abonik.svg"
+                  alt=""
+                  height="16px"
+                  style="filter: invert(0)"
+                />
+                <span>Abonəliklər</span>
+              </div>
+            </a>
+            <a href="#" class="menu_buttons">
+              <div class="d-flex align-items-center">
+                <img
+                  src="./img/qeyd.svg"
+                  alt=""
+                  height="16px"
+                  style="filter: invert(0)"
+                />
+                <span>Qeyd dəftərim</span>
+              </div>
+            </a>
+            <a href="#" class="menu_buttons">
+              <div class="d-flex align-items-center">
+                <img
+                  src="./img/maaliye.svg"
+                  alt=""
+                  height="16px"
+                  style="filter: invert(0)"
+                />
+                <span>Maliyyə</span>
+              </div>
+            </a>
+            <a href="#" class="menu_buttons">
+              <div class="d-flex align-items-center">
+                <img
+                  src="./img/sual.svg"
+                  alt=""
+                  height="16px"
+                  style="filter: invert(1)"
+                />
+                <span>Sual-cavab</span>
+              </div>
+            </a>
+            <a href="#" class="menu_buttons">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                  <img
+                    src="./img/bildirish.svg"
+                    alt=""
+                    height="16px"
+                    style="filter: invert(0)"
+                  />
+                  <span>Bildirişlər</span>
+                </div>
+                <div class="shopping_cart_count">
+                  <span style="height: 20px; width: 20px">5</span>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="menu_buttons">
+              <div class="d-flex align-items-center">
+                <img
+                  src="./img/tenzim.svg"
+                  alt=""
+                  height="16px"
+                  style="filter: invert(0)"
+                />
+                <span>Tənzimləmələr</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div
+          class="col-xxl-9 col-xl-9 col-lg-9"
+          style="display: block !important"
+        >
+          <!-- <div class="w-100 pt-3" style="">
             <div class="scroller scroller-left float-left mt-2"><i class="fa fa-chevron-left"></i></div>
             <div class="scroller scroller-right float-right mt-2"><i class="fa fa-chevron-right"></i></div>
             <div class="wrapper-nav wrappernav_style">
@@ -1204,505 +1202,495 @@
 
             </div>
           </div> -->
-            <div class="w-100 pt-3 scroller_style">
-              <div class="scroller scroller-left float-start mt-2">
-                <i class="bi bi-caret-left-fill"></i>
-              </div>
-              <div class="scroller scroller-right float-end mt-2">
-                <i class="bi bi-caret-right-fill"></i>
-              </div>
-              <div class="wrapper-nav" style="border-radius: 10px">
-                <nav
-                  style="cursor: pointer"
-                  class="nav nav-tabs list mt-2"
-                  id="myTab"
-                  role="tablist"
+          <div class="w-100 pt-3 scroller_style">
+            <div class="scroller scroller-left float-start mt-2">
+              <i class="bi bi-caret-left-fill"></i>
+            </div>
+            <div class="scroller scroller-right float-end mt-2">
+              <i class="bi bi-caret-right-fill"></i>
+            </div>
+            <div class="wrapper-nav" style="border-radius: 10px">
+              <nav
+                style="cursor: pointer"
+                class="nav nav-tabs list mt-2"
+                id="myTab"
+                role="tablist"
+              >
+                <a
+                  class="nav-item nav-link pointer active"
+                  data-bs-toggle="tab"
+                  data-bs-target="#tab1"
+                  role="tab"
+                  aria-controls="public"
+                  aria-selected="true"
+                  >Hamısı</a
                 >
-                  <a
-                    class="nav-item nav-link pointer active"
-                    data-bs-toggle="tab"
-                    data-bs-target="#tab1"
-                    role="tab"
-                    aria-controls="public"
-                    aria-selected="true"
-                    >Hamısı</a
-                  >
-                  <a
-                    class="nav-item nav-link pointer"
-                    data-bs-target="#tab2"
-                    role="tab"
-                    data-bs-toggle="tab"
-                    >Məqalə</a
-                  >
-                  <a
-                    class="nav-item nav-link pointer"
-                    data-bs-target="#tab3"
-                    role="tab"
-                    data-bs-toggle="tab"
-                    >Video</a
-                  >
-                  <a
-                    class="nav-item nav-link pointer"
-                    data-bs-target="#tab4"
-                    role="tab"
-                    data-bs-toggle="tab"
-                    >Podkast</a
-                  >
-                  <a
-                    class="nav-item nav-link pointer"
-                    data-bs-target="#tab5"
-                    role="tab"
-                    data-bs-toggle="tab"
-                    >Kitablar</a
-                  >
-                  <a
-                    class="nav-item nav-link pointer"
-                    data-bs-target="#tab6"
-                    role="tab"
-                    data-bs-toggle="tab"
-                    >Musiqi</a
-                  >
-                  <a
-                    class="nav-item nav-link pointer"
-                    data-bs-target="#tab7"
-                    role="tab"
-                    data-bs-toggle="tab"
-                    >Film</a
-                  >
-                  <a
-                    class="nav-item nav-link pointer"
-                    data-bs-target="#tab8"
-                    role="tab"
-                    data-bs-toggle="tab"
-                    >Tədbir və elanlar</a
-                  >
-                </nav>
-              </div>
-              <div class="tab-content pt-3" id="myTabContent">
-                <div
-                  role="tabpanel"
-                  class="tab-pane fade active show mt-2"
-                  id="tab1"
-                  aria-labelledby="public-tab"
+                <a
+                  class="nav-item nav-link pointer"
+                  data-bs-target="#tab2"
+                  role="tab"
+                  data-bs-toggle="tab"
+                  >Məqalə</a
                 >
-                  <div class="container background1">
-                    <div
-                      class="first_content d-flex justify-content-between pt-3"
-                    >
-                      <div style="margin-left: 12px" class="left">
-                        <span style="color: red">Yeni</span>
-                        <button
-                          class="ms-3"
-                          style="
-                            background: #2c8bc0;
-                            border-radius: 4px;
-                            color: white;
-                            border: none;
-                          "
-                        >
-                          Ailə psixologiyası
-                        </button>
-                      </div>
-                      <div class="right">
-                        <span class="mobile_design11">
-                          <i class="fa-regular fa-clock me-1"></i>12
-                          dəqiqə</span
-                        >
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div
-                        class="bottom justify-content-between col-lg-6 col-md-12"
+                <a
+                  class="nav-item nav-link pointer"
+                  data-bs-target="#tab3"
+                  role="tab"
+                  data-bs-toggle="tab"
+                  >Video</a
+                >
+                <a
+                  class="nav-item nav-link pointer"
+                  data-bs-target="#tab4"
+                  role="tab"
+                  data-bs-toggle="tab"
+                  >Podkast</a
+                >
+                <a
+                  class="nav-item nav-link pointer"
+                  data-bs-target="#tab5"
+                  role="tab"
+                  data-bs-toggle="tab"
+                  >Kitablar</a
+                >
+                <a
+                  class="nav-item nav-link pointer"
+                  data-bs-target="#tab6"
+                  role="tab"
+                  data-bs-toggle="tab"
+                  >Musiqi</a
+                >
+                <a
+                  class="nav-item nav-link pointer"
+                  data-bs-target="#tab7"
+                  role="tab"
+                  data-bs-toggle="tab"
+                  >Film</a
+                >
+                <a
+                  class="nav-item nav-link pointer"
+                  data-bs-target="#tab8"
+                  role="tab"
+                  data-bs-toggle="tab"
+                  >Tədbir və elanlar</a
+                >
+              </nav>
+            </div>
+            <div class="tab-content pt-3" id="myTabContent">
+              <div
+                role="tabpanel"
+                class="tab-pane fade active show mt-2"
+                id="tab1"
+                aria-labelledby="public-tab"
+              >
+                <div class="container background1">
+                  <div
+                    class="first_content d-flex justify-content-between pt-3"
+                  >
+                    <div style="margin-left: 12px" class="left">
+                      <span style="color: red">Yeni</span>
+                      <button
+                        class="ms-3"
+                        style="
+                          background: #2c8bc0;
+                          border-radius: 4px;
+                          color: white;
+                          border: none;
+                        "
                       >
-                        <div class="mt-1 mb-1">
-                          <div
-                            class="news_user d-flex justify-content-between align-items-center p-0"
-                          >
-                            <div class="user_info d-flex align-items-center">
-                              <div class="user_news_photo d-inline-block">
-                                <img
-                                  src="./png/anonim.png"
-                                  class="img-fluid"
-                                  alt=""
-                                />
-                              </div>
-                              <div class="user_news_info d-inline-block ps-2">
-                                <span class="user_news_name mobile_design1111"
-                                  >Kənan Zərbiyev
-                                </span>
-                                <br />
-                                <span
-                                  class="user_news_position mobile_design111"
-                                  >Pedaqoq, Təhsil koçu</span
-                                >
-                              </div>
+                        Ailə psixologiyası
+                      </button>
+                    </div>
+                    <div class="right">
+                      <span class="mobile_design11">
+                        <i class="fa-regular fa-clock me-1"></i>12 dəqiqə</span
+                      >
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div
+                      class="bottom justify-content-between col-lg-6 col-md-12"
+                    >
+                      <div class="mt-1 mb-1">
+                        <div
+                          class="news_user d-flex justify-content-between align-items-center p-0"
+                        >
+                          <div class="user_info d-flex align-items-center">
+                            <div class="user_news_photo d-inline-block">
+                              <img
+                                src="./png/anonim.png"
+                                class="img-fluid"
+                                alt=""
+                              />
                             </div>
-                            <div class="user_news_sub">
-                              <button>
-                                <i class="fa-solid fa-user-plus"></i>
-                              </button>
+                            <div class="user_news_info d-inline-block ps-2">
+                              <span class="user_news_name mobile_design1111"
+                                >Kənan Zərbiyev
+                              </span>
+                              <br />
+                              <span class="user_news_position mobile_design111"
+                                >Pedaqoq, Təhsil koçu</span
+                              >
                             </div>
                           </div>
+                          <div class="user_news_sub">
+                            <button>
+                              <i class="fa-solid fa-user-plus"></i>
+                            </button>
+                          </div>
                         </div>
+                      </div>
 
-                        <img
-                          class="img-fluid"
-                          src="png/As a Mother, I Have the Power to Destroy My Home - Her View From Home 4.png"
-                          alt=""
-                        />
-                      </div>
-                      <div
-                        class="col-lg-6 col-md-12 mob_style11 position-relative"
-                        style="text-align: left"
-                      >
-                        <div class="border_bottom"></div>
-                        <p class="right_style">
-                          Travmatik uşaqların ardında gizlənən ailə daxili
-                          mübahisələr!
-                        </p>
-                        <span
-                          >Valideyin olmaq tək övladı dünyaya gətirməklə
-                          bitmir.Övladınıza yanaşma tərziniz onun gələcək
-                          həyatına təsir edir.Bu səbəbdən doğrunu yanlışlardan
-                          ayırmaqla uşaqlarınızın sağlam psixoloji
-                          duruma...</span
-                        >
-                        <button style="display: block" class="kecid">
-                          Keçid et
-                          <i class="ms-2 fa-solid fa-chevron-right"></i>
-                        </button>
-                        <div class="social_reaction mt-4">
-                          <ul
-                            class="p-0 m-0 list-unstyled d-flex align-items-center"
-                          >
-                            <li>
-                              <a href="#" class="views"
-                                ><i class="fa-regular fa-eye"></i>
-                                <span class="px-1">6000</span></a
-                              >
-                            </li>
-                            <li>
-                              <!-- IZMENENIYA -->
-                              <a
-                                href="#"
-                                class="likes"
-                                onclick="changeIcon2(this)"
-                                ><i class="fa-regular fa-heart"></i>
-                                <span class="px-1">1200</span></a
-                              >
-                              <!-- IZMENENIYA -->
-                            </li>
-                            <li>
-                              <!-- IZMENENIYA -->
-                              <a
-                                href="#"
-                                class="save"
-                                onclick="changeIcon2(this)"
-                                ><i class="fa-regular fa-bookmark"></i
-                              ></a>
-                              <!-- IZMENENIYA -->
-                            </li>
-                            <li>
-                              <a href="#" class="share"
-                                ><i class="fa-solid fa-share-nodes"></i
-                              ></a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
+                      <img
+                        class="img-fluid"
+                        src="png/As a Mother, I Have the Power to Destroy My Home - Her View From Home 4.png"
+                        alt=""
+                      />
                     </div>
-                  </div>
-                  <div class="container d-flex justify-content-end mt-5">
-                    <br />
-                    <br />
-                    <!-- Default dropup button -->
-                    <div class="btn-group dropup displayblock11">
-                      <button
-                        type="button"
-                        class="mystyle11 btn btn-secondary dropdown-toggle"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
+                    <div
+                      class="col-lg-6 col-md-12 mob_style11 position-relative"
+                      style="text-align: left"
+                    >
+                      <div class="border_bottom"></div>
+                      <p class="right_style">
+                        Travmatik uşaqların ardında gizlənən ailə daxili
+                        mübahisələr!
+                      </p>
+                      <span
+                        >Valideyin olmaq tək övladı dünyaya gətirməklə
+                        bitmir.Övladınıza yanaşma tərziniz onun gələcək həyatına
+                        təsir edir.Bu səbəbdən doğrunu yanlışlardan ayırmaqla
+                        uşaqlarınızın sağlam psixoloji duruma...</span
                       >
-                        <i
-                          style="font-weight: 100 !important"
-                          class="fa-solid fa-plus fa-4x"
-                        ></i>
+                      <button style="display: block" class="kecid">
+                        Keçid et
+                        <i class="ms-2 fa-solid fa-chevron-right"></i>
                       </button>
-                      <ul class="dropdown-menu mob_style_li">
-                        <li>
-                          <img
-                            style="width: 25px; height: 25px"
-                            class="me-2 img-fluid"
-                            src="png/first.png"
-                            alt=""
-                          />Məqalə
-                        </li>
-                        <li>
-                          <img
-                            style="width: 25px; height: 25px"
-                            class="me-2 mt-2 mb-2 img-fluid"
-                            src="png/first1.png"
-                            alt=""
-                          />Video
-                        </li>
-                        <li>
-                          <img
-                            style="width: 25px; height: 25px"
-                            class="me-2 img-fluid"
-                            src="png/first2.png"
-                            alt=""
-                          />Podkast
-                        </li>
-                        <li>
-                          <img
-                            style="width: 25px; height: 25px"
-                            class="me-2 mt-2 mb-2 img-fluid"
-                            src="png/first3.png"
-                            alt=""
-                          />Tədbir və elan
-                        </li>
-                        <li>
-                          <img
-                            style="width: 25px; height: 25px"
-                            class="me-2 img-fluid"
-                            src="png/first4.png"
-                            alt=""
-                          />Kitab tövsiyəsi
-                        </li>
-                        <li>
-                          <img
-                            style="width: 25px; height: 25px"
-                            class="me-2 mt-2 mb-2 img-fluid"
-                            src="png/first5.png"
-                            alt=""
-                          />Film tövsiyəsi
-                        </li>
-                        <li>
-                          <img
-                            style="width: 25px; height: 25px"
-                            class="me-2 img-fluid"
-                            src="png/first6.png"
-                            alt=""
-                          />Musiqi tövsiyəsi
-                        </li>
-                      </ul>
+                      <div class="social_reaction mt-4">
+                        <ul
+                          class="p-0 m-0 list-unstyled d-flex align-items-center"
+                        >
+                          <li>
+                            <a href="#" class="views"
+                              ><i class="fa-regular fa-eye"></i>
+                              <span class="px-1">6000</span></a
+                            >
+                          </li>
+                          <li>
+                            <!-- IZMENENIYA -->
+                            <a
+                              href="#"
+                              class="likes"
+                              onclick="changeIcon2(this)"
+                              ><i class="fa-regular fa-heart"></i>
+                              <span class="px-1">1200</span></a
+                            >
+                            <!-- IZMENENIYA -->
+                          </li>
+                          <li>
+                            <!-- IZMENENIYA -->
+                            <a href="#" class="save" onclick="changeIcon2(this)"
+                              ><i class="fa-regular fa-bookmark"></i
+                            ></a>
+                            <!-- IZMENENIYA -->
+                          </li>
+                          <li>
+                            <a href="#" class="share"
+                              ><i class="fa-solid fa-share-nodes"></i
+                            ></a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div
-                  class="tab-pane fade mt-2"
-                  id="tab2"
-                  role="tabpanel"
-                  aria-labelledby="group-dropdown2-tab"
-                >
-                  This is the content of Tab 2...
+                <div class="container d-flex justify-content-end mt-5">
+                  <br />
+                  <br />
+                  <!-- Default dropup button -->
+                  <div class="btn-group dropup displayblock11">
+                    <button
+                      type="button"
+                      class="mystyle11 btn btn-secondary dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <i
+                        style="font-weight: 100 !important"
+                        class="fa-solid fa-plus fa-4x"
+                      ></i>
+                    </button>
+                    <ul class="dropdown-menu mob_style_li">
+                      <li>
+                        <img
+                          style="width: 25px; height: 25px"
+                          class="me-2 img-fluid"
+                          src="png/first.png"
+                          alt=""
+                        />Məqalə
+                      </li>
+                      <li>
+                        <img
+                          style="width: 25px; height: 25px"
+                          class="me-2 mt-2 mb-2 img-fluid"
+                          src="png/first1.png"
+                          alt=""
+                        />Video
+                      </li>
+                      <li>
+                        <img
+                          style="width: 25px; height: 25px"
+                          class="me-2 img-fluid"
+                          src="png/first2.png"
+                          alt=""
+                        />Podkast
+                      </li>
+                      <li>
+                        <img
+                          style="width: 25px; height: 25px"
+                          class="me-2 mt-2 mb-2 img-fluid"
+                          src="png/first3.png"
+                          alt=""
+                        />Tədbir və elan
+                      </li>
+                      <li>
+                        <img
+                          style="width: 25px; height: 25px"
+                          class="me-2 img-fluid"
+                          src="png/first4.png"
+                          alt=""
+                        />Kitab tövsiyəsi
+                      </li>
+                      <li>
+                        <img
+                          style="width: 25px; height: 25px"
+                          class="me-2 mt-2 mb-2 img-fluid"
+                          src="png/first5.png"
+                          alt=""
+                        />Film tövsiyəsi
+                      </li>
+                      <li>
+                        <img
+                          style="width: 25px; height: 25px"
+                          class="me-2 img-fluid"
+                          src="png/first6.png"
+                          alt=""
+                        />Musiqi tövsiyəsi
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <div
-                  class="tab-pane fade mt-2"
-                  id="tab3"
-                  role="tabpanel"
-                  aria-labelledby="group-dropdown2-tab"
-                >
-                  This is the content of Tab 3...
-                </div>
-                <div
-                  class="tab-pane fade mt-2"
-                  id="tab4"
-                  role="tabpanel"
-                  aria-labelledby="group-dropdown2-tab"
-                >
-                  This is the content of Tab 4...
-                </div>
-                <div
-                  class="tab-pane fade mt-2"
-                  id="tab5"
-                  role="tabpanel"
-                  aria-labelledby="group-dropdown2-tab"
-                >
-                  This is the content of Tab 5...
-                </div>
-                <div
-                  class="tab-pane fade mt-2"
-                  id="tab6"
-                  role="tabpanel"
-                  aria-labelledby="group-dropdown2-tab"
-                >
-                  This is the content of Tab 6...
-                </div>
-                <div
-                  class="tab-pane fade mt-2"
-                  id="tab7"
-                  role="tabpanel"
-                  aria-labelledby="group-dropdown2-tab"
-                >
-                  This is the content of Tab 7...
-                </div>
-                <div
-                  class="tab-pane fade mt-2"
-                  id="tab8"
-                  role="tabpanel"
-                  aria-labelledby="group-dropdown2-tab"
-                >
-                  This is the content of Tab 8...
-                </div>
-                <div
-                  class="tab-pane fade mt-2"
-                  id="tab9"
-                  role="tabpanel"
-                  aria-labelledby="group-dropdown2-tab"
-                >
-                  This is the content of Tab 9...
-                </div>
-                <div
-                  class="tab-pane fade mt-2"
-                  id="tab10"
-                  role="tabpanel"
-                  aria-labelledby="group-dropdown2-tab"
-                >
-                  This is the content of Tab 10...
-                </div>
-                <div
-                  class="tab-pane fade mt-2"
-                  id="tab11"
-                  role="tabpanel"
-                  aria-labelledby="group-dropdown2-tab"
-                >
-                  This is the content of Tab 11...
-                </div>
-                <div
-                  class="tab-pane fade mt-2"
-                  id="tab12"
-                  role="tabpanel"
-                  aria-labelledby="group-dropdown2-tab"
-                >
-                  This is the content of Tab 12...
-                </div>
-                <div
-                  class="tab-pane fade mt-2"
-                  id="tab13"
-                  role="tabpanel"
-                  aria-labelledby="group-dropdown2-tab"
-                >
-                  This is the content of Tab 13...
-                </div>
-                <div
-                  class="tab-pane fade mt-2"
-                  id="tab14"
-                  role="tabpanel"
-                  aria-labelledby="group-dropdown2-tab"
-                >
-                  This is the content of Tab 14...
-                </div>
-                <div
-                  class="tab-pane fade mt-2"
-                  id="tab15"
-                  role="tabpanel"
-                  aria-labelledby="group-dropdown2-tab"
-                >
-                  This is the content of Tab 15...
-                </div>
-                <div
-                  class="tab-pane fade mt-2"
-                  id="tab16"
-                  role="tabpanel"
-                  aria-labelledby="group-dropdown2-tab"
-                >
-                  This is the content of Tab 16...
-                </div>
+              </div>
+              <div
+                class="tab-pane fade mt-2"
+                id="tab2"
+                role="tabpanel"
+                aria-labelledby="group-dropdown2-tab"
+              >
+                This is the content of Tab 2...
+              </div>
+              <div
+                class="tab-pane fade mt-2"
+                id="tab3"
+                role="tabpanel"
+                aria-labelledby="group-dropdown2-tab"
+              >
+                This is the content of Tab 3...
+              </div>
+              <div
+                class="tab-pane fade mt-2"
+                id="tab4"
+                role="tabpanel"
+                aria-labelledby="group-dropdown2-tab"
+              >
+                This is the content of Tab 4...
+              </div>
+              <div
+                class="tab-pane fade mt-2"
+                id="tab5"
+                role="tabpanel"
+                aria-labelledby="group-dropdown2-tab"
+              >
+                This is the content of Tab 5...
+              </div>
+              <div
+                class="tab-pane fade mt-2"
+                id="tab6"
+                role="tabpanel"
+                aria-labelledby="group-dropdown2-tab"
+              >
+                This is the content of Tab 6...
+              </div>
+              <div
+                class="tab-pane fade mt-2"
+                id="tab7"
+                role="tabpanel"
+                aria-labelledby="group-dropdown2-tab"
+              >
+                This is the content of Tab 7...
+              </div>
+              <div
+                class="tab-pane fade mt-2"
+                id="tab8"
+                role="tabpanel"
+                aria-labelledby="group-dropdown2-tab"
+              >
+                This is the content of Tab 8...
+              </div>
+              <div
+                class="tab-pane fade mt-2"
+                id="tab9"
+                role="tabpanel"
+                aria-labelledby="group-dropdown2-tab"
+              >
+                This is the content of Tab 9...
+              </div>
+              <div
+                class="tab-pane fade mt-2"
+                id="tab10"
+                role="tabpanel"
+                aria-labelledby="group-dropdown2-tab"
+              >
+                This is the content of Tab 10...
+              </div>
+              <div
+                class="tab-pane fade mt-2"
+                id="tab11"
+                role="tabpanel"
+                aria-labelledby="group-dropdown2-tab"
+              >
+                This is the content of Tab 11...
+              </div>
+              <div
+                class="tab-pane fade mt-2"
+                id="tab12"
+                role="tabpanel"
+                aria-labelledby="group-dropdown2-tab"
+              >
+                This is the content of Tab 12...
+              </div>
+              <div
+                class="tab-pane fade mt-2"
+                id="tab13"
+                role="tabpanel"
+                aria-labelledby="group-dropdown2-tab"
+              >
+                This is the content of Tab 13...
+              </div>
+              <div
+                class="tab-pane fade mt-2"
+                id="tab14"
+                role="tabpanel"
+                aria-labelledby="group-dropdown2-tab"
+              >
+                This is the content of Tab 14...
+              </div>
+              <div
+                class="tab-pane fade mt-2"
+                id="tab15"
+                role="tabpanel"
+                aria-labelledby="group-dropdown2-tab"
+              >
+                This is the content of Tab 15...
+              </div>
+              <div
+                class="tab-pane fade mt-2"
+                id="tab16"
+                role="tabpanel"
+                aria-labelledby="group-dropdown2-tab"
+              >
+                This is the content of Tab 16...
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div
-        class="container-fluid mob_nav_back position-fixed d-lg-none"
-        style="bottom: 0; z-index: 999999999"
-      >
-        <div class="mobile_bottom_nav container">
-          <ul
-            class="d-flex justify-content-between align-items-center m-0 p-0 list-unstyled"
-          >
-            <li>
-              <a href="#">
-                <i class="fa-solid fa-house fa-2x" style="color: white"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fa-solid fa-fire fa-2x" style="color: white"></i>
-              </a>
-            </li>
-            <li>
+    </div>
+    <div
+      class="container-fluid mob_nav_back position-fixed d-lg-none"
+      style="bottom: 0; z-index: 999999999"
+    >
+      <div class="mobile_bottom_nav container">
+        <ul
+          class="d-flex justify-content-between align-items-center m-0 p-0 list-unstyled"
+        >
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-house fa-2x" style="color: white"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-fire fa-2x" style="color: white"></i>
+            </a>
+          </li>
+          <li>
+            <!-- IZMENENIYA -->
+            <a
+              class="navbar-toggler infinit_mob_nav_a"
+              id="infinit_button"
+              type="button"
+              onclick="changeIcon(this), openMenu()"
+            >
               <!-- IZMENENIYA -->
-              <a
-                class="navbar-toggler infinit_mob_nav_a"
-                id="infinit_button"
-                type="button"
-                onclick="changeIcon(this), openMenu()"
-              >
-                <!-- IZMENENIYA -->
-                <div class="infinit_mob_nav position-relative">
-                  <i
-                    class="fa-solid fa-infinity fa-2x"
-                    style="color: white"
-                  ></i>
-                  <div class="infinit_circle1 position-absolute"></div>
-                  <div class="infinit_circle2 position-absolute"></div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fa-solid fa-users fa-2x" style="color: white"></i>
-              </a>
-            </li>
-            <li>
-              <a href="./Expert_profile.html" type="button">
-                <i
-                  class="fa-solid fa-user fa-2x"
-                  style="color: white; width: 32px; height: 32px"
-                ></i>
-              </a>
-            </li>
-            <script>
-              function changeIcon(anchor) {
-                var icon = anchor.querySelector("i");
-                icon.classList.toggle("fa-infinity");
-                icon.classList.toggle("fa-circle-xmark");
-              }
-            </script>
-            <!-- IZMENENIYA -->
+              <div class="infinit_mob_nav position-relative">
+                <i class="fa-solid fa-infinity fa-2x" style="color: white"></i>
+                <div class="infinit_circle1 position-absolute"></div>
+                <div class="infinit_circle2 position-absolute"></div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-users fa-2x" style="color: white"></i>
+            </a>
+          </li>
+          <li>
+            <a href="./Expert_profile.html" type="button">
+              <i
+                class="fa-solid fa-user fa-2x"
+                style="color: white; width: 32px; height: 32px"
+              ></i>
+            </a>
+          </li>
+          <script>
+            function changeIcon(anchor) {
+              var icon = anchor.querySelector("i");
+              icon.classList.toggle("fa-infinity");
+              icon.classList.toggle("fa-circle-xmark");
+            }
+          </script>
+          <!-- IZMENENIYA -->
 
-            <script>
-              function changeIcon2(anchor) {
-                var icon = anchor.querySelector("i");
-                icon.classList.toggle("fa-regular");
-                icon.classList.toggle("fa-solid");
-              }
-            </script>
-            <!-- IZMENENIYA -->
-          </ul>
-        </div>
+          <script>
+            function changeIcon2(anchor) {
+              var icon = anchor.querySelector("i");
+              icon.classList.toggle("fa-regular");
+              icon.classList.toggle("fa-solid");
+            }
+          </script>
+          <!-- IZMENENIYA -->
+        </ul>
       </div>
-      <script>
-        function changeIcon2(anchor) {
-          var icon = anchor.querySelector("i");
-          icon.classList.toggle("fa-regular");
-          icon.classList.toggle("fa-solid");
-        }
-      </script>
-      <script>
-        function openMenu() {
-          var element = document.getElementById("fixed_nav");
-          element.classList.toggle("my_fixed_nav");
-        }
-      </script>
+    </div>
+    <script>
+      function changeIcon2(anchor) {
+        var icon = anchor.querySelector("i");
+        icon.classList.toggle("fa-regular");
+        icon.classList.toggle("fa-solid");
+      }
+    </script>
+    <script>
+      function openMenu() {
+        var element = document.getElementById("fixed_nav");
+        element.classList.toggle("my_fixed_nav");
+      }
+    </script>
 
-      <div class="container">
-        <!-- partial -->
-        <script src="./script.js"></script>
-      </div>
-    </body>
+    <div class="container">
+      <!-- partial -->
+      <script src="./script.js"></script>
+    </div>
 
     <script
       src="https://code.jquery.com/jquery-3.6.3.min.js"

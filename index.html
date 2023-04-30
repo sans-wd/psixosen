@@ -2627,6 +2627,7 @@
 ></script>
 
 <script src="./scrollable-tabs.min.js"></script>
+<!-- ggggggggggggggggggggggggggggggggggggggggggggggg -->
 <script>
   function autoplayFunction() {
     document.getElementsByClassName("myautoplay")[0].click();
@@ -2636,18 +2637,25 @@
 </script>
 <script>
   function autoplayFunction1() {
-    document.getElementsByClassName("myautoplay")[1].click();
+    if ($(window).width() <= 991) {
+    } else {
+      document.getElementsByClassName("myautoplay")[1].click();
+    }
   }
 
   setInterval(autoplayFunction1, 5000);
 </script>
 <script>
   function autoplayFunction2() {
-    document.getElementsByClassName("myautoplay")[2].click();
+    if ($(window).width() <= 991) {
+    } else {
+      document.getElementsByClassName("myautoplay")[2].click();
+    }
   }
 
   setInterval(autoplayFunction2, 6000);
 </script>
+<!-- ggggggggggggggggggggggggggggggggggggggggggggggg -->
 <script>
   function closehead() {
     var head = document.getElementById("close_link");

@@ -7,17 +7,6 @@
   var modal = document.getElementById("signup-modal");
   var closeBtn = document.getElementById("close-btn");
 
-  // Create a new controller for 'app'
-  app.controller("SignUpController", function () {
-    this.firstName = "";
-    this.lastName = "";
-    this.email = "";
-    this.password = "";
-    this.logMe = function () {
-      console.log("Logged!");
-    };
-  });
-
   // Create onclick event for signupBtn
   signupBtn.onclick = function () {
     modal.style.display = "block";
@@ -43,17 +32,6 @@
   var signupBtn = document.getElementById("signup-btn2");
   var modal = document.getElementById("signup-modal");
   var closeBtn = document.getElementById("close-btn");
-
-  // Create a new controller for 'app'
-  app.controller("SignUpController", function () {
-    this.firstName = "";
-    this.lastName = "";
-    this.email = "";
-    this.password = "";
-    this.logMe = function () {
-      console.log("Logged!");
-    };
-  });
 
   // Create onclick event for signupBtn
   signupBtn.onclick = function () {
