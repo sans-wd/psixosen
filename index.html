@@ -628,7 +628,9 @@
     <div class="fixed_pos_contruction d-lg-none" id="fixed_nav">
       <div class="d-flex justify-content-between align-items-center my-3 px-2">
         <div class="navbar_logo">
-          <a href="#" class="navbar-brand" id="logo_mob_transfer"></a>
+          <a href="#" class="navbar-brand" id="logo_mob_transfer">
+            <img src="./img/loqopsixoyazılı.png" alt="" />
+          </a>
         </div>
         <div
           class="anonim_mutton_nav d-flex justify-content-between align-items-center"
@@ -638,7 +640,18 @@
             aria-current="page"
             href="#"
             id="anon_mob_transfer"
-          ></a>
+          >
+            <button type="button" class="anonim_btn">
+              <img
+                src="./img/anobim.svg"
+                width="26px"
+                height="26px"
+                alt=""
+                srcset=""
+              />
+              <span> Anonim dinləyici çatı </span>
+            </button></a
+          >
           <a
             class="nav-item nav-link active ms-2 d-lg-none"
             aria-current="page"
@@ -655,7 +668,24 @@
         <h1>İstifadəçi bölməsi</h1>
       </div>
       <div class="d-flex justify-content-between align-items-center px-2">
-        <div onclick="myFunction_set_esas()" id="esas_mob_transfer"></div>
+        <div onclick="myFunction_set_esas()" id="esas_mob_transfer">
+          <a
+            onclick="myFunction_set_esas"
+            class="nav-item nav-link active"
+            aria-current="page"
+            href="#"
+            ><button type="button" class="eses_btn">
+              <img
+                src="./img/eses_bolme_logo.png"
+                width="26px"
+                height="26px"
+                alt=""
+                srcset=""
+              />
+              <span> Əsas bölmə</span>
+            </button>
+          </a>
+        </div>
         <div>
           <a
             onclick="myFunction_set_us()"
@@ -664,6 +694,16 @@
             href="#"
             id="usaq_mob_transfer"
           >
+            <button type="button" class="usaq_btn">
+              <img
+                src="./img/usag.svg"
+                width="26px"
+                height="26px"
+                alt=""
+                srcset=""
+              />
+              <span>Uşaq bölməsi</span>
+            </button>
           </a>
         </div>
         <div>
@@ -674,6 +714,16 @@
             onclick="myFunction_set_teh()"
             id="tehsil_mob_transfer"
           >
+            <button type="button" class="tehsil_btn">
+              <img
+                src="./img/tehsil.svg"
+                width="26px"
+                height="26px"
+                alt=""
+                srcset=""
+              />
+              <span> Təhsil bölməsi </span>
+            </button>
           </a>
         </div>
       </div>
@@ -684,14 +734,206 @@
           href="#"
           id="search_mob_transfer"
         >
+          <div class="input-group">
+            <div class="input-group-append">
+              <button class="search_button_nav" type="button">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+            <input
+              type="text"
+              class="search_input_nav"
+              placeholder="axtar..."
+            />
+          </div>
         </a>
       </div>
-      <div class="ads px-2" id="ads_mob_transfer"></div>
-      <div class="side_menu my-3" id="side_menu_mob_transfer"></div>
+      <div class="ads px-2" id="ads_mob_transfer">
+        <div class="ads_img_wrapper">
+          <img src="./img/first_slider_img2.jpg" class="img-fluid" alt="" />
+          <button class="ads_btn">
+            <i class="fa-solid fa-circle-arrow-up"></i>
+            <span>Siz də bizə qatılın</span>
+          </button>
+        </div>
+      </div>
+      <div class="side_menu my-3" id="side_menu_mob_transfer">
+        <a
+          href="#"
+          class="active menu_buttons d-flex align-items-center esas_page_nav"
+          ><div class="d-flex align-items-center">
+            <img src="./img/esas_sephe.svg" alt="" height="16px" />
+            <span>Əsas səhifə</span>
+          </div></a
+        >
+        <a
+          data-bs-toggle="collapse"
+          href="#collapseExample1"
+          role="button"
+          aria-expanded="false"
+          aria-controls="collapseExample1"
+          bis_skin_checked="1"
+          class="collapsed"
+        >
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+              <img src="./img/muteh.svg" alt="" height="16px" />
+              <span>Mütəxəssislər</span>
+            </div>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+        </a>
+        <div
+          class="child_mobile colapse_body collapse"
+          id="collapseExample1"
+          bis_skin_checked="1"
+          style=""
+        >
+          <div class="">
+            <a href="#" class="menu_buttons">Psixoloq</a>
+            <a href="#" class="menu_buttons">Təlimçi</a>
+            <a href="#" class="menu_buttons">Təlimçi</a>
+          </div>
+        </div>
+        <a href="#" class="menu_buttons">
+          <div class="d-flex align-items-center">
+            <img
+              src="./img/tehsil.svg"
+              alt=""
+              height="16px"
+              style="filter: invert(1)"
+            />
+            <span>Təhsil bölməsi</span>
+          </div>
+        </a>
+        <a href="#" class="menu_buttons">
+          <div class="d-flex align-items-center">
+            <img
+              src="./img/usag.svg"
+              alt=""
+              height="16px"
+              style="filter: invert(1)"
+            />
+            <span>Uşaq bölməsi</span>
+          </div>
+        </a>
+        <a href="#" class="menu_buttons">
+          <div class="d-flex align-items-center">
+            <img src="./img/psi_academy.svg" alt="" height="16px" />
+            <span>PSİ akademiyası</span>
+          </div></a
+        >
+        <a
+          href="#"
+          class="menu_buttons"
+          style="background-color: #1e1e1e !important; color: white !important"
+          ><div class="d-flex align-items-center">
+            <img src="./img/anobim.svg" alt="" height="16px" />
+            <span>Anonim dinləyici çatı</span>
+          </div></a
+        >
+        <a
+          href="#"
+          class="menu_buttons d-flex justify-content-start align-items-center"
+          ><div class="d-flex align-items-center">
+            <img src="./img/tedbir.svg" alt="" height="16px" />
+            <span>Tədbir və elan</span>
+          </div></a
+        >
+        <a
+          data-bs-toggle="collapse"
+          href="#collapseExample"
+          role="button"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+          bis_skin_checked="1"
+          class="collapsed"
+        >
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+              <img src="./img/xidmet.svg" alt="" height="16px" />
+              <span>Xidmətlər</span>
+            </div>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+        </a>
+        <div
+          class="child_mobile colapse_body collapse"
+          id="collapseExample"
+          bis_skin_checked="1"
+          style=""
+        >
+          <div class="">
+            <a href="#" class="menu_buttons">Məsləhət</a>
+
+            <a href="#" class="menu_buttons">Seminar</a>
+
+            <a href="#" class="menu_buttons">Təlim</a>
+
+            <a href="#" class="menu_buttons">Onlayn kitabxana</a>
+          </div>
+        </div>
+        <a href="#" class="menu_buttons"
+          ><div class="d-flex align-items-center">
+            <img src="./img/magaza.svg" alt="" height="16px" />
+            <span>Mağaza</span>
+          </div></a
+        >
+        <a href="#" class="menu_buttons"
+          ><div class="d-flex align-items-center">
+            <img src="./img/xeber.svg" alt="" height="16px" />
+            <span>Xəbərlər</span>
+          </div></a
+        >
+        <a href="#" class="menu_buttons"
+          ><div class="d-flex align-items-center">
+            <img src="./img/layihe.svg" alt="" height="16px" />
+            <span>Layihələrimiz</span>
+          </div></a
+        >
+        <a href="#" class="menu_buttons"
+          ><div class="d-flex align-items-center">
+            <img src="./img/haqq.svg" alt="" height="16px" />
+            <span>Haqqımızda</span>
+          </div></a
+        >
+      </div>
       <ul
         class="d-flex flex-wrap justify-content-evenly align-items-center list-unstyled px-2 social_networks mt-0 mb-3"
         id="social_mob_transfer"
-      ></ul>
+      >
+        <li>
+          <a href="#">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i
+              class="fa-brands fa-facebook"
+              style="
+                color: #2b4886;
+                background: transparent;
+                border-radius: 56px;
+              "
+            >
+            </i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-brands fa-youtube" style="color: red"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-brands fa-linkedin" style="color: #0077b5"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        </li>
+      </ul>
     </div>
 
     <!-- MOBILE_FIXED_MENU -->
@@ -723,7 +965,18 @@
             aria-current="page"
             href="#"
             id="anon_mob_transfer2"
-          ></a>
+          >
+            <button type="button" class="anonim_btn">
+              <img
+                src="./img/anobim.svg"
+                width="26px"
+                height="26px"
+                alt=""
+                srcset=""
+              />
+              <span> Anonim dinləyici çatı </span>
+            </button></a
+          >
         </div>
 
         <div
@@ -2286,7 +2539,7 @@
   });
 </script> -->
 
-<script>
+<!-- <script>
   $(function () {
     var desktopForm = $("#audiimgtransferdeask").html();
     $(window).on("load resize", function () {
@@ -2430,7 +2683,7 @@
       }
     });
   });
-</script>
+</script> -->
 <script>
   function openMenu() {
     var element = document.getElementById("fixed_nav");
