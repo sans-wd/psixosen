@@ -75,7 +75,7 @@
                 >
                   <button
                     type="button"
-                    class="btn btn-light active4"
+                    class="btn btn-light"
                     onclick="filterSelection('muteh')"
                     style="border-radius: 16px"
                   >
@@ -83,7 +83,7 @@
                   </button>
                   <button
                     type="button"
-                    class="btn btn-light"
+                    class="btn btn-light active4"
                     onclick="filterSelection('istifa')"
                     style="border-radius: 16px"
                   >
@@ -393,7 +393,7 @@
                     >
                       <button
                         type="button"
-                        class="btn btn-primary active3"
+                        class="btn btn-primary"
                         onclick="filterSelection3('qeyd2')"
                         style="
                           background-color: var(--sign-in-color);
@@ -404,7 +404,7 @@
                       </button>
                       <button
                         type="button"
-                        class="btn btn-primary"
+                        class="btn btn-primary active3"
                         onclick="filterSelection3('istifa2')"
                         style="
                           background-color: var(--sign-in-color);
@@ -2722,7 +2722,7 @@
 </script>
 
 <script>
-  filterSelection("muteh");
+  filterSelection("istifa");
   function filterSelection(c) {
     var x, i;
     x = document.getElementsByClassName("filterDiv");
@@ -2814,7 +2814,7 @@
   }
 </script>
 <script>
-  filterSelection3("qeyd2");
+  filterSelection3("istifa2");
   function filterSelection3(c) {
     var x, i;
     x = document.getElementsByClassName("filterDiv3");
